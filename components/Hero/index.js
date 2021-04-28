@@ -2,6 +2,7 @@
 import Slider from 'react-animated-slider';
 import { useEffect, useRef } from 'react'
 import { TweenLite, Power3 } from 'gsap';
+import HeroBanner from './HeroBanner';
 
 
 
@@ -55,9 +56,7 @@ export default function Hero() {
                     )
                 }
             </Slider>
-            <div style={{ minHeight: '300px' }}>
-
-            </div>
+            <HeroBanner />
         </>
     )
 }
