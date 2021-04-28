@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import AutoContainer from '../AutoContainer';
 import CustomCarousel from '../CustomCarousel';
+import ReactPlayer from 'react-player'
 
 
 const InnerContainer = styled.div`
@@ -63,10 +64,14 @@ const List = styled.ul`
     }
     li::before {
         position: absolute;
-        content: '\f109';
+        content: ' ';
+        background: url('/icons/check.png') center top;
+        background-repeat: no-repeat;
+        background-size: contain;
         left: 0px;
-        top: 5px;
-        color: #f7bd00;
+        top: 0px;
+        height: 30px;
+        width: 30px;
         line-height: 1em;
         font-size: 18px;
         font-family: "Flaticon";
@@ -77,9 +82,9 @@ const List = styled.ul`
 
 const RightColumn = styled.div`
     position: relative;
-    margin-bottom: 40px;
+    margin-top: 40px;
 
-    flex: 50%;
+    flex: 40%;
     @media screen and (max-width: 800px) {
         flex: 100%;
     }
@@ -88,7 +93,7 @@ const RightColumn = styled.div`
 const VideoSection = () => {
     return (
         <>
-            <div style={{ 
+            <div style={{
                 position: 'relative',
                 marginTop: '-52px',
                 padding: '155px 0 100px',
@@ -96,25 +101,28 @@ const VideoSection = () => {
                 backgroundColor: '#f4f4f4',
                 backgroundPosition: 'right bottom',
                 backgroundRepeat: 'no-repeat'
-             }}>
+            }}>
                 <AutoContainer>
                     <InnerContainer>
                         <Row>
                             <LeftColumn>
-                                <h2>Why you choose us for your next project</h2>
+                                <h2>Pourquoi 'Nom du Societe'?</h2>
                                 <Paragraph>
-                                    Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards.
-                            </Paragraph>
+                                Avec plus de 8 500 collaborateurs au Maroc et en Afrique subsaharienne et disposant du plus grand parc d’engins de construction au Maroc, TGCC s’impose aujourd’hui en tant que leader national et, compte à son actif plus de 1 000 projets et d’ouvrages d’envergures réalisés.                            </Paragraph>
                                 <List>
-                                    <li>Expert & Professional Engineers</li>
-                                    <li>Expert & Professional Engineers</li>
-                                    <li>Expert & Professional Engineers</li>
-                                    <li>Expert & Professional Engineers</li>
+                                    <li>Leader dans son domaine d'activité et en constante évolution</li>
+                                    <li>Riche grâce à son capital humain varié</li>
+                                    <li>Engagée sur le long terme</li>
+                                    <li>Veille à la protection de ses salariés</li>
                                 </List>
                             </LeftColumn>
                             <RightColumn>
-                                Video
-                        </RightColumn>
+                                <ReactPlayer style={{ 
+                                    maxWidth: '500px',
+                                    height: '400px',
+                                    margin: 'auto'
+                                 }} url="https://youtu.be/kxPCFljwJws" />
+                            </RightColumn>
                         </Row>
                     </InnerContainer>
                     <CustomCarousel />
