@@ -1,17 +1,11 @@
 import styled from 'styled-components'
-
+import AutoContainer from '../AutoContainer'
 
 const BannerSection = styled.div`
     position: relative;
     z-index: 12;
 `;
 
-const AutoContainer = styled.div`
-    position: static;
-    max-width: 1200px;
-    padding: 0px 15px;
-    margin: 0 auto;
-`;
 
 const InnerContainer = styled.div`
     position: relative;
@@ -21,25 +15,33 @@ const InnerContainer = styled.div`
     box-shadow: 0px 0px 20px rgb(224 222 222 / 50%);
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 `;
 
 const LeftSection = styled.div`
-    width: 90%;
+    flex: 80%;
     float: left;
+    @media screen and (max-width: 800px) {
+        flex: 100%;
+    }
     h2 {
         position: relative;
         color: #000000;
         font-size: 37px;
         font-weight: 400;
     }
+    
 `;
 
 const RightSection = styled.div`
-    width: 30%;
+    flex: 20%;
     text-align: center;
 
+    @media screen and (max-width: 800px) {
+        flex: 100%;
+    }
 
 `;
 
@@ -65,6 +67,7 @@ const ContactButton = styled.button`
         cursor: pointer;
     }
 `;
+
 
 
 const HeroBanner = () => {
