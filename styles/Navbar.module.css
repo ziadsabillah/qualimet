@@ -1,0 +1,37 @@
+.sticky__header {
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding: 0px 0px;
+    background: #ffffff !important;
+}
+
+.pull__left {
+    float: left !important;
+}
+
+
+.container {
+    position: static;
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.sticky__header .logo {
+    padding: 10px 0 10px;
+    width: 50%;
+}
+
+.right__col {
+    position: relative;
+    float: right !important;
+}
+
+.pull__right {
+    float: right !important;
+}
