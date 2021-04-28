@@ -34,7 +34,7 @@ export default function Hero() {
                             background: `url('${slide.imgPath}')`,
                             backgroundPosition: 'center center',
                             backgroundSize: 'cover',
-                            backgroundPosition: 'fixed',
+                            backgroundAttachment: 'fixed',
                             textAlign: 'center',
                             display: 'flex',
                             alignItems: 'flex-end',
@@ -55,6 +55,9 @@ export default function Hero() {
                     )
                 }
             </Slider>
+            <div style={{ minHeight: '300px' }}>
+
+            </div>
         </>
     )
 }
