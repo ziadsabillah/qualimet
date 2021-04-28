@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import AutoContainer from '../AutoContainer'
 
-const BannerSection = styled.div`
+export const BannerSection = styled.div`
     position: relative;
     z-index: 12;
 `;
@@ -76,8 +76,8 @@ const HeroBanner = () => {
         <BannerSection>
             <AutoContainer>
                 <InnerContainer>
-                    <LeftSection><h2>Looking for a best Construction Company</h2></LeftSection>
-                    <RightSection><ContactButton>Contact Us</ContactButton></RightSection>
+                    <LeftSection><h2>En savoir plus sur NOUS ?<br></br> Telecharger notre plaquette</h2></LeftSection>
+                    <RightSection><ContactButton>Telecharger</ContactButton></RightSection>
                 </InnerContainer>
             </AutoContainer>
         </BannerSection>
