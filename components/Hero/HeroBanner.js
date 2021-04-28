@@ -32,6 +32,12 @@ const LeftSection = styled.div`
         font-size: 37px;
         font-weight: 400;
     }
+    h4 {
+        position: relative;
+        color: #000000;
+        font-size: 20px;
+        font-weight: 400;
+    }
     
 `;
 
@@ -76,8 +82,13 @@ const HeroBanner = () => {
         <BannerSection>
             <AutoContainer>
                 <InnerContainer>
-                    <LeftSection><h2>En savoir plus sur NOUS ?<br></br> Telecharger notre plaquette</h2></LeftSection>
-                    <RightSection><ContactButton>Telecharger</ContactButton></RightSection>
+                    <LeftSection>
+                        <h2>En savoir plus sur 'Societé' ?</h2> 
+                        <h4>Telecharger notre plaquette</h4>
+                    </LeftSection>
+                    <RightSection>
+                        <ContactButton>Telecharger</ContactButton>
+                    </RightSection>
                 </InnerContainer>
             </AutoContainer>
         </BannerSection>
