@@ -125,3 +125,7 @@ header {
   -webkit-touch-callout: none;
 }
 
+.slider a.nextButton svg polygon, .slider a.previousButton svg polygon {
+  fill: #fff !important;
+}
+
