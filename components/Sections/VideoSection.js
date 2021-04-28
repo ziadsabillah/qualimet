@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import AutoContainer from '../AutoContainer';
 import CustomCarousel from '../CustomCarousel';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/youtube'
 
 
 const InnerContainer = styled.div`
@@ -28,6 +28,7 @@ const LeftColumn = styled.div`
 
     @media screen and (max-width: 800px) {
         flex: 100%;
+        text-align: center;
     }
 
     h2 {
@@ -48,6 +49,9 @@ const Paragraph = styled.div`
     line-height: 1.7em;
     margin-bottom: 18px;
     font-family: 'Open Sans', sans-serif;
+    /* @media screen and (max-width: 800px) {
+        text-align: center;
+    } */
 `;
 
 const List = styled.ul`
@@ -83,6 +87,7 @@ const List = styled.ul`
 const RightColumn = styled.div`
     position: relative;
     margin-top: 40px;
+    padding-top: 56.25%;
 
     flex: 40%;
     @media screen and (max-width: 800px) {
@@ -119,6 +124,9 @@ const VideoSection = () => {
                             <RightColumn>
                                 <ReactPlayer style={{ 
                                     maxWidth: '500px',
+                                    position: 'absolute',
+                                    top: '-64px',
+                                    left: '0',
                                     height: '400px',
                                     margin: 'auto'
                                  }} url="https://youtu.be/kxPCFljwJws" />
