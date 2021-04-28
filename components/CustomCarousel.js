@@ -224,6 +224,35 @@ const ReadMoreBtn = styled.a`
 `;
 
 
+const services = [
+    {
+        title: 'Building Renovation',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-2.svg'
+    },
+    {
+        title: 'Building Maintenance',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-3.svg'
+    },
+    {
+        title: 'Building Construction',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-1.svg'
+    },
+    {
+        title: 'Architecture Design',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-4.svg'
+    },
+    {
+        title: 'Architecture Interieur',
+        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        iconPath: 'icons/icon-4.svg'
+    }
+];
+
+
 
 
 
@@ -232,34 +261,37 @@ const CustomCarousel = ({ deviceType }) => {
         <>
             <Carousel
                 ssr
-                partialVisbile
+                partialVisible
                 itemClass="carousel-item"
                 responsive={responsive}
             >
-                <ServiceBlock>
+                {services.map((service, index) => (
+
+
+                    <ServiceBlock key={index}>
                     <InnerBox>
                         <FlipContainer>
                             <Flipper className="flipper">
                                 <FrontSide className="front">
                                     <IconBox>
                                         <Icon>
-                                            <img src="/icons/icon-2.svg" alt="Icon" />
+                                            <img src={service.iconPath} alt="Icon" />
                                         </Icon>
                                     </IconBox>
-                                    <CarouselTitle>Building Renovations</CarouselTitle>
+                                    <CarouselTitle>{service.title}</CarouselTitle>
                                     <CarouselText>
-                                        Blah blah blah
+                                        {service.description}
                                 </CarouselText>
                                 </FrontSide>
                                 <BackSide className="back">
                                     <OverlayBox>
                                         <OverlayInner>
                                             <OverlayContent>
-                                                <h4>Building Renovation</h4>
+                                                <h4>{service.title}</h4>
                                                 <OverlayText>
-                                                    Blah Blah
+                                                    {service.description}
                                             </OverlayText>
-                                                <ReadMoreBtn>Read more</ReadMoreBtn>
+                                                <ReadMoreBtn href="#">Read more</ReadMoreBtn>
                                             </OverlayContent>
                                         </OverlayInner>
                                     </OverlayBox>
@@ -268,6 +300,8 @@ const CustomCarousel = ({ deviceType }) => {
                         </FlipContainer>
                     </InnerBox>
                 </ServiceBlock>
+                ))}
+                
             </Carousel>
         </>
     )
