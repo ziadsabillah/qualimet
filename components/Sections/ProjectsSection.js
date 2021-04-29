@@ -10,6 +10,7 @@ import { SectionHeader } from '../SectionHeader'
 const ProjectWrapper = styled.section`
     position: relative;
     padding: 95px 0px 70px;
+    min-height: 550px;
 `;
 
 const FilterTabs = styled.ul`
