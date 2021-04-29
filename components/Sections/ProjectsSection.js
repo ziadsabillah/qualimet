@@ -136,25 +136,25 @@ const cardsDefault = [
         id: "c",
         projectName: "Projet 3",
         imgPath: "/img/project-3.jfif",
-        filter: "Type 2"
+        filter: "Type2"
     },
     {
         id: "d",
         projectName: "Projet 4",
         imgPath: "/img/project-4.jfif",
-        filter: "Type 3"
+        filter: "Type3"
     },
     {
         id: "e",
         projectName: "Projet 5",
         imgPath: "/img/project-5.jfif",
-        filter: "Type 2"
+        filter: "Type2"
     },
     {
         id: "f",
         projectName: "Projet 6",
         imgPath: "/img/project-6.jfif",
-        filter: "Type 4"
+        filter: "Type4"
     },
     {
         id: "h",
@@ -167,9 +167,9 @@ const cardsDefault = [
 const filtersDefault = [
     { label: "Tout", isChecked: true },
     { label: "Commerciale", isChecked: false },
-    { label: "Type 2", isChecked: false },
-    { label: "Type 3", isChecked: false },
-    { label: "Type 4", isChecked: false }
+    { label: "Type2", isChecked: false },
+    { label: "Type3", isChecked: false },
+    { label: "Type4", isChecked: false }
 ];
 
 
