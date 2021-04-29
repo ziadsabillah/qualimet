@@ -110,7 +110,7 @@ const VideoSection = () => {
                     <InnerContainer>
                         <Row>
                             <LeftColumn>
-                                <h2>Pourquoi Borvel?</h2>
+                                <h2>Pourquoi Borvel SARL?</h2>
                                 <Paragraph>
                                 Avec plus de 8 500 collaborateurs au Maroc et en Afrique subsaharienne et disposant du plus grand parc d’engins de construction au Maroc, TGCC s’impose aujourd’hui en tant que leader national et, compte à son actif plus de 1 000 projets et d’ouvrages d’envergures réalisés.                            </Paragraph>
                                 <List>
