@@ -47,7 +47,7 @@ const Link = styled.a`
 const NavLinks = () => (
     <NavLinkContainer>
         <LinksWrapper>
-            <LinkItem className="active"><Link href="#">Home</Link></LinkItem>
+            <LinkItem className="active"><Link href="#">Accueil</Link></LinkItem>
             <LinkItem><Link href="#">Projets</Link></LinkItem>
             <LinkItem><Link href="#">Clients</Link></LinkItem>
             <LinkItem><Link href="#">Contact</Link></LinkItem>
