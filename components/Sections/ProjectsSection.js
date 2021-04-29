@@ -173,7 +173,7 @@ const filtersDefault = [
 
 const ProjectSection = () => {
     const [filters, updateFilters] = useState(filtersDefault)
-    const [selectedFilter, setSelectedFilter] = useState(filtersDefault[0])
+    const [selectedFilter, setSelectedFilter] = useState("Tout")
 
     const onFilter = event => {
         const {
