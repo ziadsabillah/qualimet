@@ -71,10 +71,6 @@ const Filter = styled.li`
     
 `;
 
-const Card = styled.div`
-
-    
-`;
 
 const CardContent = styled.div`
     overflow: hidden;
@@ -84,7 +80,7 @@ const CardContent = styled.div`
 
     img {
         width: 100%;
-        max-height: 100%;
+        min-height: 100%;
         height: auto;
     }
 
