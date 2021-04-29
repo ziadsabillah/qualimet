@@ -53,6 +53,7 @@ header {
 
 .clearfix::before {
   display: table;
+  content: ' ';
 
 }
 
@@ -160,10 +161,16 @@ header {
   text-align: center !important;
   display: flex !important;
   flex-wrap: wrap;
+  transition: all 0.3s ease;
+
 }
 
 .masonry {
   margin: 1em;
   gap: 20px;
   width: unset !important;
+}
+.masonry-wrapper {
+  position: relative;
+  padding-left: 200px;
 }

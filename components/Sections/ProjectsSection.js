@@ -14,17 +14,35 @@ const Container = styled.div`
     min-height: 500px;
 `;
 
-const Filter = styled.button`
-    background-color: transparent;
-    border-radius: 20px;
-    padding: 10px;
-    
+const FilterTabs = styled.ul`
+    position: relative;
+    margin-bottom: 40px;
+`;
+
+const Filter = styled.li`
+    position: relative;
+    color: #242424;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    label::after {
+        position: absolute;
+        content: '';
+        left: 23px;
+        top: 33px;
+        width: 10px;
+        height: 1px;
+        background: #303030;
+    }
     > input {
         width: 0;
         height: 0;
 
         &:checked {
-            color: blue;
+            color: #F7BD00 !important;
             border-color: blue;
         }
     }
@@ -33,18 +51,14 @@ const Filter = styled.button`
         margin: 15px 15px 15px 0;
         padding: 6px 20px;
         display: inline-block;
-        font-size: 12px;
-        line-height: 20px;
-        border-radius: 50px;
-        background-color: #ffecfb;
+        font-size: 16px;
+        font-weight: 500;
         margin-bottom: 5px;
         transition: all 0.3s ease-in-out;
-        border-bottom: 2px solid transparent;
 
         &:hover {
-            background: #F7BD00;
-            color: #fff;
-            
+            color: #f7bd00;
+            cursor: pointer;
         }
     }
     
@@ -200,26 +214,36 @@ const ProjectSection = () => {
 
     return (
         <>
-            <div style={{
-                textAlign: 'center'
-            }}>
-                {filters.map(f => (
-                    <Filter key={`${f.label}_key`}>
-                        <input
-                            id={f.label}
-                            type="checkbox"
-                            value={f.label}
-                            onChange={onFilter}
-                            checked={f.isChecked}
-                        />
-                        <label htmlFor={f.label}>{f.label}</label>
-                    </Filter>
-                ))}
-            </div>
+
             <AutoContainer>
                 <ResponsiveMasonry
+                    className="masonry-wrapper"
                     columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+                    <div style={{
+                        textAlign: 'center',
+                        position: 'absolute',
+                        left: '0',
+                        top: '0',
+                        zIndex: '1'
+                    }} className="clearfix">
+                        <FilterTabs className="clearfix">
+                        {filters.map(f => (
+                            <Filter key={`${f.label}_key`}>
+                                <input
+                                    id={f.label}
+                                    type="checkbox"
+                                    value={f.label}
+                                    onChange={onFilter}
+                                    checked={f.isChecked}
+                                />
+                                <label htmlFor={f.label}>{f.label}</label>
+                            </Filter>
+                        ))}
+                        </FilterTabs>
+                    </div>
                     <Masonry className="masonry">
+
+
                         {selectedFilter === "Tout" ?
                             cardsDefault.map(card => (
                                 <Card key={card.id} className={`card`}>
