@@ -157,5 +157,12 @@ header {
 } */
 
 .card {
-  height: 100%;
+  text-align: center !important;
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.masonry {
+  margin: 1em;
+  gap: 20px;
 }

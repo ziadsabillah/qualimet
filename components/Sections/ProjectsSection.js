@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import styled from 'styled-components'
 import IsoTopeGrid from 'react-isotope'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 import { useMediaQuery } from 'react-responsive'
 
@@ -96,7 +97,6 @@ const ProjectInfo = styled.div`
 
     h4 {
         font-size: 22px;
-        line-height: 1px;
         font-weight: 700;
         margin-bottom: 0;
     }
@@ -122,45 +122,58 @@ const ProjectInfo = styled.div`
 const cardsDefault = [
     {
         id: "a",
-        filter: ["test", "chart"]
+        projectName: "Projet 1",
+        filter: "Commerciale"
     },
     {
         id: "b",
-        filter: ["test1", "tile"]
+        projectName: "Projet 2",
+
+        filter: "Commerciale"
     },
     {
         id: "c",
-        filter: ["test", "chart"]
+        projectName: "Projet 3",
+
+        filter: "Type 2"
     },
     {
         id: "d",
-        filter: ["test1", "tile"]
+        projectName: "Projet 4",
+
+        filter: "Type 3"
     },
     {
         id: "e",
-        filter: ["test", "tile"]
+        projectName: "Projet 5",
+
+        filter: "Type 2"
     },
     {
         id: "f",
-        filter: ["test1", "chart"]
+        projectName: "Projet 6",
+
+        filter: "Type 4"
     },
     {
         id: "h",
-        filter: ["test1", "chart"]
+        projectName: "Projet 7",
+        filter: "Commerciale"
     }
 ];
 
 const filtersDefault = [
-    { label: "all", isChecked: true },
-    { label: "test", isChecked: false },
-    { label: "test1", isChecked: false },
-    { label: "chart", isChecked: false },
-    { label: "tile", isChecked: false }
+    { label: "Tout", isChecked: true },
+    { label: "Commerciale", isChecked: false },
+    { label: "Type 2", isChecked: false },
+    { label: "Type 3", isChecked: false },
+    { label: "Type 4", isChecked: false }
 ];
 
 
 const ProjectSection = () => {
     const [filters, updateFilters] = useState(filtersDefault)
+    const [selectedFilter, setSelectedFilter] = useState(filtersDefault[0])
 
     const onFilter = event => {
         const {
@@ -175,9 +188,11 @@ const ProjectSection = () => {
                         isChecked: checked
                     }
                 }
-
+                setSelectedFilter(selectedFilter => selectedFilter = value);
                 return f;
-            }))
+            }));
+
+
     }
 
     return (
@@ -199,8 +214,60 @@ const ProjectSection = () => {
                 ))}
             </div>
 
-            <Container>
-                <IsoTopeGrid
+            <ResponsiveMasonry
+                columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+                <Masonry className="masonry">
+                    {selectedFilter === "Tout" ?
+                        cardsDefault.map(card => (
+                            <Card key={card.id} className={`card`}>
+                                <CardContent>
+                                    <img src="/img/team-4.jpg" />
+                                    <ProjectInfo className="project-info">
+                                        <h4><a href="#">{card.projectName}</a></h4>
+                                        
+                                    </ProjectInfo>
+                                </CardContent>
+                            </Card>
+                        ))
+
+                        :
+
+                        cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
+                            <Card key={card.id} className={`card ${card.filter[0]}`}>
+                                <CardContent>
+                                    <img src="/img/team-4.jpg" />
+                                    <ProjectInfo className="project-info">
+                                        <h4><a href="#">{card.projectName}</a></h4>
+                                    </ProjectInfo>
+                                </CardContent>
+                            </Card>
+                        ))
+
+                    }
+                </Masonry>
+            </ResponsiveMasonry>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {/* <Container>
+                 <IsoTopeGrid
                     className="grid"
                     gridLayout={cardsDefault}
                     noOfCols={4}
@@ -220,8 +287,8 @@ const ProjectSection = () => {
                         </Card>
                     ))}
 
-                </IsoTopeGrid>
-            </Container>
+                </IsoTopeGrid> 
+            </Container> */}
 
         </>
     )
