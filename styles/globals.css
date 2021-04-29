@@ -165,4 +165,5 @@ header {
 .masonry {
   margin: 1em;
   gap: 20px;
+  width: unset !important;
 }
