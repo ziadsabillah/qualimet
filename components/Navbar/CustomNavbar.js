@@ -3,7 +3,6 @@ import Logo from './Logo'
 import NavLinks from './NavLinks';
 import { DeviceSize } from './responsive'
 import MobileNavLinks from './MobileNavLinks'
-import Accessibility from './Accessibility'
 
 import { useMediaQuery } from 'react-responsive'
 

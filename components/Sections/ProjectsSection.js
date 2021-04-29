@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import styled from 'styled-components'
-import IsoTopeGrid from 'react-isotope'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 import AutoContainer from '../AutoContainer'
@@ -81,11 +80,11 @@ const CardContent = styled.div`
     overflow: hidden;
     position: relative;
     border-radius: 6px;
-    margin: 0;
+    margin: 5px;
 
     img {
         width: 100%;
-        max-height: 100%;
+        min-height: 100%;
         height: auto;
     }
 
@@ -247,7 +246,9 @@ const ProjectSection = () => {
                                             onChange={onFilter}
                                             checked={f.isChecked}
                                         />
-                                        <label htmlFor={f.label}>{f.label}</label>
+                                        <label htmlFor={f.label} className={`
+                                            ${selectedFilter === f.label ? 'active' : ''}
+                                        `}>{f.label}</label>
                                     </Filter>
                                 ))}
                             </FilterTabs>

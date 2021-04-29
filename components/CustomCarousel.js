@@ -1,6 +1,5 @@
 import Carousel from 'react-multi-carousel'
-import { DeviceSize } from '../components/Navbar/responsive'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 
 
