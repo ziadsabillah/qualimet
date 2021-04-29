@@ -198,6 +198,9 @@ header {
   }
 }
 
+.active {
+  color: #F7C00C !important;
+}
 
 
 .card {
@@ -210,7 +213,6 @@ header {
 
 .masonry {
   margin: 1em;
-  gap: 20px;
   width: unset !important;
 }
 .masonry-wrapper {

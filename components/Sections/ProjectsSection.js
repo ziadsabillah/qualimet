@@ -71,12 +71,16 @@ const Filter = styled.li`
     
 `;
 
+const Card = styled.div`
+
+    
+`;
 
 const CardContent = styled.div`
     overflow: hidden;
     position: relative;
     border-radius: 6px;
-    margin: 0;
+    margin: 5px;
 
     img {
         width: 100%;
@@ -242,7 +246,9 @@ const ProjectSection = () => {
                                             onChange={onFilter}
                                             checked={f.isChecked}
                                         />
-                                        <label htmlFor={f.label}>{f.label}</label>
+                                        <label htmlFor={f.label} className={`
+                                            ${selectedFilter === f.label ? 'active' : ''}
+                                        `}>{f.label}</label>
                                     </Filter>
                                 ))}
                             </FilterTabs>
