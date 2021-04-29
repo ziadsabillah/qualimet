@@ -48,9 +48,9 @@ const NavLinks = () => (
     <NavLinkContainer>
         <LinksWrapper>
             <LinkItem className="active"><Link href="#">Home</Link></LinkItem>
-            <LinkItem><Link href="#">About</Link></LinkItem>
-            <LinkItem><Link href="#">Explore</Link></LinkItem>
-            <LinkItem><Link href="#">Impact</Link></LinkItem>
+            <LinkItem><Link href="#">Projets</Link></LinkItem>
+            <LinkItem><Link href="#">Clients</Link></LinkItem>
+            <LinkItem><Link href="#">Contact</Link></LinkItem>
         </LinksWrapper>
     </NavLinkContainer>
 )
