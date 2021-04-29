@@ -1,5 +1,6 @@
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
+import CallToActionSection from '../components/Sections/CallToActionSection'
 import ProjectSection from '../components/Sections/ProjectsSection'
 import VideoSection from '../components/Sections/VideoSection'
 
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <VideoSection />
       <ProjectSection />
+      <CallToActionSection />
     </Layout>
   )
 }
