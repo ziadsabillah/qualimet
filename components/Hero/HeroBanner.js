@@ -83,7 +83,7 @@ const HeroBanner = () => {
             <AutoContainer>
                 <InnerContainer>
                     <LeftSection>
-                        <h2>En savoir plus sur 'Societé' ?</h2> 
+                        <h2>En savoir plus sur Borvel ?</h2> 
                         <h4>Telecharger notre plaquette</h4>
                     </LeftSection>
                     <RightSection>

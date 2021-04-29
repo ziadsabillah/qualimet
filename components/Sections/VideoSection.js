@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import AutoContainer from '../AutoContainer';
 import CustomCarousel from '../CustomCarousel';
 import ReactPlayer from 'react-player'
+import { SectionHeader } from '../SectionHeader';
 
 
 const InnerContainer = styled.div`
@@ -109,7 +110,7 @@ const VideoSection = () => {
                     <InnerContainer>
                         <Row>
                             <LeftColumn>
-                                <h2>Pourquoi 'Nom du Societe'?</h2>
+                                <h2>Pourquoi Borvel?</h2>
                                 <Paragraph>
                                 Avec plus de 8 500 collaborateurs au Maroc et en Afrique subsaharienne et disposant du plus grand parc d’engins de construction au Maroc, TGCC s’impose aujourd’hui en tant que leader national et, compte à son actif plus de 1 000 projets et d’ouvrages d’envergures réalisés.                            </Paragraph>
                                 <List>
@@ -126,6 +127,9 @@ const VideoSection = () => {
                             </RightColumn>
                         </Row>
                     </InnerContainer>
+                    <SectionHeader>
+                        <h2>Nos Services</h2>
+                    </SectionHeader>
                     <CustomCarousel />
                 </AutoContainer>
             </div>
