@@ -49,6 +49,17 @@ export const TextArea = styled.textarea`
     font-family: "Poppins", sans-serif;
 `;
 
+// List Styles ul
+
+export const ListStyleOne = styled.ul`
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+`;
+
 // Submit Button 
 export const SubmitButton = styled.button`
     margin-top: 10px;
@@ -70,4 +81,31 @@ export const SubmitButton = styled.button`
         border-color: 2px solid #fff;
         cursor: pointer;
     }
+`;
+
+
+// Layout 
+export const Row = styled.div`
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+`;
+
+
+export const Column3 = styled.div`
+
+    @media (min-width: 992px) {
+            flex: 33.333337%;
+        }
+
+    flex: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+
 `;
