@@ -174,3 +174,23 @@ header {
   position: relative;
   padding-left: 200px;
 }
+@media only screen and (max-width: 1023px) {
+  .masonry-wrapper {
+    padding-left: 0;
+  }
+
+  .masonry-wrapper .filter-tabs {
+    position: relative !important;
+  }
+
+  .filter {
+    position: relative;
+    padding-left: 0px;
+    margin-right: 0px;
+    display: inline-block;
+  }
+
+  .masonry-wrapper ul  input::after {
+    content: none;
+  }
+}

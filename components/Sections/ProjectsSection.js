@@ -36,7 +36,16 @@ const Filter = styled.li`
         width: 10px;
         height: 1px;
         background: #303030;
+
+        @media screen and (max-width: 1023px) {
+        display: none;
+        content: none;
+        width: 0;
+        height: 0;
     }
+    }
+
+    
     > input {
         width: 0;
         height: 0;
@@ -225,10 +234,10 @@ const ProjectSection = () => {
                         left: '0',
                         top: '0',
                         zIndex: '1'
-                    }} className="clearfix">
-                        <FilterTabs className="clearfix">
+                    }} className="filter-tabs clearfix">
+                        <FilterTabs className="filter-tabs clearfix">
                         {filters.map(f => (
-                            <Filter key={`${f.label}_key`}>
+                            <Filter key={`${f.label}_key`} className="filter">
                                 <input
                                     id={f.label}
                                     type="checkbox"
