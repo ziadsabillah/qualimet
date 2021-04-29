@@ -2,7 +2,9 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import CallToActionSection from '../components/Sections/CallToActionSection'
 import ProjectSection from '../components/Sections/ProjectsSection'
+import Testimonials from '../components/Sections/Testimonials'
 import VideoSection from '../components/Sections/VideoSection'
+import Contact from '../components/Sections/Contact'
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <VideoSection />
       <ProjectSection />
       <CallToActionSection />
+      <Testimonials />
+      <Contact />
     </Layout>
   )
 }
