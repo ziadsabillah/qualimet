@@ -23,5 +23,12 @@ export const SectionHeader = styled.div`
         height: 2px;
         bottom: 8px;
         background-color: #f7bd00;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+            content: none;
+            width: 0;
+            height: 0;
+        }
     }
 `;

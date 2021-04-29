@@ -141,7 +141,7 @@ header {
 
 
 .react-player {
-  width: 400px;
+  width: 520px  !important;
   height: 400px;
   position: absolute;
   top: 0;
@@ -150,7 +150,13 @@ header {
   
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1000px) {
+  .react-player {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .react-player {
     top: -24px !important;
     left: 43px;
