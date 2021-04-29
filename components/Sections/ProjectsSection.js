@@ -72,7 +72,7 @@ const CardContent = styled.div`
     }
 
     &:hover {
-        background: red;
+        background: #F7BD00;
         .project-info {
         opacity: 1 ;
     }
@@ -106,7 +106,7 @@ const ProjectInfo = styled.div`
     }
 
     h4 a:hover {
-        color: #007bff;
+        color: #000;
     }
     p {
         padding: 0;
@@ -123,41 +123,43 @@ const cardsDefault = [
     {
         id: "a",
         projectName: "Projet 1",
+        imgPath: "/img/project-1.jfif",
         filter: "Commerciale"
     },
     {
         id: "b",
         projectName: "Projet 2",
-
+        imgPath: "/img/project-2.jfif",
         filter: "Commerciale"
     },
     {
         id: "c",
         projectName: "Projet 3",
-
+        imgPath: "/img/project-3.jfif",
         filter: "Type 2"
     },
     {
         id: "d",
         projectName: "Projet 4",
-
+        imgPath: "/img/project-4.jfif",
         filter: "Type 3"
     },
     {
         id: "e",
         projectName: "Projet 5",
-
+        imgPath: "/img/project-5.jfif",
         filter: "Type 2"
     },
     {
         id: "f",
         projectName: "Projet 6",
-
+        imgPath: "/img/project-6.jfif",
         filter: "Type 4"
     },
     {
         id: "h",
         projectName: "Projet 7",
+        imgPath: "/img/project-7.jfif",
         filter: "Commerciale"
     }
 ];
@@ -221,7 +223,7 @@ const ProjectSection = () => {
                         cardsDefault.map(card => (
                             <Card key={card.id} className={`card`}>
                                 <CardContent>
-                                    <img src="/img/team-4.jpg" />
+                                    <img src={card.imgPath} />
                                     <ProjectInfo className="project-info">
                                         <h4><a href="#">{card.projectName}</a></h4>
                                         
@@ -233,9 +235,9 @@ const ProjectSection = () => {
                         :
 
                         cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
-                            <Card key={card.id} className={`card ${card.filter[0]}`}>
+                            <Card key={card.id} className={`card`}>
                                 <CardContent>
-                                    <img src="/img/team-4.jpg" />
+                                    <img src={card.imgPath} />
                                     <ProjectInfo className="project-info">
                                         <h4><a href="#">{card.projectName}</a></h4>
                                     </ProjectInfo>
