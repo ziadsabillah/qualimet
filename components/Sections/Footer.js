@@ -26,6 +26,10 @@ const UpperBox = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(0, 0, 0, 0.3);
     height: 100px;
+
+    @media only screen and (max-width: 767px) {
+        height: 230px;
+    }
 `;
 
 const ListItem = styled.li`
@@ -38,6 +42,15 @@ const ListItem = styled.li`
     font-weight: 400;
     padding-right: 20px;
 
+    @media only screen and (max-width: 767px) {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+
     &::after {
         position: absolute;
         content: '';
@@ -46,6 +59,10 @@ const ListItem = styled.li`
         width: 1px;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.1);
+        @media only screen and (max-width: 767px) {
+            display: none;
+            content: none;
+        }
     }
 
     // If its the last child remove the after element

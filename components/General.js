@@ -53,11 +53,11 @@ export const TextArea = styled.textarea`
 
 export const ListStyleOne = styled.ul`
     position: relative;
-    display: flex;
     align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
+    
 `;
 
 // Submit Button 
