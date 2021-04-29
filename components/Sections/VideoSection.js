@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import AutoContainer from '../AutoContainer';
 import CustomCarousel from '../CustomCarousel';
-import ReactPlayer from 'react-player/youtube'
+import ReactPlayer from 'react-player'
 
 
 const InnerContainer = styled.div`
@@ -87,11 +87,11 @@ const List = styled.ul`
 const RightColumn = styled.div`
     position: relative;
     margin-top: 40px;
-    padding-top: 56.25%;
 
     flex: 40%;
     @media screen and (max-width: 800px) {
         flex: 100%;
+        padding-top: 56.25%;
     }
 `;
 
@@ -122,13 +122,8 @@ const VideoSection = () => {
                                 </List>
                             </LeftColumn>
                             <RightColumn>
-                                <ReactPlayer style={{ 
-                                    maxWidth: '500px',
-                                    position: 'absolute',
-                                    top: '-64px',
-                                    left: '0',
-                                    height: '400px',
-                                    margin: 'auto'
+                                <ReactPlayer className="react-player" style={{ 
+                                    
                                  }} url="https://youtu.be/kxPCFljwJws" />
                             </RightColumn>
                         </Row>
