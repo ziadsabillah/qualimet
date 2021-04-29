@@ -4,14 +4,13 @@ import styled from 'styled-components'
 import IsoTopeGrid from 'react-isotope'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-import { useMediaQuery } from 'react-responsive'
 import AutoContainer from '../AutoContainer'
+import { SectionHeader } from '../SectionHeader'
 
 
-const Container = styled.div`
+const ProjectWrapper = styled.section`
     position: relative;
-    margin-top: 20px;
-    min-height: 500px;
+    padding: 95px 0px 70px;
 `;
 
 const FilterTabs = styled.ul`
@@ -223,67 +222,70 @@ const ProjectSection = () => {
 
     return (
         <>
+            <ProjectWrapper>
+                <AutoContainer>
+                    <SectionHeader>
+                        <h2>Nos Réalisations</h2>
+                    </SectionHeader>
+                    <ResponsiveMasonry
+                        className="masonry-wrapper"
+                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+                        <div style={{
+                            textAlign: 'center',
+                            position: 'absolute',
+                            left: '0',
+                            top: '0',
+                            zIndex: '1'
+                        }} className="filter-tabs clearfix">
+                            <FilterTabs className="filter-tabs clearfix">
+                                {filters.map(f => (
+                                    <Filter key={`${f.label}_key`} className="filter">
+                                        <input
+                                            id={f.label}
+                                            type="checkbox"
+                                            value={f.label}
+                                            onChange={onFilter}
+                                            checked={f.isChecked}
+                                        />
+                                        <label htmlFor={f.label}>{f.label}</label>
+                                    </Filter>
+                                ))}
+                            </FilterTabs>
+                        </div>
+                        <Masonry className="masonry">
 
-            <AutoContainer>
-                <ResponsiveMasonry
-                    className="masonry-wrapper"
-                    columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-                    <div style={{
-                        textAlign: 'center',
-                        position: 'absolute',
-                        left: '0',
-                        top: '0',
-                        zIndex: '1'
-                    }} className="filter-tabs clearfix">
-                        <FilterTabs className="filter-tabs clearfix">
-                        {filters.map(f => (
-                            <Filter key={`${f.label}_key`} className="filter">
-                                <input
-                                    id={f.label}
-                                    type="checkbox"
-                                    value={f.label}
-                                    onChange={onFilter}
-                                    checked={f.isChecked}
-                                />
-                                <label htmlFor={f.label}>{f.label}</label>
-                            </Filter>
-                        ))}
-                        </FilterTabs>
-                    </div>
-                    <Masonry className="masonry">
 
+                            {selectedFilter === "Tout" ?
+                                cardsDefault.map(card => (
+                                    <Card key={card.id} className={`card`}>
+                                        <CardContent>
+                                            <img src={card.imgPath} />
+                                            <ProjectInfo className="project-info">
+                                                <h4><a href="#">{card.projectName}</a></h4>
 
-                        {selectedFilter === "Tout" ?
-                            cardsDefault.map(card => (
-                                <Card key={card.id} className={`card`}>
-                                    <CardContent>
-                                        <img src={card.imgPath} />
-                                        <ProjectInfo className="project-info">
-                                            <h4><a href="#">{card.projectName}</a></h4>
+                                            </ProjectInfo>
+                                        </CardContent>
+                                    </Card>
+                                ))
 
-                                        </ProjectInfo>
-                                    </CardContent>
-                                </Card>
-                            ))
+                                :
 
-                            :
+                                cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
+                                    <Card key={card.id} className={`card`}>
+                                        <CardContent>
+                                            <img src={card.imgPath} />
+                                            <ProjectInfo className="project-info">
+                                                <h4><a href="#">{card.projectName}</a></h4>
+                                            </ProjectInfo>
+                                        </CardContent>
+                                    </Card>
+                                ))
 
-                            cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
-                                <Card key={card.id} className={`card`}>
-                                    <CardContent>
-                                        <img src={card.imgPath} />
-                                        <ProjectInfo className="project-info">
-                                            <h4><a href="#">{card.projectName}</a></h4>
-                                        </ProjectInfo>
-                                    </CardContent>
-                                </Card>
-                            ))
-
-                        }
-                    </Masonry>
-                </ResponsiveMasonry>
-            </AutoContainer>
-
+                            }
+                        </Masonry>
+                    </ResponsiveMasonry>
+                </AutoContainer>
+            </ProjectWrapper>
 
 
 
