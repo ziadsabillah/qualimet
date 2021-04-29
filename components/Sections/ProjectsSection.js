@@ -5,6 +5,7 @@ import IsoTopeGrid from 'react-isotope'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 import { useMediaQuery } from 'react-responsive'
+import AutoContainer from '../AutoContainer'
 
 
 const Container = styled.div`
@@ -72,7 +73,7 @@ const CardContent = styled.div`
     }
 
     &:hover {
-        background: #F7BD00;
+        background: #000;
         .project-info {
         opacity: 1 ;
     }
@@ -215,39 +216,41 @@ const ProjectSection = () => {
                     </Filter>
                 ))}
             </div>
+            <AutoContainer>
+                <ResponsiveMasonry
+                    columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+                    <Masonry className="masonry">
+                        {selectedFilter === "Tout" ?
+                            cardsDefault.map(card => (
+                                <Card key={card.id} className={`card`}>
+                                    <CardContent>
+                                        <img src={card.imgPath} />
+                                        <ProjectInfo className="project-info">
+                                            <h4><a href="#">{card.projectName}</a></h4>
 
-            <ResponsiveMasonry
-                columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-                <Masonry className="masonry">
-                    {selectedFilter === "Tout" ?
-                        cardsDefault.map(card => (
-                            <Card key={card.id} className={`card`}>
-                                <CardContent>
-                                    <img src={card.imgPath} />
-                                    <ProjectInfo className="project-info">
-                                        <h4><a href="#">{card.projectName}</a></h4>
-                                        
-                                    </ProjectInfo>
-                                </CardContent>
-                            </Card>
-                        ))
+                                        </ProjectInfo>
+                                    </CardContent>
+                                </Card>
+                            ))
 
-                        :
+                            :
 
-                        cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
-                            <Card key={card.id} className={`card`}>
-                                <CardContent>
-                                    <img src={card.imgPath} />
-                                    <ProjectInfo className="project-info">
-                                        <h4><a href="#">{card.projectName}</a></h4>
-                                    </ProjectInfo>
-                                </CardContent>
-                            </Card>
-                        ))
+                            cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
+                                <Card key={card.id} className={`card`}>
+                                    <CardContent>
+                                        <img src={card.imgPath} />
+                                        <ProjectInfo className="project-info">
+                                            <h4><a href="#">{card.projectName}</a></h4>
+                                        </ProjectInfo>
+                                    </CardContent>
+                                </Card>
+                            ))
 
-                    }
-                </Masonry>
-            </ResponsiveMasonry>
+                        }
+                    </Masonry>
+                </ResponsiveMasonry>
+            </AutoContainer>
+
 
 
 
