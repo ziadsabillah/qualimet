@@ -126,6 +126,15 @@ header {
   -webkit-touch-callout: none;
 }
 
+.testimonial-carousel-item {
+  width: 540px;
+  margin-right: 90px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  
+}
+
 .slider a.nextButton svg polygon, .slider a.previousButton svg polygon {
   fill: #fff !important;
 }
