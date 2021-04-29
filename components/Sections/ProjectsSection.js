@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import styled from 'styled-components'
-import IsoTopeGrid from 'react-isotope'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 import AutoContainer from '../AutoContainer'
