@@ -5,7 +5,6 @@ import ProjectSection from '../components/Sections/ProjectsSection'
 import Testimonials from '../components/Sections/Testimonials'
 import VideoSection from '../components/Sections/VideoSection'
 import Contact from '../components/Sections/Contact'
-import Footer from '../components/Sections/Footer'
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
       <CallToActionSection />
       <Testimonials />
       <Contact />
-      <Footer />
     </Layout>
   )
 }

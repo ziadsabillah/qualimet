@@ -155,7 +155,7 @@ const Contact = () => {
                                     />
                                 </FormGroup>
                                 <SubmitButton>
-                                    Submit
+                                    Envoyer
                                 </SubmitButton>
                             </Form>
                         </LeftColumn>

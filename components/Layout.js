@@ -1,6 +1,6 @@
 
 import Head from 'next/head';
-import Footer from './Navbar/Footer';
+import Footer from './Sections/Footer';
 import Navbar from './Navbar/CustomNavbar';
 
 const Layout = (props) => {
