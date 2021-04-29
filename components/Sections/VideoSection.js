@@ -13,8 +13,6 @@ const InnerContainer = styled.div`
 
 
 const Row = styled.div`
-    margin-right: -15px;
-    margin-left: -15px;
 
     display: flex;
     flex-wrap: wrap;
