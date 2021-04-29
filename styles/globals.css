@@ -53,6 +53,7 @@ header {
 
 .clearfix::before {
   display: table;
+  content: ' ';
 
 }
 
@@ -129,3 +130,67 @@ header {
   fill: #fff !important;
 }
 
+
+.react-player {
+  max-width: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .react-player {
+    top: -24px !important;
+    width: 100%;
+  }
+}
+
+
+/* .card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: white;
+} */
+
+.card {
+  text-align: center !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+
+}
+
+.masonry {
+  margin: 1em;
+  gap: 20px;
+  width: unset !important;
+}
+.masonry-wrapper {
+  position: relative;
+  padding-left: 200px;
+}
+@media only screen and (max-width: 1023px) {
+  .masonry-wrapper {
+    padding-left: 0;
+  }
+
+  .masonry-wrapper .filter-tabs {
+    position: relative !important;
+  }
+
+  .filter {
+    position: relative;
+    padding-left: 0px;
+    margin-right: 0px;
+    display: inline-block;
+  }
+
+  .masonry-wrapper ul  input::after {
+    content: none;
+  }
+}

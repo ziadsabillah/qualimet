@@ -28,6 +28,7 @@ const LeftColumn = styled.div`
 
     @media screen and (max-width: 800px) {
         flex: 100%;
+        text-align: center;
     }
 
     h2 {
@@ -48,6 +49,9 @@ const Paragraph = styled.div`
     line-height: 1.7em;
     margin-bottom: 18px;
     font-family: 'Open Sans', sans-serif;
+    /* @media screen and (max-width: 800px) {
+        text-align: center;
+    } */
 `;
 
 const List = styled.ul`
@@ -87,6 +91,7 @@ const RightColumn = styled.div`
     flex: 40%;
     @media screen and (max-width: 800px) {
         flex: 100%;
+        padding-top: 56.25%;
     }
 `;
 
@@ -117,10 +122,8 @@ const VideoSection = () => {
                                 </List>
                             </LeftColumn>
                             <RightColumn>
-                                <ReactPlayer style={{ 
-                                    maxWidth: '500px',
-                                    height: '400px',
-                                    margin: 'auto'
+                                <ReactPlayer className="react-player" style={{ 
+                                    
                                  }} url="https://youtu.be/kxPCFljwJws" />
                             </RightColumn>
                         </Row>
