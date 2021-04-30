@@ -20,7 +20,7 @@ const LogoImg = styled.div`
 const Logo = () => (
     <>
         <LogoWrapper>
-            <LogoImg><Image src='/img/logosmall.png' alt="MaTechSo Template Logo" width={150} height={50}/></LogoImg>
+            <LogoImg><a href="/"><Image src='/img/logosmall.png' alt="MaTechSo Template Logo" width={150} height={50}/></a></LogoImg>
         </LogoWrapper>
     </>
 )

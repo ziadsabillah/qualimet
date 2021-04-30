@@ -12,35 +12,51 @@ const LinksWrapper = styled.ul`
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100%;
+    max-height: 100%;
     list-style: none;
 
     background-color: #fff;
     width: 100%;
     flex-direction: column;
+    align-items: center;
+    
     position: fixed;
-    top: 65px;
+    top: 60px;
     left: 0;
+
+    z-index: 999;
+    @media only screen and (max-width: 1140px) {
+        background: #000000;
+        float: none;
+        margin: 0 !important;
+        background: #2c2c2c;
+        border: 1px solid #ffffff;
+        border-top: none;
+    }
 `;
 
 const LinkItem = styled.li`
     width: 100%;
-    padding: 0 1.1em;
+    padding: 1.1em;
     color: #222;
     font-weight: 500;
     font-size: 14px;
     display: flex;
-    margin-bottom: 10px;
+    @media only screen and (max-width: 1140px) {
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 1) !important;
+        border-bottom: none;
+        opacity: 1;
+        top: 0px;
+        left: 0px;
+        visibility: visible;
+    }
 `;
 
 const Link = styled.a`
     text-decoration: none;
     color: inherit;
     font-size: inherit;
-`;
-
-const Marginer = styled.div`
-    height: 2em;
 `;
 
 const MobileNavLinks = () => {
@@ -56,7 +72,6 @@ const MobileNavLinks = () => {
                 <LinkItem><Link href="#">About</Link></LinkItem>
                 <LinkItem><Link href="#">Explore</Link></LinkItem>
                 <LinkItem><Link href="#">Impact</Link></LinkItem>
-                <Marginer />
             </LinksWrapper>
             }
         </NavLinkContainer>
