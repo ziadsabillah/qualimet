@@ -1,6 +1,6 @@
 import Carousel from 'react-multi-carousel'
 import styled from 'styled-components'
-
+import services from '../data/services'
 
 
 
@@ -107,6 +107,7 @@ const Icon = styled.span`
         height: 70px;
         width: auto !important;
         -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
         vertical-align: middle;
     }
 `;
@@ -222,34 +223,6 @@ const ReadMoreBtn = styled.a`
     }
 `;
 
-
-const services = [
-    {
-        title: 'TRAVAUX D’AMÉNAGEMENT',
-        description: 'Nous mettons notre expérience à la disposition de nos clients pour la conception et l’aménagement de leurs espaces (bureaux, magasins, appartements, maisons, locaux industriels …).',
-        iconPath: 'icons/icon-2.svg'
-    },
-    {
-        title: 'CONSTRUCTION CLÉ EN MAIN',
-        description: 'Nous proposons la formule clé en main en tant qu’entreprise générale ou contractant général, permettant ainsi à nos clients de signer un seul contrat sans partager la responsabilité entre différents intervenants.',
-        iconPath: 'icons/icon-3.svg'
-    },
-    {
-        title: "MAÎTRISE D'OUVRAGE DÉLÉGUÉE (MOD)",
-        description: 'Cette mission consiste à être le représentant unique du Maître de d’Ouvrage vis-à-vis de l’ensemble des intervenants dans le cadre de la réalisation d’un projet de construction.',
-        iconPath: 'icons/icon-1.svg'
-    },
-    {
-        title: "ASSISTANCE AU MAÎTRE D'OUVRAGE (AMO)",
-        description: 'Nous assistons le Maître de d’Ouvrage dans toutes ses tâches, décisions et actions suivant un planning permettant de respecter les objectifs de délai du projet.',
-        iconPath: 'icons/icon-4.svg'
-    },
-    {
-        title: 'ORDONNANCEMENT, PILOTAGE ET COORDINATION (OPC)',
-        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
-        iconPath: 'icons/icon-4.svg'
-    }
-];
 
 
 

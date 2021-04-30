@@ -192,6 +192,10 @@ header {
   
 }
 
+.react-player video {
+  width: 100%;
+}
+
 @media screen and (max-width: 1000px) {
   .react-player {
     width: 400px !important;
