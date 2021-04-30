@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import cardsDefault from '../../data/cardsDefault'
 import Layout from '../../components/Layout'
 import DetailsPageHeader from '../../components/DetailsPageHeader'
-import {SectionHeader} from '../../components/SectionHeader'
 import DetailsContent from '../../components/DetailsContent'
 
 
