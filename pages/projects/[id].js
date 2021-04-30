@@ -17,7 +17,7 @@ const ProjectDetails = () => {
         <>
  
         <Layout>
-            <DetailsPageHeader section={card.projectName ? card.projectName : ''} />
+            <DetailsPageHeader section={card ? card.projectName : ''} />
         </Layout>
 
         </>
