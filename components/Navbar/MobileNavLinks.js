@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { useState } from 'react'
 import { MenuToggle } from "./MenuToggle";
+import { useRouter } from 'next/router'
 
 const NavLinkContainer = styled.div`
     height: 100%;
@@ -59,6 +60,19 @@ const Link = styled.a`
     font-size: inherit;
 `;
 
+const DetectActive = ({href, pageName}) => {
+    const router = useRouter();
+    let className = '';
+
+    if(router.pathname === href) {
+        className = `active`
+    }
+
+    return  <LinkItem className={className}><Link href={href}>{pageName}</Link></LinkItem>
+
+}
+
+
 const MobileNavLinks = () => {
 
     const [isOpen, setOpen] = useState(false)
@@ -68,10 +82,18 @@ const MobileNavLinks = () => {
             <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
             {isOpen &&
             <LinksWrapper>
-                <LinkItem><Link href="#">Home</Link></LinkItem>
-                <LinkItem><Link href="#">About</Link></LinkItem>
-                <LinkItem><Link href="#">Explore</Link></LinkItem>
-                <LinkItem><Link href="#">Impact</Link></LinkItem>
+                <DetectActive href="/" pageName="Accueil" />
+                
+                <DetectActive href="/about" pageName="A propos" />
+
+                <DetectActive href="/projects" pageName="Projets" />
+
+                <DetectActive href="/services" pageName="Services" />
+
+                <DetectActive href="/clients" pageName="Clients" />
+
+                <DetectActive href="/contact" pageName="Contact" />
+
             </LinksWrapper>
             }
         </NavLinkContainer>
