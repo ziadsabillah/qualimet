@@ -222,7 +222,7 @@ const ProjectSection = () => {
                                         <CardContent>
                                             <img src={card.imgPath} />
                                             <ProjectInfo className="project-info">
-                                                <h4><Link href={`/projects/${card.id}`}>{card.projectName}</Link></h4>
+                                                <h4><a href={`/projects/${card.id}`}>{card.projectName}</a></h4>
 
                                             </ProjectInfo>
                                         </CardContent>
@@ -236,7 +236,7 @@ const ProjectSection = () => {
                                         <CardContent>
                                             <img src={card.imgPath} />
                                             <ProjectInfo className="project-info">
-                                                <h4><a href="#">{card.projectName}</a></h4>
+                                                <h4><a href={`/projects/${card.id}`}>{card.projectName}</a></h4>
                                             </ProjectInfo>
                                         </CardContent>
                                     </Card>
