@@ -6,10 +6,6 @@ import DetailsContent from '../../components/DetailsContent'
 
 
 const ProjectDetails = () => {
-
-
-    
-
     const router = useRouter()
     const { id } = router.query
     const card = cardsDefault ? cardsDefault.find(card => card.id === id) : {

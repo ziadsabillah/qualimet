@@ -6,8 +6,6 @@ import  cardsDefault from '../../data/cardsDefault.js';
 import AutoContainer from '../AutoContainer'
 import { SectionHeader } from '../SectionHeader'
 
-import Link from 'next/link'
-
 
 const ProjectWrapper = styled.section`
     position: relative;
