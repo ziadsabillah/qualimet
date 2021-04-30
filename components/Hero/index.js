@@ -50,7 +50,7 @@ export default function Hero() {
 
     return (
         <>
-            <Slider autoplay={1000} infinite={true}>
+            <Slider autoplay={2000}>
                 {
                     slides.map((slide, index) =>
                         <div key={index}
