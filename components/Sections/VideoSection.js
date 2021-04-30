@@ -121,9 +121,6 @@ const VideoSection = () => {
                                 </List>
                             </LeftColumn>
                             <RightColumn>
-                                {/* <ReactPlayer className="react-player" style={{ 
-                                    
-                                 }} url="https://youtu.be/kxPCFljwJws" /> */}
                                  <div className="react-player">
                                      <video src={require('../../public/video/video.mp4')} controls autoPlay loop />
                                  </div>
