@@ -25,6 +25,8 @@ const ImageBox = styled.div`
     img {
         position: relative;
         width: 100%;
+        max-height: 500px;
+        object-fit: contain;
         display: block;
     }
 `;
@@ -40,9 +42,7 @@ const DetailsContent = ({imgPath, projectDescription, projectName}) => {
                     </SectionHeader>
                     <Row className="clearfix">
                         <Column2>
-                            <ProjectDescriptionHeader>
-                                Description du Project
-                            </ProjectDescriptionHeader>
+                            
                             <Text>
                                 {projectDescription}
                             </Text>
