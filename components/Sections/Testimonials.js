@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Carousel from 'react-multi-carousel';
 import AutoContainer from '../AutoContainer';
 import { SectionHeader } from '../SectionHeader';
+import { Text } from '../General';
 
 
 const responsive = {
@@ -58,13 +59,6 @@ const ImageBox = styled.div`
 
 `;
 
-const Text = styled.div`
-    position: relative;
-    color: #797979;
-    font-size: 16px;
-    line-height: 1.9em;
-    margin-bottom: 20px;
-`;
 
 const AuthorName = styled.div`
     position: relative;

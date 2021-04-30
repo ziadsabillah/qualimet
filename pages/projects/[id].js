@@ -2,6 +2,8 @@ import { useRouter } from 'next/router'
 import cardsDefault from '../../data/cardsDefault'
 import Layout from '../../components/Layout'
 import DetailsPageHeader from '../../components/DetailsPageHeader'
+import {SectionHeader} from '../../components/SectionHeader'
+import DetailsContent from '../../components/DetailsContent'
 
 
 const ProjectDetails = () => {
@@ -17,7 +19,8 @@ const ProjectDetails = () => {
         <>
  
         <Layout>
-            <DetailsPageHeader section={card ? card.projectName : ''} />
+            <DetailsPageHeader section={'Details du Projet'} />
+            <DetailsContent imgPath={card.imgPath} projectDescription={card.description} projectName={card.projectName} />
         </Layout>
 
         </>
