@@ -25,7 +25,7 @@ const ProjectDetails = () => {
  
         <Layout>
             <DetailsPageHeader section={'Details du Projet'} />
-            <DetailsContent imgPath={card ? card.imgPath : ''} projectDescription={cardd ? card.description : ''} projectName={card ? card.projectName : ''} />
+            <DetailsContent imgPath={card ? card.imgPath : ''} projectDescription={card ? card.description : ''} projectName={card ? card.projectName : ''} />
         </Layout>
 
         </>
