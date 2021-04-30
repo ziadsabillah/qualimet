@@ -109,3 +109,20 @@ export const Column3 = styled.div`
     float: left;
 
 `;
+
+export const Text = styled.div`
+    position: relative;
+    color: #797979;
+    font-size: 16px;
+    line-height: 1.9em;
+    margin-bottom: 20px;
+`;
+
+
+export const Column2 = styled.div`
+    @media (min-width: 992px) {
+        flex: 50%;
+    }
+    flex: 100%;
+    float: left;
+`;

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const LogoWrapper = styled.div`
@@ -20,7 +21,7 @@ const LogoImg = styled.div`
 const Logo = () => (
     <>
         <LogoWrapper>
-            <LogoImg><Image src='/img/logosmall.png' alt="MaTechSo Template Logo" width={150} height={50}/></LogoImg>
+            <LogoImg><Link href="/"><Image src='/img/logofooter.png' alt="MaTechSo Template Logo" width={150} height={50}/></Link></LogoImg>
         </LogoWrapper>
     </>
 )

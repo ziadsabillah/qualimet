@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 
 import styled from 'styled-components'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-
+import  cardsDefault from '../../data/cardsDefault.js';
 import AutoContainer from '../AutoContainer'
 import { SectionHeader } from '../SectionHeader'
+
+import Link from 'next/link'
 
 
 const ProjectWrapper = styled.section`
     position: relative;
     padding: 95px 0px 70px;
+    min-height: 550px;
 `;
 
 const FilterTabs = styled.ul`
@@ -141,50 +144,7 @@ const ProjectInfo = styled.div`
 `;
 
 
-const cardsDefault = [
-    {
-        id: "a",
-        projectName: "Projet 1",
-        imgPath: "/img/project-1.jfif",
-        filter: "Commerciale"
-    },
-    {
-        id: "b",
-        projectName: "Projet 2",
-        imgPath: "/img/project-2.jfif",
-        filter: "Commerciale"
-    },
-    {
-        id: "c",
-        projectName: "Projet 3",
-        imgPath: "/img/project-3.jfif",
-        filter: "Type2"
-    },
-    {
-        id: "d",
-        projectName: "Projet 4",
-        imgPath: "/img/project-4.jfif",
-        filter: "Type3"
-    },
-    {
-        id: "e",
-        projectName: "Projet 5",
-        imgPath: "/img/project-5.jfif",
-        filter: "Type2"
-    },
-    {
-        id: "f",
-        projectName: "Projet 6",
-        imgPath: "/img/project-6.jfif",
-        filter: "Type4"
-    },
-    {
-        id: "h",
-        projectName: "Projet 7",
-        imgPath: "/img/project-7.jfif",
-        filter: "Commerciale"
-    }
-];
+
 
 const filtersDefault = [
     { label: "Tout", isChecked: true },
@@ -262,7 +222,7 @@ const ProjectSection = () => {
                                         <CardContent>
                                             <img src={card.imgPath} />
                                             <ProjectInfo className="project-info">
-                                                <h4><a href="#">{card.projectName}</a></h4>
+                                                <h4><Link href={`/projects/${card.id}`}>{card.projectName}</Link></h4>
 
                                             </ProjectInfo>
                                         </CardContent>
