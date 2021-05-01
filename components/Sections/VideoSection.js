@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import AutoContainer from '../AutoContainer';
 import CustomCarousel from '../CustomCarousel';
-import ReactPlayer from 'react-player'
 import { SectionHeader } from '../SectionHeader';
+import { useRef, useEffect } from 'react'
 
 
 const InnerContainer = styled.div`
@@ -95,6 +95,13 @@ const RightColumn = styled.div`
 `;
 
 const VideoSection = () => {
+
+    let video = useRef(null)
+
+    useEffect(() => {
+        video.play()
+    }, [])
+
     return (
         <>
             <div style={{
@@ -122,7 +129,7 @@ const VideoSection = () => {
                             </LeftColumn>
                             <RightColumn>
                                  <div className="react-player">
-                                     <video src={require('../../public/video/video.mp4')} controls autoPlay loop />
+                                     <video ref={el => {video = el}} src={require('../../public/video/video.mp4')}   autoPlay={true} loop />
                                  </div>
                             </RightColumn>
                         </Row>

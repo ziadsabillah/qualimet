@@ -1,7 +1,5 @@
 
 import Slider from 'react-animated-slider';
-import { useEffect, useRef } from 'react'
-import { TweenLite, Power3 } from 'gsap';
 import HeroBanner from './HeroBanner';
 import styled from 'styled-components'
 
@@ -20,13 +18,7 @@ const Button = styled.a`
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     --webkit-transition: all 0.3s ease;
-
-    &:hover {
-        color: #ffff;
-        border-color: #fff;
-        background: none;
-        cursor: pointer;
-    }
+    cursor: pointer;
 `;
 
 
@@ -35,14 +27,19 @@ export default function Hero() {
     const slides = [
         {
             title: "IMAGINER ENSEMBLE LES VILLES DE DEMAIN ET LES CONSTRUIRE",
-  
+            titleColor: '#ffffff',
             button: 'NOS PROJETS',
-            imgPath: '/img/city2.jpg'
+            href: '/projects',
+            imgPath: '/img/city2.jpg',
+
         },
         {
-            title: 'Again',
-            description: 'this is a description',
-            imgPath: '/slider/image-5.jpeg'
+            title: 'GARE CGV',
+            city: 'Rabat',
+            titleColor: '#ffffff',
+            button: 'Lire Plus',
+            href: '/projects/i',
+            imgPath: '/slider/gare.jpg'
         }
     ]
 
@@ -56,27 +53,29 @@ export default function Hero() {
                         <div key={index}
                             className="slider-content"
                             style={{
-                            background: `url('${slide.imgPath}')`,
-                            backgroundPosition: 'center bottom',
-                            backgroundAttachment: 'fixed',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: "cover",
-                            textAlign: 'center',
-                            display: 'flex',
-                            alignItems: 'flex-end',
-                            paddingRight: '15vw',
-                            justifyContent: 'center',
-                            color: "#fff",
-                            flexFlow: 'column'
-                        }}>
+                                background: `url('${slide.imgPath}')`,
+            
+                                backgroundPosition: 'center center',
+                                backgroundAttachment: 'fixed',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: "cover",
+                                textAlign: 'center',
+                                display: 'flex',
+                                alignItems: 'flex-end',
+                                paddingRight: '15vw',
+                                justifyContent: 'center',
+                                color: `${slide.titleColor}`,
+                                flexFlow: 'column'
+                            }}>
                             <div className="inner" style={{ width: '40%' }}>
                                 <h1 style={{
                                     fontSize: '40px',
                                 }}>{slide.title}</h1>
-                                <p  style={{
+                                {slide.city && <h2>{slide.city}</h2>}
+                                <p style={{
                                     fontSize: '20px'
                                 }}>{slide.description}</p>
-                                {slide.button && <Button>{slide.button}</Button>}
+                                {slide.button && <Button href={slide.href}>{slide.button}</Button>}
                             </div>
                         </div>
                     )
