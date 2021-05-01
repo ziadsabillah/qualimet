@@ -64,7 +64,7 @@ const DetectActive = ({href, pageName}) => {
     const router = useRouter();
     let className = '';
 
-    if(router.pathname === href) {
+    if(router.pathname === href || (router.pathname.includes(href) && href !== '/')) {
         className = `active`
     }
 
