@@ -38,7 +38,7 @@ export default function Hero() {
             city: 'Rabat',
             titleColor: '#ffffff',
             button: 'Lire Plus',
-            href: '/projects',
+            href: '/projects/i',
             imgPath: '/slider/gare.jpg'
         }
     ]
