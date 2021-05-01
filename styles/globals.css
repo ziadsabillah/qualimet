@@ -204,7 +204,7 @@ header {
   top: 0;
   left: 0;
   height: 400px;
-  
+  padding: 3rem;
 }
 
 .react-player video {
@@ -216,7 +216,6 @@ header {
 @media screen and (max-width: 1200px) {
   .react-player {
     width: 80%!important;
-    margin: 3em;
   }
 }
 
@@ -226,7 +225,6 @@ header {
     left: 43px;
     width: 88% !important;
     height: 200px !important;
-    padding: 0;
     margin: 0;
   }
 }
