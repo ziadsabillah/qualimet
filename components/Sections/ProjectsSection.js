@@ -11,6 +11,7 @@ const ProjectWrapper = styled.section`
     position: relative;
     padding: 95px 0px 70px;
     min-height: 550px;
+    background: #242424;
 `;
 
 const FilterTabs = styled.ul`
@@ -20,7 +21,7 @@ const FilterTabs = styled.ul`
 
 const Filter = styled.li`
     position: relative;
-    color: #242424;
+    color: #d3d3d3;
     font-size: 16px;
     text-align: left;
     cursor: pointer;
@@ -129,7 +130,7 @@ const ProjectInfo = styled.div`
     }
 
     h4 a:hover {
-        color: #000;
+        color: #f2bd00;
     }
     p {
         padding: 0;
@@ -181,7 +182,9 @@ const ProjectSection = () => {
         <>
             <ProjectWrapper>
                 <AutoContainer>
-                    <SectionHeader>
+                    <SectionHeader
+                        style={{ color: '#d3d3d3' }}
+                    >
                         <h2>Nos Réalisations</h2>
                     </SectionHeader>
                     <ResponsiveMasonry
