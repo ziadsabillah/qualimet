@@ -126,3 +126,19 @@ export const Column2 = styled.div`
     flex: 100%;
     float: left;
 `;
+
+export const Column4 = styled.div`
+
+
+    @media (min-width: 992px) {
+        flex: 50%;
+    }
+
+    @media (min-width: 1024px) {
+        flex: 25%;
+    }
+
+    flex: 100%;
+    float: left;
+
+`;
