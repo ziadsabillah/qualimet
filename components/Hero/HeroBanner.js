@@ -41,6 +41,10 @@ const LeftSection = styled.div`
     
 `;
 
+const DarkAutoContainer = styled(AutoContainer)`
+    background: #f4f4f4;
+`;
+
 const RightSection = styled.div`
     flex: 20%;
     text-align: center;
