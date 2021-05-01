@@ -1,6 +1,7 @@
 import Carousel from 'react-multi-carousel'
 import styled from 'styled-components'
 import services from '../data/services'
+import Link from 'next/link'
 
 
 
@@ -237,10 +238,10 @@ const CustomCarousel = () => {
                 itemClass="carousel-item"
                 responsive={responsive}
             >
-                {services.map((service, index) => (
+                {services.map((service) => (
 
 
-                    <ServiceBlock key={index}>
+                    <ServiceBlock key={service._id}>
                     <InnerBox>
                         <FlipContainer>
                             <Flipper className="flipper">
@@ -263,7 +264,7 @@ const CustomCarousel = () => {
                                                 <OverlayText>
                                                     {service.description}
                                             </OverlayText>
-                                                <ReadMoreBtn href="#">Lire Plus.</ReadMoreBtn>
+                                                <ReadMoreBtn ><Link href={`/services/${service._id}`}>Lire Plus.</Link></ReadMoreBtn>
                                             </OverlayContent>
                                         </OverlayInner>
                                     </OverlayBox>
