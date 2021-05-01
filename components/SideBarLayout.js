@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import AutoContainer from './AutoContainer';
+import Featured from './Featured';
 import { Column2, Row } from './General';
 import SideBarCategoryWidget from './SideBarCategoryWidget';
 import SideBarCtaWidget from './SideBarCtaWidget'
@@ -78,7 +79,8 @@ const Content = styled.div`
     p {
         position: relative;
         color: #797979;
-        font-size: 1.8em;
+        font-size: 1.3em;
+        min-height: 200px;
         margin-bottom: 22px;
     }
 `;
@@ -131,6 +133,7 @@ const InnerColumn = styled.div`
         font-size: 16px;
         line-height: 1.8em;
         margin-bottom: 22px;
+        min-height: 250px;
     }
 
 `;
@@ -229,12 +232,12 @@ const SideBarLayout = ({allServices, currentService, images}) => {
                                                 <InnerColumn>
                                                     <ContentHeader>Analyse du Projet</ContentHeader>
                                                     <p>
-                                                        {currentService ? currentService.projectAnalysic : 
+                                                        {currentService ? currentService.projectAnalysic ? currentService.projectAnalysic : 
                                                         `Ce processus permettant la réalisation d’un projet de construction, à partir de l’expression des
                                                         besoins d’un client-partenaire jusqu’à l’exécution complète des travaux, peut s’avérer long et
                                                         hasardeux. Ce seul document ne peut de toute évidence, pallier au besoin d’un gestionnaire de
                                                         projet expérimenté et compétent. Le processus proposé se veut donc, une forme de vulgarisation
-                                                        d’un processus beaucoup plus vaste et complexe.`
+                                                        d’un processus beaucoup plus vaste et complexe.` : ''
                                                         }
                                                     </p>
                                                     <BenefitList>
@@ -253,7 +256,7 @@ const SideBarLayout = ({allServices, currentService, images}) => {
                                             </ContentColumn>
                                         </Row>
                                     </TwoColumn>
-                                    
+                                    <Featured />
                                                         
                                 </Content>
 
