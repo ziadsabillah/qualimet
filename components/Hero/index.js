@@ -8,7 +8,7 @@ const Button = styled.a`
     margin-top: 5px;
     line-height: 24px;
     color: #252525;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
     background: #F7BD00;
     display: inline-block;
@@ -19,6 +19,11 @@ const Button = styled.a`
     transition: all 0.3s ease;
     --webkit-transition: all 0.3s ease;
     cursor: pointer;
+
+    @media only screen and (max-width: 400px) {
+        font-size: 0.6em;
+        padding: 6px 20px;
+    }
 `;
 
 
@@ -69,7 +74,7 @@ export default function Hero() {
                             }}>
                             <div className="inner" style={{ width: '40%' }}>
                                 <h1 style={{
-                                    fontSize: '40px',
+                                    fontSize: '1.2em',
                                 }}>{slide.title}</h1>
                                 {slide.city && <h2>{slide.city}</h2>}
                                 <p style={{
