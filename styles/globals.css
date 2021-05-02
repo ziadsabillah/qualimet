@@ -75,7 +75,13 @@ header {
 }
 
 .slider {
-  height: 90vh !important;
+  height: 70vh !important;
+}
+
+@media only screen and (max-width: 400px) {
+  .slider {
+    height: 70vh !important;
+  }
 }
 
 .slider-content::before {
