@@ -89,6 +89,12 @@ header {
   opacity: 0.3;
 }
 
+@media only screen and (max-width: 400px) {
+  .slider-content {
+    background-position: center;
+  }
+}
+
 .slider-content h2 {
   color: #F7BD00;
 }

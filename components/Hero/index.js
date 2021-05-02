@@ -58,9 +58,9 @@ export default function Hero() {
                         <div key={index}
                             className="slider-content"
                             style={{
-                                background: `url('${slide.imgPath}')`,
+                                background: `url('${slide.imgPath}') black`,
                                 minHeight: '100%',
-                                backgroundPosition: 'center center',
+                                backgroundPosition: 'center',
                                 backgroundAttachment: 'fixed',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: "cover",
