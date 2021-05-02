@@ -75,7 +75,7 @@ header {
 }
 
 .slider {
-  height: 90vh !important;
+  height: 70vh !important;
 }
 
 .slider-content::before {
@@ -208,14 +208,18 @@ header {
 }
 
 .react-player video {
-  max-width: 90%;
+
+  width: 90%;
+  padding: 2em;
+
 }
 
 
 
 @media screen and (max-width: 1200px) {
   .react-player {
-    width: 80%!important;
+    width: 90%!important;
+    padding: 2em;
   }
 }
 
