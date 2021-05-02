@@ -1,6 +1,8 @@
 
 import Head from 'next/head';
-import Footer from './Sections/Footer';
+import dynamic from 'next/dynamic'
+
+const FooterDynamic = dynamic(() => import('./Sections/Footer'), { ssr: false})
 import Navbar from './Navbar/CustomNavbar';
 
 const Layout = (props) => {
@@ -18,7 +20,7 @@ const Layout = (props) => {
                 <main>
                     {props.children}
                 </main>
-                <Footer />
+                <FooterDynamic />
             </div>
         </>
     )

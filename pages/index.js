@@ -1,4 +1,7 @@
+import dynamic from 'next/dynamic'
+
 import Layout from '../components/Layout'
+
 
 import ProjectsSection from '../components/Sections/ProjectsSection'
 import Testimonials from '../components/Sections/Testimonials'
