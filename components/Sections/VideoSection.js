@@ -129,7 +129,7 @@ const VideoSection = () => {
                             </LeftColumn>
                             <RightColumn>
                                  <div className="react-player">
-                                     <video ref={el => {video = el}} src={require('../../public/video/video.mp4')}   autoPlay={true} loop />
+                                     <video ref={el => {video = el}} src={require('../../public/video/video.mp4')}   loop />
                                  </div>
                             </RightColumn>
                         </Row>
