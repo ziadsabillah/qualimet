@@ -59,7 +59,7 @@ export default function Hero() {
                             className="slider-content"
                             style={{
                                 background: `url('${slide.imgPath}')`,
-            
+                                minHeight: '100%',
                                 backgroundPosition: 'center center',
                                 backgroundAttachment: 'fixed',
                                 backgroundRepeat: 'no-repeat',
