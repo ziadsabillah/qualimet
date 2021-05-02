@@ -74,12 +74,18 @@ header {
 
 }
 
-.slider {
+.slider-wrapper {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.slide {
   height: 70vh;
   background-size: cover !important;
 }
 
-.slider-content::before {
+.slide::before {
   content: '';
   position: absolute;
   top: 0;
@@ -96,6 +102,12 @@ header {
   }
 }
 
+@media (max-height: 500px) {
+  .slider-wrapper, .slide {
+    height: calc(100vh - 75px);
+  }
+}
+
 .slider-content h2 {
   color: #F7BD00;
 }
@@ -108,6 +120,19 @@ header {
   }
 }
 
+/* Previous and Next buttons of hero slider */
+
+.previousButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  cursor: pointer;
+
+}
 
 
 /* Slider animations */
