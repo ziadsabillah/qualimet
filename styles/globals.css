@@ -119,6 +119,10 @@ header {
     padding: 0 !important;
   }
 
+  .slider-content {
+    background-size: 100%;
+  }
+
 }
 
 /* Previous and Next buttons of hero slider */
