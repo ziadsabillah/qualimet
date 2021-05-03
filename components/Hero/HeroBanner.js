@@ -25,17 +25,18 @@ const LeftSection = styled.div`
     float: left;
     @media screen and (max-width: 800px) {
         flex: 100%;
+        text-align: center;
     }
     h2 {
         position: relative;
         color: #000000;
-        font-size: 37px;
+        font-size: 2.2em;
         font-weight: 400;
     }
     h4 {
         position: relative;
         color: #000000;
-        font-size: 20px;
+        font-size: 1em;
         font-weight: 400;
     }
     
