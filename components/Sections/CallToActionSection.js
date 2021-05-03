@@ -123,6 +123,7 @@ const BtnSecondary = styled.a`
         color: #191919;
         background: none;
         border-color: #191919;
+        cursor: pointer;
     }
 
 `;
@@ -146,7 +147,7 @@ const CallToActionSection = () => {
                             <Number>+212 6 13 04 93 90</Number>
                     </Left>
                     <Right>
-                        <BtnSecondary>Contact</BtnSecondary>
+                        <BtnSecondary href='/contact'>Contact</BtnSecondary>
                     </Right>
                 </ContactNumberBox>
             </AutoContainer>
