@@ -58,7 +58,7 @@ const SideBarCategoryWidget = ({allServices, currentService}) => {
             <WidgetWrapper>
                 <WidgetList>
                     {allServices ? allServices.map(service => (
-                        <WidgetListItem>
+                        <WidgetListItem key={service._id}>
                             <ItemLink className={currentService === service ? 'activeState' : ''} href={`/services/${service._id}`}>
                                 {service.title}
                             </ItemLink>
