@@ -116,7 +116,6 @@ header {
   .slide {
     align-items: center !important;
     padding: 0 !important;
-    text-align: center !important;
   }
 }
 
@@ -131,7 +130,18 @@ header {
   height: 32px;
   color: #fff;
   cursor: pointer;
+  /* background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px; */
 
+}
+
+.previousButton {
+  left: 0;
+  /* -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
+          transform: rotate(180deg) translateY(calc(50% + 0px)); */
+}
+
+.nextButton {
+  right: 0;
 }
 
 
