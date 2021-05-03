@@ -6,7 +6,7 @@ const AutoContainer = styled.div`
     padding: 0px 15px;
     margin: 0 auto;
     @media screen and (max-width: 800px) {
-        padding: 0;
+        padding: 15px;
     }
 `;
 

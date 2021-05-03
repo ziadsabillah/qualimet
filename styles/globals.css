@@ -6,6 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 15px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -74,24 +75,37 @@ header {
 
 }
 
-.slider {
-  height: 70vh !important;
+.slider-wrapper {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
 }
 
-.slider-content::before {
+.slide {
+  height: 70vh;
+  background-size: cover !important;
+}
+
+.slide::before {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: #000;
-  opacity: 0.3;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
 
 @media only screen and (max-width: 400px) {
   .slider-content {
     background-position: center;
+  }
+}
+
+@media (max-height: 500px) {
+  .slider-wrapper, .slide {
+    height: calc(100vh - 75px);
   }
 }
 
@@ -103,10 +117,42 @@ header {
   .slide {
     align-items: center !important;
     padding: 0 !important;
-    text-align: center !important;
+  }
+
+  .slider-content {
+    background-attachment: unset;
   }
 }
 
+/* Previous and Next buttons of hero slider */
+
+.previousButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  padding: 0 5px;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  color: #fff ;
+  cursor: pointer;
+  /* background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px; */
+
+}
+
+.previousButton svg polygon, .nextButton svg polygon {
+  fill: rgb(214, 214, 214) !important;
+}
+
+.previousButton {
+  left: 0;
+  /* -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
+          transform: rotate(180deg) translateY(calc(50% + 0px)); */
+}
+
+.nextButton {
+  right: 0;
+}
 
 
 /* Slider animations */
