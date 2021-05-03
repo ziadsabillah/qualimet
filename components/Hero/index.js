@@ -60,6 +60,7 @@ export default function Hero() {
                             style={{
                                 background: `url('${slide.imgPath}') black`,
                                 minHeight: '100%',
+                                backgroundAttachment: 'fixed',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: "cover",
