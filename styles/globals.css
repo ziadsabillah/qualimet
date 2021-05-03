@@ -129,14 +129,19 @@ header {
 .previousButton, .nextButton {
   position: absolute;
   top: 50%;
+  padding: 0 5px;
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 10;
   width: 32px;
   height: 32px;
-  color: #fff;
+  color: #fff ;
   cursor: pointer;
   /* background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px; */
 
+}
+
+.previousButton svg polygon, .nextButton svg polygon {
+  fill: rgb(214, 214, 214) !important;
 }
 
 .previousButton {

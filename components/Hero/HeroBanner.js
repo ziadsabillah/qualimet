@@ -30,9 +30,11 @@ const LeftSection = styled.div`
     h2 {
         position: relative;
         color: #000000;
-        font-size: 2.2em;
+        font-size: 2em;
         font-weight: 400;
     }
+
+
     h4 {
         position: relative;
         color: #000000;
