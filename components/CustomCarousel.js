@@ -204,7 +204,7 @@ const OverlayText = styled.div`
     margin-bottom: 20px;
 `;
 
-const ReadMoreBtn = styled.a`
+const ReadMoreBtn = styled.button`
     position: relative;
     color: #f7bd00;
     font-size: 14px;
@@ -242,39 +242,39 @@ const CustomCarousel = () => {
 
 
                     <ServiceBlock key={service._id}>
-                    <InnerBox>
-                        <FlipContainer>
-                            <Flipper className="flipper">
-                                <FrontSide className="front">
-                                    <IconBox>
-                                        <Icon>
-                                            <img src={service.iconPath} alt="Icon" />
-                                        </Icon>
-                                    </IconBox>
-                                    <CarouselTitle>{service.title}</CarouselTitle>
-                                    <CarouselText>
-                                        {service.description}
-                                </CarouselText>
-                                </FrontSide>
-                                <BackSide className="back">
-                                    <OverlayBox>
-                                        <OverlayInner>
-                                            <OverlayContent>
-                                                <h4>{service.title}</h4>
-                                                <OverlayText>
-                                                    {service.description}
-                                            </OverlayText>
-                                                <ReadMoreBtn ><Link href={`/services/${service._id}`}>Lire Plus.</Link></ReadMoreBtn>
-                                            </OverlayContent>
-                                        </OverlayInner>
-                                    </OverlayBox>
-                                </BackSide>
-                            </Flipper>
-                        </FlipContainer>
-                    </InnerBox>
-                </ServiceBlock>
+                        <InnerBox>
+                            <FlipContainer>
+                                <Flipper className="flipper">
+                                    <FrontSide className="front">
+                                        <IconBox>
+                                            <Icon>
+                                                <img src={service.iconPath} alt="Icon" />
+                                            </Icon>
+                                        </IconBox>
+                                        <CarouselTitle>{service.title}</CarouselTitle>
+                                        <CarouselText>
+                                            {service.description}
+                                        </CarouselText>
+                                    </FrontSide>
+                                    <BackSide className="back">
+                                        <OverlayBox>
+                                            <OverlayInner>
+                                                <OverlayContent>
+                                                    <h4>{service.title}</h4>
+                                                    <OverlayText>
+                                                        {service.description}
+                                                    </OverlayText>
+                                                    <ReadMoreBtn ><Link href={`/services/${service._id}`}>Lire Plus.</Link></ReadMoreBtn>
+                                                </OverlayContent>
+                                            </OverlayInner>
+                                        </OverlayBox>
+                                    </BackSide>
+                                </Flipper>
+                            </FlipContainer>
+                        </InnerBox>
+                    </ServiceBlock>
                 ))}
-                
+
             </Carousel>
         </>
     )

@@ -61,7 +61,6 @@ export default function Hero() {
                                 background: `url('${slide.imgPath}') black`,
                                 minHeight: '100%',
                                 backgroundPosition: 'center',
-                                backgroundAttachment: 'fixed',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: "cover",
                                 textAlign: 'center',

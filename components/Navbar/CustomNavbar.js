@@ -31,7 +31,7 @@ const MiddleSection = styled.div`
     justify-content: center;
 `;
 
-const CustomNavbar = (props) => {
+const CustomNavbar = () => {
 
     const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
 

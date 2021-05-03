@@ -120,8 +120,9 @@ header {
   }
 
   .slider-content {
-    background-attachment: unset;
+    background-size: 100%;
   }
+
 }
 
 /* Previous and Next buttons of hero slider */
