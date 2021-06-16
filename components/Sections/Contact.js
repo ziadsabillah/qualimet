@@ -64,7 +64,7 @@ const InfoTitle = styled.h2`
         bottom: 0px;
         width: 40px;
         height: 2px;
-        background-color: #f7bd00;
+        background-color: #FC6C58;
     }
 `;
 
@@ -114,6 +114,7 @@ const Contact = () => {
                 <AutoContainer>
                     <SectionHeader>
                         <h2>Envoyer nous un message</h2>
+                        <p>Vous souhaitez nous contacter et avoir plus d’informations ? Il vous suffit de remplir le formulaire ci-dessous. Nous ferons en sorte de vous répondre dans les plus brefs délais.</p>
                     </SectionHeader>
                     <Row className="clearfix">
                         <LeftColumn>
@@ -160,19 +161,20 @@ const Contact = () => {
                             </Form>
                         </LeftColumn>
                         <RightColumn>
-                            <InfoTitle>Borvel SARL</InfoTitle>
+                            <InfoTitle>STE Atourrate</InfoTitle>
                             <InfoList>
-                                <li>Avenue Mohamed V</li>
-                                <li>+212 6 13 04 93 93</li>
-                                <li>exemple@exemple.com</li>
+                                <li>
+                                Lot12 Moulin Idrissia Etg2 Bur17 Et.2. Atlas, Fès 30000, Maroc
+                                </li>
+                                <li>
+                                +212 05356-44048
+                                </li>
+                                <li>
+                                contact@atourrate.com
+                                </li>
                             </InfoList>
-                            <SmallHeader>Horaires de travail</SmallHeader>
+                            <SmallHeader>Cordonnées</SmallHeader>
                             <Times>
-                                Lun-Merc : 10:00 au 18:00
-                                <br />
-                                Jeu-Vend : 10:00 au 14:00
-                                <br />
-                                Sam-Dim : 10:00 au 12:00
 
                             </Times>
                         </RightColumn>

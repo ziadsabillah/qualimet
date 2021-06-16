@@ -8,7 +8,7 @@ const WidgetWrapper = styled.div`
 
 const WidgetList = styled.ul`
     position: relative;
-    border-left: 3px solid #f7bd00;
+    border-left: 3px solid #375F9C;
 `;
 
 const WidgetListItem = styled.li`
@@ -27,7 +27,7 @@ const ItemLink = styled.a`
 
 
     &.activeState, &:hover {
-        background-color: #f7bd00;
+        background-color: #375F9C;
         padding-left: 45px;
         
         &::before {

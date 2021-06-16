@@ -7,18 +7,19 @@ import styled from 'styled-components'
 const Button = styled.a`
     margin-top: 5px;
     line-height: 24px;
-    color: #252525;
+    color: #FFF;
     font-size: 1em;
     font-weight: 500;
-    background: #F7BD00;
+    background: #375F9C;
     display: inline-block;
     padding: 12px 40px;
     border-radius: 50px;
-    border: 2px solid #F7BD00;
+    border: 2px solid #375F9C;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     --webkit-transition: all 0.3s ease;
     cursor: pointer;
+
 
     @media only screen and (max-width: 400px) {
         font-size: 0.6em;
@@ -31,20 +32,27 @@ export default function Hero() {
 
     const slides = [
         {
-            title: "IMAGINER ENSEMBLE LES VILLES DE DEMAIN ET LES CONSTRUIRE",
-            titleColor: '#ffffff',
-            button: 'NOS PROJETS',
-            href: '/projects',
-            imgPath: '/img/city2.jpg',
+            title: `Nous opérons sur tout le territoire Marocain.
+                N'hésitez pas à nous contacter pour plus d'informations
+            `,
+            titleColor: '#FFF',
+            button: 'Contact',
+            href: '/contact',
+            imgPath: '/slider/helmet.jpeg',
 
         },
         {
-            title: 'GARE CGV',
-            city: 'Rabat',
+            title: `Bâtir ce n'est pas seulement une promesse, c'est un art et un savoir-faire.`,
             titleColor: '#ffffff',
-            button: 'Lire Plus',
-            href: '/projects/i',
-            imgPath: '/slider/gare.jpg'
+            button: 'Demander un devis',
+            href: '/contact',
+            imgPath: '/slider/slider-4.jpeg'
+        },{
+            title: `Votre meilleur partenaire pour vos projets de constructions`,
+            titleColor: '#ffffff',
+            button: 'Nos Projets',
+            href: '/projects',
+            imgPath: '/slider/slider-5.jpeg'
         }
     ]
 

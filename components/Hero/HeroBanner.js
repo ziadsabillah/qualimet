@@ -10,7 +10,7 @@ export const BannerSection = styled.div`
 const InnerContainer = styled.div`
     position: relative;
     margin-top: -70px;
-    background-color: #f7bd00;
+    background-color: #F66944;
     padding: 30px 70px 30px 45px;
     box-shadow: 0px 0px 20px rgb(224 222 222 / 50%);
     width: 100%;
@@ -29,7 +29,7 @@ const LeftSection = styled.div`
     }
     h2 {
         position: relative;
-        color: #000000;
+        color: #FFF;
         font-size: 2em;
         font-weight: 400;
     }
@@ -37,7 +37,7 @@ const LeftSection = styled.div`
 
     h4 {
         position: relative;
-        color: #000000;
+        color: #FFF;
         font-size: 1em;
         font-weight: 400;
     }
@@ -74,9 +74,9 @@ const ContactButton = styled.button`
     --webkit-transition: all 0.3s ease;
 
     &:hover {
-        color: #191919;
-        border-color: #191919;
-        background: none;
+        color: #FFF;
+        border-color: #375F9C;
+        background: #375F9C;
         cursor: pointer;
     }
 `;
@@ -90,11 +90,13 @@ const HeroBanner = () => {
             <AutoContainer>
                 <InnerContainer>
                     <LeftSection>
-                        <h2>En savoir plus sur Borvel ?</h2> 
-                        <h4>Telecharger notre plaquette</h4>
+                        <h2>Un travail de qualité grâce au dévouement</h2> 
+                        <h4>
+                        La satisfaction de nos clients fait notre plus grande joie et nous permet également de progresser dans un contexte ouvert et concurrentiel.
+                        </h4>
                     </LeftSection>
                     <RightSection>
-                        <ContactButton>Telecharger</ContactButton>
+                        <ContactButton href="/projects">Réalisations</ContactButton>
                     </RightSection>
                 </InnerContainer>
             </AutoContainer>

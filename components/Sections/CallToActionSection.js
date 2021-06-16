@@ -19,13 +19,13 @@ const SectionWrapper = styled.section`
         width: 100%;
         display: block;
         height: 100%;
-        background-color: rgba(247,189,0,0.95);
+        background-color: rgba(252, 108, 88, .95);
     }
 `;
 
 const ActionHeader = styled.h2`
     position: relative;
-    color: #242424;
+    color: #fefefe;
     font-size: 35px;
     font-weight: 600;
     line-height: 1.3em;
@@ -35,7 +35,7 @@ const ActionHeader = styled.h2`
 
 const ActionText = styled.div`
     position: relative;
-    color: #242424;
+    color: #fefefe;
     font-size: 24px;
     font-weight: 400;
     text-align: center;
@@ -61,7 +61,7 @@ const ContactNumberBox = styled.div`
         position: absolute;
         content: '';
         top: 12px;
-        left: 50%;
+        left: 54%;
         width: 2px;
         height: 42px;
         background-color: #191919;
@@ -94,7 +94,7 @@ const Right = styled.div`
 
 const Number = styled.div`
     position: relative;
-    color: #191919;
+    color: #fefefe;
     font-size: 32px;
     font-weight: 600;
     padding: 10px 0px;
@@ -137,14 +137,16 @@ const CallToActionSection = () => {
         <SectionWrapper>
             <AutoContainer>
                 <ActionHeader>
-                    Nous avons 15 d'expérience en construction
+                    Besoins de nos services ?
                 </ActionHeader>
                 <ActionText>
-                    Une petite description pour attirer le client
+                Société Atourrate
                 </ActionText>
                 <ContactNumberBox className="clearfix">
                     <Left>
-                            <Number>+212 6 13 04 93 90</Number>
+                            <Number>
+                            +212 05356-44048 
+                            </Number>
                     </Left>
                     <Right>
                         <BtnSecondary href='/contact'>Contact</BtnSecondary>

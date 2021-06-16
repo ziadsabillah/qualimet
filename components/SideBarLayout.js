@@ -198,7 +198,7 @@ const SideBarLayout = ({allServices, currentService, images}) => {
                     <SideBarWrapper>
                         <SideBar>
                             <SideBarCategoryWidget allServices={allServices} currentService={currentService} />
-                            <SideBarCtaWidget mainTitle='Confiez votre projet à Borvel' mainTitleSpan='Leader Marocain de la Construction' secondTitle='Contactez-nous'callToAction='Contact' actionPath="/contact" imgSrc='/img/help.jpg' />
+                            <SideBarCtaWidget mainTitle='Confiez votre projet à Atourrate' mainTitleSpan='Leader Marocain de la Construction' secondTitle='Contactez-nous'callToAction='Contact' actionPath="/contact" imgSrc='/img/help.jpg' />
                         </SideBar>
                     </SideBarWrapper>
                     <ContentSideWrapper>
@@ -222,13 +222,13 @@ const SideBarLayout = ({allServices, currentService, images}) => {
                                 <Content>
                                     <p>{currentService ? currentService.description : ''}</p>
                                     <TwoColumn>
-                                        <Row className="clearfix">
-                                            <ImageColumn>
+                                        {/* <Row className="clearfix"> */}
+                                            {/* <ImageColumn>
                                                 <ImageBox>
                                                     <img src={images[2]} alt="Third Image" />
                                                 </ImageBox>
-                                            </ImageColumn>
-                                            <ContentColumn> 
+                                            </ImageColumn> */}
+                                            {/* <ContentColumn> 
                                                 <InnerColumn>
                                                     <ContentHeader>Analyse du Projet</ContentHeader>
                                                     <p>
@@ -253,8 +253,8 @@ const SideBarLayout = ({allServices, currentService, images}) => {
                                                         
                                                     </BenefitList>
                                                 </InnerColumn>
-                                            </ContentColumn>
-                                        </Row>
+                                            </ContentColumn> */}
+                                        {/* </Row> */}
                                     </TwoColumn>
                                     <Featured />
                                                         

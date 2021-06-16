@@ -13,7 +13,7 @@ export default function Services() {
     ]
     return (
         <>
-        <Layout>
+        <Layout title="Nos Services">
                 <DetailsPageHeader section={services[0] ? services[0].title : ''} />
                 <SideBarLayout allServices={services} currentService={services[0]} images={images} />
             </Layout>

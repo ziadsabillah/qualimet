@@ -2,32 +2,40 @@
 const services = [
     {
         _id: 'a',
-        title: 'TRAVAUX D’AMÉNAGEMENT',
-        description: 'Nous mettons notre expérience à la disposition de nos clients pour la conception et l’aménagement de leurs espaces (bureaux, magasins, appartements, maisons, locaux industriels …).',
+        title: `Travaux routiers et voirie`,
+        description: ` Nous considérons que la réussite de l’équipe est due à la bonne
+        image et connue par le sérieux de ses prestations.`,
         iconPath: 'icons/icon-2.svg'
     },
     {
         _id: "b",
-        title: 'CONSTRUCTION CLÉ EN MAIN',
-        description: 'Nous proposons la formule clé en main en tant qu’entreprise générale ou contractant général, permettant ainsi à nos clients de signer un seul contrat sans partager la responsabilité entre différents intervenants.',
+        title: 'Construction',
+        description: `La construction des bâtiments relève de spécialités professionnelles définies en corps de métier, et nous sommes assez avancé dans le métier du Bâtiment.`,
         iconPath: 'icons/icon-3.svg'
     },
     {
         _id: "c",
-        title: "MAÎTRISE D'OUVRAGE DÉLÉGUÉE (MOD)",
-        description: 'Cette mission consiste à être le représentant unique du Maître de d’Ouvrage vis-à-vis de l’ensemble des intervenants dans le cadre de la réalisation d’un projet de construction.',
+        title: "Assainissement-Conduite",
+        description: `Notre entreprise met son savoir-faire et ses compétences au service de ces
+        projets que ce soit un gros ou un petit chantier.`,
         iconPath: 'icons/icon-1.svg'
     },
     {
         _id: 'd',
-        title: "ASSISTANCE AU MAÎTRE D'OUVRAGE (AMO)",
-        description: 'Nous assistons le Maître de d’Ouvrage dans toutes ses tâches, décisions et actions suivant un planning permettant de respecter les objectifs de délai du projet.',
+        title: `Travaux divers et publiques`,
+        description: `Une entreprise de construction est une entreprise capable de réaliser des travaux de construction dans les domaines du bâtiment ou des travaux publics.`,
         iconPath: 'icons/icon-4.svg'
     },
     {
         _id: 'e',
-        title: 'ORDONNANCEMENT, PILOTAGE ET COORDINATION (OPC)',
-        description: 'Lexcept to obtain some advantage from it? But who has any right to find fault with a man chooses to enjoy.',
+        title: 'Etancheité Isolation',
+        description: `Nous réglons les problèmes d’étanchéité du bâtiment qui favorise une sensibilité du bâtiment vis-à-vis des infiltrations ou fuites d’air parasite.`,
+        iconPath: 'icons/icon-4.svg'
+    },
+    {
+        _id: 'f',
+        title: `Revêtement`,
+        description: `Un revêtement a pour but d’améliorer les propriétés de surface d’une maison. Par exemple à accroître l’apparence, l’adhésion, la résistance à la corrosion.`,
         iconPath: 'icons/icon-4.svg'
     }
 ];

@@ -51,7 +51,7 @@ const Filter = styled.li`
         height: 0;
 
         &:checked {
-            color: #F7BD00 !important;
+            color: #FC6C58 !important;
             border-color: blue;
         }
     }
@@ -66,7 +66,7 @@ const Filter = styled.li`
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            color: #f7bd00;
+            color: #FC6C58;
             cursor: pointer;
         }
     }
@@ -130,7 +130,7 @@ const ProjectInfo = styled.div`
     }
 
     h4 a:hover {
-        color: #f2bd00;
+        color: #FC6C58;
     }
     p {
         padding: 0;

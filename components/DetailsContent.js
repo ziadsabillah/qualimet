@@ -1,7 +1,9 @@
 import styled from "styled-components"
+import services from "../data/services";
 import AutoContainer from "./AutoContainer";
 import { Column2, Row, Text } from "./General";
 import { SectionHeader } from "./SectionHeader";
+import VideoSection from "./Sections/VideoSection";
 
 
 const ProjectSingleSection = styled.section`
@@ -39,19 +41,12 @@ const DetailsContent = ({imgPath, projectDescription, projectName}) => {
                 <AutoContainer>
                     <SectionHeader>
                         <h2>{projectName}</h2>
+                        <p>Fondée en 2000, ATOURRATE est une solide entreprise spécialisée en :</p>
                     </SectionHeader>
-                    <Row className="clearfix">
-                        <Column2>
-                            
+                    <Row className="clearfix">                            
                             <Text>
                                 {projectDescription}
                             </Text>
-                        </Column2>
-                        <Column2>
-                            <ImageBox>
-                                <img src={imgPath} alt={`Project ${projectName} Image`} />
-                            </ImageBox>
-                        </Column2>
                     </Row>
                 </AutoContainer>
             </ProjectSingleSection>

@@ -82,7 +82,7 @@ const Flipper = styled.div`
 const FrontSide = styled.div`
     position: relative;
     display: block;
-    height: 350px;
+    min-height: 200px;
     width: 100%;
     z-index: 2;
     -webkit-transition: opacity ease 500ms;
@@ -135,7 +135,6 @@ const BackSide = styled.div`
 	-moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
-	background: #242424;
 
     position: absolute;
     left: 0px;
@@ -146,8 +145,8 @@ const BackSide = styled.div`
 
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    background: #242424 !important;
-    color: #242424;
+    background: #FC6C58 !important;
+    color: #FC6C58;
 
     -webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
@@ -165,7 +164,7 @@ const OverlayBox = styled.div`
     right: -1px;
     bottom: -1px;
     display: block;
-    background-color: #242424 !important;
+    background-color: #FC6C58 !important;
 
     h4 {
         position: relative;
@@ -252,9 +251,9 @@ const CustomCarousel = () => {
                                             </Icon>
                                         </IconBox>
                                         <CarouselTitle>{service.title}</CarouselTitle>
-                                        <CarouselText>
+                                        {/* <CarouselText>
                                             {service.description}
-                                        </CarouselText>
+                                        </CarouselText> */}
                                     </FrontSide>
                                     <BackSide className="back">
                                         <OverlayBox>
@@ -264,7 +263,7 @@ const CustomCarousel = () => {
                                                     <OverlayText>
                                                         {service.description}
                                                     </OverlayText>
-                                                    <ReadMoreBtn ><Link href={`/services/${service._id}`}>Lire Plus.</Link></ReadMoreBtn>
+                                                    {/* <ReadMoreBtn ><Link href={`/services/${service._id}`}>Lire Plus.</Link></ReadMoreBtn> */}
                                                 </OverlayContent>
                                             </OverlayInner>
                                         </OverlayBox>

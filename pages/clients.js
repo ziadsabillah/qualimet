@@ -5,7 +5,7 @@ import CallToActionSection from '../components/Sections/CallToActionSection'
 export default function Clients() {
     return (
         <>
-            <Layout>
+            <Layout title="Clients">
                 <Testimonials />
                 <CallToActionSection />
             </Layout>

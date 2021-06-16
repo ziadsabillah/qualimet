@@ -96,11 +96,11 @@ const RightColumn = styled.div`
 
 const VideoSection = () => {
 
-    let video = useRef(null)
+    // let video = useRef(null)
 
-    useEffect(() => {
-        video.play()
-    }, [])
+    // useEffect(() => {
+    //     video.play()
+    // }, [])
 
     return (
         <>
@@ -117,19 +117,20 @@ const VideoSection = () => {
                     <InnerContainer>
                         <Row>
                             <LeftColumn>
-                                <h2>Pourquoi Borvel SARL?</h2>
+                                <h2>STE Atourrate</h2>
                                 <Paragraph>
-                                Avec plus de 8 500 collaborateurs au Maroc et en Afrique subsaharienne et disposant du plus grand parc d’engins de construction au Maroc, TGCC s’impose aujourd’hui en tant que leader national et, compte à son actif plus de 1 000 projets et d’ouvrages d’envergures réalisés.                            </Paragraph>
+                                    Construction, travaux divers et publiques, négoce, travaux routiers et voirie, assainissement-Conduites, étanchéité-Isolation, revêtement.
+                                </Paragraph>
                                 <List>
-                                    <li>Leader dans son domaine d'activité et en constante évolution</li>
-                                    <li>Riche grâce à son capital humain varié</li>
-                                    <li>Engagée sur le long terme</li>
-                                    <li>Veille à la protection de ses salariés</li>
+                                    <li>Construction</li>
+                                    <li>Travaux divers et publiques</li>
+                                    <li>Travaux routiers et voirie</li>
+                                    <li>Assainissement-Conduite</li>
                                 </List>
                             </LeftColumn>
                             <RightColumn>
                                  <div className="react-player">
-                                     <video ref={el => {video = el}} src={require('../../public/video/video.mp4')}   loop />
+                                     <img src='/img/d.jpeg' alt="Image Featured" />
                                  </div>
                             </RightColumn>
                         </Row>

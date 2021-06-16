@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 const WidgetContent = styled.div`
     position: relative;
     overflow: hidden;
-    background-color: #f7bd00;
+    background-color: #375F9C;
 `;
 
 const ImageBox = styled.div`
@@ -41,14 +41,14 @@ const Content = styled.div`
         height: 100%;
         display: block;
         z-index: 5;
-        background-color: #f7bd00;
+        background-color: #375F9C;
         transform: rotate(-10deg);
     }
 `;
 
 const ContentHeaderMain = styled.h2`
     position: relative;
-    color: #242424;
+    color: #fefefe;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.2em;
@@ -57,7 +57,7 @@ const ContentHeaderMain = styled.h2`
 
 const ContentHeaderSecond = styled.h3`
     position: relative;
-    color: #242424;
+    color: #fefefe;
     font-size: 30px;
     font-weight: 700;
     margin-top: 5px;
@@ -69,14 +69,14 @@ const ThemeBtn = styled.a`
     z-index: 6;
     position: relative;
     line-height: 24px;
-    color: #242424;
+    color: #fefefe;
     font-size: 16px;
     font-weight: 500;
     background: none;
     padding: 12px 33px;
     border-radius: 50px;
     display: inline-block;
-    border: 2px solid #242424;
+    border: 2px solid #fefefe;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 

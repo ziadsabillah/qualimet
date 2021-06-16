@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import services from '../../data/services';
 import AutoContainer from '../AutoContainer';
 import { Column3, ListStyleOne, Row } from '../General'
 
@@ -120,7 +121,7 @@ const LinksHeader = styled.h2`
         bottom: 0px;
         width: 100%;
         height: 1px;
-        background-color: #efb200;
+        background-color: #375F9C;
 
         @media (max-width: 400px) {
             display: none;
@@ -167,19 +168,19 @@ const Footer = () => {
                     <UpperBox>
                         <ListStyleOne className="clearfix">
                             <ListItem>
-                                Avenue Mohamed V
+                                Lot12 Moulin Idrissia 
                                 <br />
-                                Rabat, Maroc. 11000
+                                Etg2 Bur17 Et.2. Atlas, Fès 30000
                             </ListItem>
                             <ListItem>
                                 Envoyer-nous un email:
                                 <br />
-                                exemple@exemple.com
+                                contact@atourrate.com
                             </ListItem>
                             <ListItem>
                                 Appelez-nous
                                 <br />
-                                +212 6 13049390
+                                +212 05356-44048
                             </ListItem>
                         </ListStyleOne>
                     </UpperBox>
@@ -191,7 +192,7 @@ const Footer = () => {
                                         <img src="/img/logofooter.png" alt="logo" />
                                     </Logo>
                                     <Text>
-                                        Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do iusmod tempor incididunt ut labore et.
+                                    Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès. 
                                     </Text>
                                 </LogoWidget>
                             </Column3>
@@ -207,18 +208,23 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                A propos
+                                            <a href="/services">
+                                                Services
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                Clients
+                                            <a href="/projects">
+                                                Projets
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                Réalisations
+                                            <a href="/about">
+                                                Présentation
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/contact">
+                                                Demander un devis
                                             </a>
                                         </li>
                                     </List>
@@ -230,18 +236,12 @@ const Footer = () => {
                                         Nos Services
                                     </LinksHeader>
                                     <List>
-                                        <li>
-                                            <a href="#">TRAVAUX D’AMÉNAGEMENT</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">MAÎTRISE D'OUVRAGE DÉLÉGUÉE (MOD)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">CONSTRUCTION CLÉ EN MAIN</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">ASSISTANCE AU MAÎTRE D'OUVRAGE (AMO)</a>
-                                        </li>
+                                        {services?.map(service => (
+                                            <li>
+                                                <a href={`/services/${service._id}`}>{service.title}</a>
+                                            </li>
+                                        ))}
+                                        
                                     </List>
                                 </LinksWidget>
                             </Column3>

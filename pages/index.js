@@ -10,12 +10,12 @@ import CallToActionSection from '../components/Sections/CallToActionSection'
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="Atourrate Fès">
       <Hero />
       <VideoSection />
       <ProjectsSection />
       <CallToActionSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
     </Layout>
   )
