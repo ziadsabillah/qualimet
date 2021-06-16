@@ -145,7 +145,7 @@ const CallToActionSection = () => {
                 <ContactNumberBox className="clearfix">
                     <Left>
                             <Number>
-                            +212 05356-44048 
+                            +212 5356-44048 
                             </Number>
                     </Left>
                     <Right>
