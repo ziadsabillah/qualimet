@@ -43,7 +43,7 @@ const ItemLink = styled.a`
         height: 1px;
         width: 15px;
         opacity: 0;
-        background-color: #313131;
+        background-color: #fefefe;
         transition: all 500ms ease;
         -moz-transition: all 500ms ease;
         -webkit-transition: all 500ms ease;
