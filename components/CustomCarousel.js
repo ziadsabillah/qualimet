@@ -116,9 +116,9 @@ const Icon = styled.span`
 const CarouselTitle = styled.h3`
     position: relative;
     color: #242424;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 `;
 
 const CarouselText = styled.div`
@@ -169,7 +169,7 @@ const OverlayBox = styled.div`
     h4 {
         position: relative;
         color: #242424;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         margin-bottom: 14px;
     }
