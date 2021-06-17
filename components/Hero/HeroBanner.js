@@ -10,7 +10,7 @@ export const BannerSection = styled.div`
 const InnerContainer = styled.div`
     position: relative;
     margin-top: -70px;
-    background-color: #F66944;
+    background-color: #375F9C;
     padding: 30px 70px 30px 45px;
     box-shadow: 0px 0px 20px rgb(224 222 222 / 50%);
     width: 100%;

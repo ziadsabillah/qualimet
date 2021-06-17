@@ -148,9 +148,7 @@ const ProjectInfo = styled.div`
 const filtersDefault = [
     { label: "Tout", isChecked: true },
     { label: "Commerciale", isChecked: false },
-    { label: "Type2", isChecked: false },
-    { label: "Type3", isChecked: false },
-    { label: "Type4", isChecked: false }
+    
 ];
 
 
