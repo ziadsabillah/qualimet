@@ -8,7 +8,7 @@ import { useMediaQuery } from 'react-responsive'
 
 const NavbarContainer = styled.div`
     width: 100%;
-    height: 60px;
+    height: 70px;
     box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
     display: flex;
     align-items: center;
