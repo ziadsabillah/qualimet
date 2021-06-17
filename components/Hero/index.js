@@ -10,7 +10,7 @@ const Button = styled.a`
     color: #FFF;
     font-size: 1em;
     font-weight: 500;
-    background: #375F9C;
+    background: transparent;
     display: inline-block;
     padding: 12px 40px;
     border-radius: 50px;
