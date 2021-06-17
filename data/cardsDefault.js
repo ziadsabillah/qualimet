@@ -1,35 +1,31 @@
 const cardsDefault = [
     {
-        id: "a",
+        id: 4,
+        projectName: "Aéroport Al Houceima",
+        imgPath: "/projects/ae.png",
+
+    },
+    {
+        id: 1,
         projectName: "Le Grand Théatre d'Al Houceima",
         imgPath: "/projects/amphi.png",
-        filter: "Commerciale"
     },
     {
-        id: "b",
+        id: 2,
         projectName: "Piscine Batha",
-        imgPath: "/projects/batha.jpg",
-        filter: "Commerciale"
+        imgPath: "/projects/piscine.jpg",
     },
     {
-        id: "c",
+        id: 3,
         projectName: "Centre Multidisciplinaire Zouagha",
         imgPath: "/projects/centre-de-prise.png",
-        filter: "Commerciale"
     },
+    
     {
-        id: "z",
-        projectName: "Aéroport Al Houceima",
-        imgPath: "/projects/aeroport.png",
-
-        filter: "Commerciale"
-    },
-    {
-        id: "e",
+        id: 5,
         projectName: "Centre Culturel Province Al Houceima",
         imgPath: "/projects/culture.png",
 
-        filter: "Commerciale"
     },
     
 ];

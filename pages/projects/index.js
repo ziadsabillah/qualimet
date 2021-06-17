@@ -5,7 +5,7 @@ import ProjectSection from "../../components/Sections/ProjectsSection";
 export default function Projects() {
     return (
         <>
-            <Layout>
+            <Layout title="Nos Réalisations">
                 <ProjectSection />
             </Layout>
         </>
