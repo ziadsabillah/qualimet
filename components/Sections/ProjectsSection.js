@@ -212,34 +212,17 @@ const ProjectSection = () => {
                             </FilterTabs>
                         </div>
                         <Masonry className="masonry">
-
-
-                            {selectedFilter === "Tout" ?
-                                cardsDefault.map(card => (
+                        {
+                                cardsDefault?.map(card => (
                                     <Card key={card.id} className={`card`}>
                                         <CardContent>
                                             <img src={card.imgPath} />
                                             <ProjectInfo className="project-info">
                                                 <h4><a href={`/projects`}>{card.projectName}</a></h4>
-
                                             </ProjectInfo>
                                         </CardContent>
                                     </Card>
                                 ))
-
-                                :
-
-                                cardsDefault.filter(card => card.filter === selectedFilter).map(card => (
-                                    <Card key={card.id} className={`card`}>
-                                        <CardContent>
-                                            <img src={card.imgPath} />
-                                            <ProjectInfo className="project-info">
-                                                <h4><a href={`/projects/${card.id}`}>{card.projectName}</a></h4>
-                                            </ProjectInfo>
-                                        </CardContent>
-                                    </Card>
-                                ))
-
                             }
                         </Masonry>
                     </ResponsiveMasonry>
