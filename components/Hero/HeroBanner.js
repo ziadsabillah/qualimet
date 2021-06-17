@@ -75,8 +75,8 @@ const ContactButton = styled.button`
 
     &:hover {
         color: #FFF;
-        border-color: #375F9C;
-        background: #375F9C;
+        border-color: #FC6C58;
+        background: #FC6C58;
         cursor: pointer;
     }
 `;

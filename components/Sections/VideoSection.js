@@ -9,7 +9,6 @@ const InnerContainer = styled.div`
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 80px;
-    border-bottom: 1px solid #d7d7d7;
 `;
 
 
