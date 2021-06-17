@@ -76,7 +76,7 @@ const Flipper = styled.div`
 	transform-style: preserve-3d;
 
 	position: relative;
-	padding:25px 25px 45px;
+	/* padding:25px 25px 45px; */
 `;
 
 const FrontSide = styled.div`
@@ -98,15 +98,15 @@ const FrontSide = styled.div`
 	left: 0;
 `;
 const IconBox = styled.div`
-    margin-bottom: 25px;
+    margin-bottom: 1em;
 `;
 
 const Icon = styled.span`
     img {
         position: relative;
         display: inline-block !important;
-        height: 70px;
-        width: auto !important;
+        height: 200px;
+        width: 100% !important;
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
         vertical-align: middle;
