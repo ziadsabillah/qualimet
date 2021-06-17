@@ -147,7 +147,6 @@ const ProjectInfo = styled.div`
 
 const filtersDefault = [
     { label: "Tout", isChecked: true },
-    { label: "Commerciale", isChecked: false },
     
 ];
 
@@ -221,7 +220,7 @@ const ProjectSection = () => {
                                         <CardContent>
                                             <img src={card.imgPath} />
                                             <ProjectInfo className="project-info">
-                                                <h4><a href={`/projects/${card.id}`}>{card.projectName}</a></h4>
+                                                <h4><a href={`/projects`}>{card.projectName}</a></h4>
 
                                             </ProjectInfo>
                                         </CardContent>
