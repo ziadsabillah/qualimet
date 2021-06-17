@@ -80,7 +80,6 @@ const Content = styled.div`
         position: relative;
         color: #797979;
         font-size: 1.3em;
-        min-height: 200px;
         margin-bottom: 22px;
     }
 `;

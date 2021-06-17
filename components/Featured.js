@@ -30,8 +30,7 @@ const InnerBox = styled.div`
         margin-bottom: 7px;
 
         &:hover {
-            color: #f7bd00;
-        
+            color: #FC6C58;
         }
     }
 `;
@@ -44,12 +43,14 @@ const Text = styled.div`
 
 const IconBox = styled.div`
     position: relative;
-    color: #f7bd00;
+    color: #FC6C58;
     font-size: 60px;
     line-height: 1em;
     margin-bottom: 20px;
-    min-height: 61px;
-
+    max-height: 61px;
+    img {
+        max-height: 61px;
+    }  
 `;
 
 const Featured = () => {
@@ -58,8 +59,10 @@ const Featured = () => {
             <FeaturedWrapper>
                 <Row className="clearfix">
                     <Column3 style={{ padding: '0', margin: '0' }}>
-                    <InnerBox>
-                            <IconBox></IconBox>
+                        <InnerBox>
+                            <IconBox>
+                                <img src="/icons/check.png" alt="Check Png" />
+                            </IconBox>
                             <h3>
                                 Licencié et Assuré
                             </h3>
@@ -69,8 +72,10 @@ const Featured = () => {
                         </InnerBox>
                     </Column3>
                     <Column3 style={{ padding: '0', margin: '0' }}>
-                    <InnerBox>
-                            <IconBox></IconBox>
+                        <InnerBox>
+                            <IconBox>
+                                <img src="/icons/medal.png" alt="Medal Icon" />
+                            </IconBox>
                             <h3>
                                 Travailleurs Professionel
                             </h3>
@@ -80,8 +85,10 @@ const Featured = () => {
                         </InnerBox>
                     </Column3>
                     <Column3 style={{ padding: '0', margin: '0' }}>
-                    <InnerBox>
-                            <IconBox></IconBox>
+                        <InnerBox>
+                            <IconBox>
+                                <img src="/icons/entreprise.png" alt="Entreprise Icon" />
+                            </IconBox>
                             <h3>
                                 Entreprise Primée
                             </h3>
@@ -92,7 +99,7 @@ const Featured = () => {
                     </Column3>
 
 
-                        
+
                 </Row>
             </FeaturedWrapper>
         </>
