@@ -237,7 +237,7 @@ const Footer = () => {
                                     </LinksHeader>
                                     <List>
                                         {services?.map(service => (
-                                            <li>
+                                            <li key={service._id}>
                                                 <a href={`/services/${service._id}`}>{service.title}</a>
                                             </li>
                                         ))}
