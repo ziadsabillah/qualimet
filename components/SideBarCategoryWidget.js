@@ -29,6 +29,7 @@ const ItemLink = styled.a`
     &.activeState, &:hover {
         background-color: #375F9C;
         padding-left: 45px;
+        color: #fefefe;
         
         &::before {
             opacity: 1;
