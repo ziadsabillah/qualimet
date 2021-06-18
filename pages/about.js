@@ -17,7 +17,6 @@ Dans un environnement à très forte concurrence, Société ATOURRATE considère
                 <DetailsPageHeader section={'Présentation'} />
                 <VideoSection />
                 <CallToActionSection />
-                <Testimonials />
             </Layout>
         </>
     )
