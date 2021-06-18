@@ -182,12 +182,12 @@ const ProjectSection = () => {
                     <SectionHeader
                         style={{ color: '#d3d3d3' }}
                     >
-                        <h2>Nos Réalisations</h2>
+                        <h2>Quelques Références</h2>
                     </SectionHeader>
                     <ResponsiveMasonry
                         className="masonry-wrapper"
                         columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-                        <div style={{
+                        {/* <div style={{
                             textAlign: 'center',
                             position: 'absolute',
                             left: '0',
@@ -210,7 +210,7 @@ const ProjectSection = () => {
                                     </Filter>
                                 ))}
                             </FilterTabs>
-                        </div>
+                        </div> */}
                         <Masonry className="masonry">
                         {
                                 cardsDefault?.map(card => (

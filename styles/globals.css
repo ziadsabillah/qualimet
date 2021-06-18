@@ -305,7 +305,7 @@ header {
 }
 .masonry-wrapper {
   position: relative;
-  padding-left: 200px;
+  /* padding-left: 00px; */
 }
 @media only screen and (max-width: 1023px) {
   .masonry-wrapper {
