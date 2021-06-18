@@ -251,7 +251,7 @@ const Footer = () => {
                                 <h4 style={{ color: '#fff' }}>Copyright © 2021 Atourrate Fès</h4>
                             </Column2>
                             <Column2>
-                                <h4 style={{ color: '#fff', textAlign: 'right' }}>Powered by LunaSoft</h4>
+                                <h4 style={{ color: '#fff', textAlign: 'right' }}>Powered by <a passHref={true} href="https://www.matechso.com" target="_blank">MaTechSo</a></h4>
                             </Column2>
                         </Row>
                     </MiddleSection>
