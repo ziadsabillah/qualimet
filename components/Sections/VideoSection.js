@@ -113,7 +113,7 @@ const VideoSection = () => {
                 backgroundRepeat: 'no-repeat'
             }}>
                 <AutoContainer>
-                    <InnerContainer>
+                    {/* <InnerContainer>
                         <Row>
                             <LeftColumn>
                                 <h2>STE Atourrate</h2>
@@ -133,7 +133,7 @@ const VideoSection = () => {
                                  </div>
                             </RightColumn>
                         </Row>
-                    </InnerContainer>
+                    </InnerContainer> */}
                     <SectionHeader>
                         <h2>Nos Services</h2>
                     </SectionHeader>
