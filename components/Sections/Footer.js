@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import services from '../../data/services';
 import AutoContainer from '../AutoContainer';
-import { Column3, ListStyleOne, Row } from '../General'
+import { Column3, Column2, ListStyleOne, Row } from '../General'
 
 const MainFooter = styled.footer`
     background-image: url('/img/6.jpeg');
@@ -168,7 +168,7 @@ const Footer = () => {
                     <UpperBox>
                         <ListStyleOne className="clearfix">
                             <ListItem>
-                                Lot12 Moulin Idrissia 
+                                Lot12 Moulin Idrissia
                                 <br />
                                 Etg2 Bur17 Et.2. Atlas, Fès 30000
                             </ListItem>
@@ -192,7 +192,7 @@ const Footer = () => {
                                         <img src="/img/logofooter.png" alt="logo" />
                                     </Logo>
                                     <Text>
-                                    Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès. 
+                                        Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès.
                                     </Text>
                                 </LogoWidget>
                             </Column3>
@@ -204,7 +204,7 @@ const Footer = () => {
                                     <List>
                                         <li>
                                             <a href="/">
-                                                Accueil 
+                                                Accueil
                                             </a>
                                         </li>
                                         <li>
@@ -241,10 +241,18 @@ const Footer = () => {
                                                 <a href={`/services/${service._id}`}>{service.title}</a>
                                             </li>
                                         ))}
-                                        
+
                                     </List>
                                 </LinksWidget>
                             </Column3>
+                        </Row>
+                        <Row>
+                            <Column2>
+                                <h4 style={{ color: '#fff' }}>Copyright © 2021 Atourrate Fès</h4>
+                            </Column2>
+                            <Column2>
+                                <h4 style={{ color: '#fff', textAlign: 'right' }}>Powered by LunaSoft</h4>
+                            </Column2>
                         </Row>
                     </MiddleSection>
                 </AutoContainer>
