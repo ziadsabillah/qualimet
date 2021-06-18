@@ -58,7 +58,7 @@ const RightSection = styled.div`
 
 `;
 
-const ContactButton = styled.button`
+const ContactButton = styled.a`
     margin-top: 5px;
     line-height: 24px;
     color: #252525;
