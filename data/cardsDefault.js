@@ -13,7 +13,7 @@ const cardsDefault = [
     {
         id: 2,
         projectName: "Piscine Batha",
-        imgPath: "/projects/piscine.jpg",
+        imgPath: "/projects/piscine2.png",
     },
     {
         id: 3,
