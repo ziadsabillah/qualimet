@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import contact from '../../data/contact';
 import services from '../../data/services';
 import AutoContainer from '../AutoContainer';
-import { Column3, ListStyleOne, Row } from '../General'
+import { Column3, Column2, ListStyleOne, Row } from '../General'
 
 const MainFooter = styled.footer`
     background-image: url('/img/6.jpeg');
@@ -168,19 +169,19 @@ const Footer = () => {
                     <UpperBox>
                         <ListStyleOne className="clearfix">
                             <ListItem>
-                                Lot12 Moulin Idrissia 
+                                {contact.street}
                                 <br />
-                                Etg2 Bur17 Et.2. Atlas, Fès 30000
+                                {contact.address1}
                             </ListItem>
                             <ListItem>
                                 Envoyer-nous un email:
                                 <br />
-                                contact@atourrate.com
-                            </ListItem>
+                                {contact.email}
+                        </ListItem>
                             <ListItem>
                                 Appelez-nous
                                 <br />
-                                +212 05356-44048
+                                {contact.phone}
                             </ListItem>
                         </ListStyleOne>
                     </UpperBox>
@@ -192,7 +193,7 @@ const Footer = () => {
                                         <img src="/img/logofooter.png" alt="logo" />
                                     </Logo>
                                     <Text>
-                                    Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès. 
+                                        Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès.
                                     </Text>
                                 </LogoWidget>
                             </Column3>
@@ -204,7 +205,7 @@ const Footer = () => {
                                     <List>
                                         <li>
                                             <a href="/">
-                                                Accueil 
+                                                Accueil
                                             </a>
                                         </li>
                                         <li>
@@ -241,10 +242,18 @@ const Footer = () => {
                                                 <a href={`/services/${service._id}`}>{service.title}</a>
                                             </li>
                                         ))}
-                                        
+
                                     </List>
                                 </LinksWidget>
                             </Column3>
+                        </Row>
+                        <Row>
+                            <Column2>
+                                <h4 style={{ color: '#fff' }}>Copyright © 2021 Atourrate Fès</h4>
+                            </Column2>
+                            <Column2>
+                                <h4 style={{ color: '#fff', textAlign: 'right' }}>Powered by <a passHref={true} href="https://www.matechso.com" target="_blank">MaTechSo</a></h4>
+                            </Column2>
                         </Row>
                     </MiddleSection>
                 </AutoContainer>
