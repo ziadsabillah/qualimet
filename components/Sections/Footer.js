@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import contact from '../../data/contact';
 import services from '../../data/services';
 import AutoContainer from '../AutoContainer';
 import { Column3, Column2, ListStyleOne, Row } from '../General'
@@ -168,19 +169,19 @@ const Footer = () => {
                     <UpperBox>
                         <ListStyleOne className="clearfix">
                             <ListItem>
-                                Lot12 Moulin Idrissia
+                                {contact.street}
                                 <br />
-                                Etg2 Bur17 Et.2. Atlas, Fès 30000
+                                {contact.address1}
                             </ListItem>
                             <ListItem>
                                 Envoyer-nous un email:
                                 <br />
-                                contact@atourrate.com
-                            </ListItem>
+                                {contact.email}
+                        </ListItem>
                             <ListItem>
                                 Appelez-nous
                                 <br />
-                                +212 05356-44048
+                                {contact.phone}
                             </ListItem>
                         </ListStyleOne>
                     </UpperBox>

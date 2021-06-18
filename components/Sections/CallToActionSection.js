@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import contact from "../../data/contact";
 import AutoContainer from "../AutoContainer";
 
 
@@ -145,7 +146,7 @@ const CallToActionSection = () => {
                 <ContactNumberBox className="clearfix">
                     <Left>
                             <Number>
-                            +212 5356-44048 
+                            {contact.phone} 
                             </Number>
                     </Left>
                     <Right>
