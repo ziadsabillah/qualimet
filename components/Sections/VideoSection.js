@@ -107,7 +107,7 @@ const VideoSection = () => {
                 position: 'relative',
                 marginTop: '-80px',
                 padding: '155px 0 100px',
-                backgroundImage: "url('/img/7.jpeg')",
+                // backgroundImage: "url('/img/7.jpeg')",
                 backgroundColor: '#f4f4f4',
                 backgroundPosition: 'right bottom',
                 backgroundRepeat: 'no-repeat'
