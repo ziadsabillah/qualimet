@@ -77,6 +77,26 @@ const ListItem = styled.li`
     }
 `;
 
+const RowCentered = styled(Row)`
+    @media (max-width: 767px) {
+        h4{
+            text-align: center;
+
+        }
+    }
+`;
+
+
+
+const Column2Centered = styled(Column2)`
+    @media (max-width: 767px) {
+        h4{
+            text-align: center !important;
+            margin-top: 1em;
+
+        }
+    }
+`;
 const MiddleSection = styled.div`
     position: relative;
     padding-top: 45px;
@@ -177,7 +197,7 @@ const Footer = () => {
                                 Envoyer-nous un email:
                                 <br />
                                 {contact.email}
-                        </ListItem>
+                            </ListItem>
                             <ListItem>
                                 Appelez-nous
                                 <br />
@@ -247,14 +267,14 @@ const Footer = () => {
                                 </LinksWidget>
                             </Column3>
                         </Row>
-                        <Row>
-                            <Column2>
+                        <RowCentered>
+                            <Column2Centered>
                                 <h4 style={{ color: '#fff' }}>Copyright © 2021 Atourrate Fès</h4>
-                            </Column2>
-                            <Column2>
+                            </Column2Centered>
+                            <Column2Centered>
                                 <h4 style={{ color: '#fff', textAlign: 'right' }}>Powered by <a passHref={true} href="https://www.matechso.com" target="_blank">MaTechSo</a></h4>
-                            </Column2>
-                        </Row>
+                            </Column2Centered>
+                        </RowCentered>
                     </MiddleSection>
                 </AutoContainer>
             </MainFooter>
