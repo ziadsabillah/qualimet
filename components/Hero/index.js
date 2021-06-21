@@ -38,21 +38,31 @@ export default function Hero() {
             titleColor: '#FFF',
             button: 'Contact',
             href: '/contact',
-            imgPath: '/slider/helmet.jpeg',
-
+            imgPath: '/slider/slidernew-4.jpg',
+            id: 1
+        },
+        {
+            id: 4,
+            title: `Un travail de qualité grâce au dévouement`,
+            titleColor: '#FFF',
+            button: 'Réalisations',
+            href:"/projects",
+            imgPath: '/slider/slidernew-3.jpg'
         },
         {
             title: `Bâtir ce n'est pas seulement une promesse, c'est un art et un savoir-faire.`,
             titleColor: '#ffffff',
             button: 'Demander un devis',
             href: '/contact',
-            imgPath: '/slider/slider-4.jpeg'
+            imgPath: '/slider/slidernew-1.jpg',
+            id: 2,
         },{
             title: `Votre meilleur partenaire pour vos projets de constructions`,
             titleColor: '#ffffff',
             button: 'Nos Projets',
             href: '/projects',
-            imgPath: '/slider/slider-5.jpeg'
+            imgPath: '/slider/slidernew-2.jpg',
+            id: 3,
         }
     ]
 
