@@ -47,7 +47,7 @@ export default function Hero() {
             titleColor: '#FFF',
             button: 'Réalisations',
             href:"/projects",
-            imgPath: '/slider/slidernew-3.jpg'
+            imgPath: '/slider/slidernew-5.jpg'
         },
         {
             title: `Bâtir ce n'est pas seulement une promesse, c'est un art et un savoir-faire.`,
