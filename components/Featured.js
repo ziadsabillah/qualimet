@@ -66,9 +66,6 @@ const Featured = () => {
                             <h3>
                                 Licencié et Assuré
                             </h3>
-                            <Text>
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernaturipsam voluptatem quia.
-                            </Text>
                         </InnerBox>
                     </Column3>
                     <Column3 style={{ padding: '0', margin: '0' }}>
@@ -79,9 +76,6 @@ const Featured = () => {
                             <h3>
                                 Travailleurs Professionel
                             </h3>
-                            <Text>
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernaturipsam voluptatem quia.
-                            </Text>
                         </InnerBox>
                     </Column3>
                     <Column3 style={{ padding: '0', margin: '0' }}>
@@ -92,9 +86,6 @@ const Featured = () => {
                             <h3>
                                 Entreprise Primée
                             </h3>
-                            <Text>
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernaturipsam voluptatem quia.
-                            </Text>
                         </InnerBox>
                     </Column3>
 
