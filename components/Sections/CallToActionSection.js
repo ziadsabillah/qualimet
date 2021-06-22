@@ -43,6 +43,11 @@ const Title = styled.div`
     margin-top: 1em;
     color: #FFF;
     text-align: center !important;
+    h3{
+        min-height: 62px;
+        margin: 0;
+    }
+    
 `;
 
 const Button = styled.a`

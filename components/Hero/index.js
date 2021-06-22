@@ -6,20 +6,20 @@ import styled from 'styled-components'
 
 const Button = styled.a`
     margin-top: 5px;
-    line-height: 24px;
+    line-height: 20px;
     color: #FFF;
     font-size: 1em;
     font-weight: 500;
     background: transparent;
     display: inline-block;
-    padding: 12px 40px;
-    border-radius: 50px;
-    border: 2px solid #375F9C;
+    padding: 10px 30px;
+    border-radius: 4px;
+    border: 2px solid #F68C33;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     --webkit-transition: all 0.3s ease;
     cursor: pointer;
-
+    text-decoration: none;
 
     @media only screen and (max-width: 400px) {
         font-size: 0.6em;
@@ -55,13 +55,6 @@ export default function Hero() {
             href: '/contact',
             imgPath: '/slider/slidernew-1.jpg',
             id: 2,
-        },{
-            title: `Votre meilleur partenaire pour vos projets de constructions`,
-            titleColor: '#ffffff',
-            button: 'Nos Projets',
-            href: '/projects',
-            imgPath: '/slider/slidernew-2.jpg',
-            id: 3,
         }
     ]
 
