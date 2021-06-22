@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: 'Gotham Bold';
-  src: url("/public/fonts/cross-browser/gotham-bold-webfont.woff") format('woff');
+  src: url("../public/fonts/cross-browser/gotham-bold-webfont.woff") format('woff')
+       url("../public/fonts/cross-browser/gotham-bold-webfont.woff2") format("woff2");
 }
 
 
@@ -233,15 +234,14 @@ header {
 }
 
 
-.carousel-item {
-  width: 270px !important;
+.service-carousel-item {
+  max-width: 450px !important;
   margin-right: 30px;
   min-height: 1px;
   float: left;
-  -webkit-backface-visibility: hidden;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
 }
+
+
 
 .testimonial-carousel-item {
   width: 540px;
