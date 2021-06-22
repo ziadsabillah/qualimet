@@ -18,9 +18,10 @@ const LinksWrapper = styled.ul`
 `;
 
 const LinkItem = styled.li`
-    height: 100%;
+    height: 50px;
+    align-self: center;
     padding: 0 1.1em;
-    color: #375F9C;
+    color: #242424;
     font-weight: 500;
     font-size: 14px;
     align-items: center;
@@ -30,13 +31,13 @@ const LinkItem = styled.li`
     transition: all 220ms ease-in-out; 
 
     &:hover {
-        border-top: 2px solid #FC6C58;
-        color: #FC6C58;
+        border-bottom: 2px solid #1B75BB;
+        color: #1B75BB;
     }
 
     &.active {
-        border-top: 2px solid #FC6C58;
-        color: #FC6C58;
+        border-bottom: 2px solid #1B75BB;
+        color: #1B75BB;
     }
 `;
 
@@ -54,7 +55,7 @@ const DetectActive = ({href, pageName}) => {
         className = `active`
     }
 
-    return  <LinkItem className={className}><Link href={href}>{pageName}</Link></LinkItem>
+    return  <LinkItem className={className}><Link href={href}>{pageName.toUpperCase()}</Link></LinkItem>
 
 }
 
@@ -67,15 +68,15 @@ const NavLinks = () => {
             <LinksWrapper>
                 <DetectActive href="/" pageName="Accueil" />
                 
-                <DetectActive href="/about" pageName="Présentation" />
+                <DetectActive href="/about" pageName="Spécialité" />
 
-                <DetectActive href="/projects" pageName="Projets" />
+                <DetectActive href="/projects" pageName="Accreditations" />
 
-                <DetectActive href="/services" pageName="Services" />
+                <DetectActive href="/services" pageName="Prestations" />
 
-                <DetectActive href="/recrutements" pageName="Recrutements" />
+                <DetectActive href="/recrutements" pageName="A propos" />
 
-                <DetectActive href="/contact" pageName="Contact" />
+                <DetectActive href="/contact" pageName="Contacts" />
 
             </LinksWrapper>
         </NavLinkContainer>

@@ -8,11 +8,11 @@ import { useMediaQuery } from 'react-responsive'
 
 const NavbarContainer = styled.div`
     width: 100%;
-    height: 70px;
+    height: 100px;
     box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
     display: flex;
     align-items: center;
-    padding: 0 1.5em;
+    padding: 0 5em;
     background: #FFFF;
 `;
 
@@ -28,7 +28,7 @@ const MiddleSection = styled.div`
     display: flex;
     height: 100%;
     flex: 2;
-    justify-content: center;
+    justify-content: flex-end;
 `;
 
 const CustomNavbar = () => {

@@ -10,77 +10,48 @@ export const BannerSection = styled.div`
 const InnerContainer = styled.div`
     position: relative;
     margin-top: 10px;
-    background-color: #375F9C;
+    /* background-color: #375F9C; */
     padding: 30px 70px 30px 45px;
     box-shadow: 0px 0px 20px rgb(224 222 222 / 50%);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 `;
 
-const LeftSection = styled.div`
-    flex: 80%;
-    float: left;
-    @media screen and (max-width: 800px) {
-        flex: 100%;
-        text-align: center;
-    }
-    h2 {
-        position: relative;
-        color: #FFF;
-        font-size: 2em;
-        font-weight: 400;
-    }
-
-
-    h4 {
-        position: relative;
-        color: #FFF;
-        font-size: 1em;
-        font-weight: 400;
-    }
-    
+const Subtitle = styled.span`
+    font-size: 15px;
+    color: #616161;
+    font-style: italic;
 `;
 
-const DarkAutoContainer = styled(AutoContainer)`
-    background: #f4f4f4;
-`;
-
-const RightSection = styled.div`
-    flex: 20%;
+const Title = styled.h1`
+    color: #333;
     text-align: center;
-
-    @media screen and (max-width: 800px) {
-        flex: 100%;
-    }
-
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin-top: .5em;
 `;
 
-const ContactButton = styled.a`
-    margin-top: 5px;
-    line-height: 24px;
-    color: #252525;
-    font-size: 16px;
-    font-weight: 500;
-    background: #ffffff;
+const LineIcon = styled.div`
     display: inline-block;
-    padding: 12px 40px;
-    border-radius: 50px;
-    border: 2px solid #ffffff;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-    --webkit-transition: all 0.3s ease;
+    height: 6px;
+    width: 30px;
+    position: relative;
+    padding-top: 1em;
+    margin-top: .5em;
+    &::before, &::after {
+        height: 2px;
+        width: 20px;
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #777;
 
-    &:hover {
-        color: #FFF;
-        border-color: #FC6C58;
-        background: #FC6C58;
-        cursor: pointer;
     }
 `;
-
 
 
 const HeroBanner = () => {
@@ -89,15 +60,11 @@ const HeroBanner = () => {
         <BannerSection>
             <AutoContainer>
                 <InnerContainer>
-                    <LeftSection>
-                        <h2>Un travail de qualité grâce au dévouement</h2> 
-                        <h4>
-                        La satisfaction de nos clients fait notre plus grande joie et nous permet également de progresser dans un contexte ouvert et concurrentiel.
-                        </h4>
-                    </LeftSection>
-                    <RightSection>
-                        <ContactButton href="/projects">Réalisations</ContactButton>
-                    </RightSection>
+                    <Subtitle>Depuis 2008</Subtitle>
+                    <Title>
+                    LABORATOIRE DE MÉTROLOGIE INDÉPENDANT SPÉCIALISÉ SUR L'ÉTALONNAGE ET LA VÉRIFICATION D'INSTRUMENTS DE MESURE
+                    </Title>
+                    <LineIcon />
                 </InnerContainer>
             </AutoContainer>
         </BannerSection>

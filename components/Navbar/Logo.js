@@ -9,12 +9,9 @@ const LogoWrapper = styled.div`
 `;
 
 const LogoImg = styled.div`
-    width: 150px; 
-    height: 50px;
 
     img {
-        width: 100%;
-        height: 100%;
+        max-width: 200px;
         &:hover {
             cursor: pointer;
         }
@@ -24,7 +21,7 @@ const LogoImg = styled.div`
 const Logo = () => (
     <>
         <LogoWrapper>
-            <LogoImg><Link href="/"><Image src='/img/logofooter.png' alt="MaTechSo Template Logo" width={150} height={50}/></Link></LogoImg>
+            <LogoImg><Link href="/"><img src='/img/logofooter.png' alt="MaTechSo Template Logo"  /></Link></LogoImg>
         </LogoWrapper>
     </>
 )

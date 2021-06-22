@@ -20,7 +20,7 @@ const Layout = (props) => {
                 <main>
                     {props.children}
                 </main>
-                <FooterDynamic />
+                {/* <FooterDynamic /> */}
             </div>
         </>
     )

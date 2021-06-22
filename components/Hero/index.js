@@ -32,27 +32,26 @@ export default function Hero() {
 
     const slides = [
         {
-            title: `Nous opérons sur tout le territoire Marocain.
-                N'hésitez pas à nous contacter pour plus d'informations
+            title: `La métrologie, c'est notre metier
             `,
             titleColor: '#FFF',
             button: 'Contact',
             href: '/contact',
-            imgPath: '/slider/slidernew-4.jpg',
+            imgPath: '/slider/labo-1.jpg',
             id: 1
         },
         {
             id: 4,
-            title: `Un travail de qualité grâce au dévouement`,
+            title: `QualiMet Maroc`,
             titleColor: '#FFF',
-            button: 'Réalisations',
-            href:"/projects",
-            imgPath: '/slider/slidernew-5.jpg'
+            button: 'A propos',
+            href:"/about",
+            imgPath: '/slider/measure.jpg'
         },
         {
-            title: `Bâtir ce n'est pas seulement une promesse, c'est un art et un savoir-faire.`,
+            title: `Nos Accréditations et reconnaissances`,
             titleColor: '#ffffff',
-            button: 'Demander un devis',
+            button: 'Accréditations',
             href: '/contact',
             imgPath: '/slider/slidernew-1.jpg',
             id: 2,
@@ -70,7 +69,7 @@ export default function Hero() {
 
     return (
         <>
-            <Slider autoplay={2000} className="slider-wrapper">
+            <Slider autoplay={2500} className="slider-wrapper">
                 {
                     slides.map((slide, index) =>
                         <div key={index}
@@ -83,17 +82,17 @@ export default function Hero() {
                                 backgroundSize: "cover",
                                 textAlign: 'center',
                                 display: 'flex',
-                                alignItems: 'flex-end',
-                                paddingRight: '15vw',
+                                alignItems: 'center',
+                                // paddingRight: '15vw',
                                 justifyContent: 'center',
                                 color: `${slide.titleColor}`,
                                 flexFlow: 'column'
                             }}>
-                            <div className="inner" style={{ width: '40%' }}>
+                            <div className="inner" style={{ width: '80%' }}>
                                 <h1 style={{
-                                    fontSize: '1.2em',
-                                }}>{slide.title}</h1>
-                                {slide.city && <h2>{slide.city}</h2>}
+                                    fontSize: '2em',
+                                }}>{slide.title.toUpperCase()}</h1>
+                                {slide.city && <h2>{slide.city.toUpperCase()}</h2>}
                                 <p style={{
                                     fontSize: '20px'
                                 }}>{slide.description}</p>

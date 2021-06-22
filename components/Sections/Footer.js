@@ -210,7 +210,7 @@ const Footer = () => {
                             <Column3>
                                 <LogoWidget>
                                     <Logo>
-                                        <img src="/img/logofooter.png" alt="logo" />
+                                        <img src="/img/logofooter.png" width={170} alt="logo" />
                                     </Logo>
                                     <Text>
                                         Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès.
