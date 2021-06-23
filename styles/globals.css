@@ -142,7 +142,7 @@ header {
 
 }
 
-.slide {
+.slide.carousel-fade {
   position: relative !important;
 }
 
