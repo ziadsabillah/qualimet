@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 import contact from '../../data/contact';
-import services from '../../data/services';
+import data  from '../../data/services';
 import AutoContainer from '../AutoContainer';
-import { Column3, Column2, ListStyleOne, Row } from '../General'
+import { Column3, Column2, ListStyleOne } from '../General'
+import { Row, Col } from 'react-bootstrap';
+
+import { useState, useEffect } from 'react';
 
 const MainFooter = styled.footer`
-    background-image: url('/img/6.jpeg');
+    background-image: url('/img/6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
     position: relative;
     padding-top: 55px;
     display: block;
@@ -22,17 +28,17 @@ const MainFooter = styled.footer`
     }
 `;
 
-const UpperBox = styled.div`
-    position: relative;
-    padding: 22px 25px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 100px;
+// const UpperBox = styled.div`
+//     position: relative;
+//     padding: 22px 25px 18px;
+//     border: 1px solid rgba(255, 255, 255, 0.1);
+//     background-color: rgba(0, 0, 0, 0.3);
+//     height: 100px;
 
-    @media only screen and (max-width: 767px) {
-        height: 230px;
-    }
-`;
+//     @media only screen and (max-width: 767px) {
+//         height: 230px;
+//     }
+// `;
 
 const ListItem = styled.li`
     position: relative;
@@ -99,8 +105,8 @@ const Column2Centered = styled(Column2)`
 `;
 const MiddleSection = styled.div`
     position: relative;
-    padding-top: 45px;
-    padding-bottom: 40px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 `;
 
 const LogoWidget = styled.div`
@@ -127,13 +133,22 @@ const LinksWidget = styled.div`
 
 const LinksHeader = styled.h2`
     position: relative;
-    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Gotham Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
     font-weight: 500;
     color: #ffff;
-    line-height: 1.2em;
+    line-height: 1.1em;
     margin-bottom: 25px;
     padding-bottom: 20px;
     text-transform: capitalize;
+
+    &:hover {
+        &::after {
+            transform: scaleX(0);
+        }
+    }
 
     &::after {
         position: absolute;
@@ -143,6 +158,11 @@ const LinksHeader = styled.h2`
         width: 100%;
         height: 1px;
         background-color: #375F9C;
+
+        transform: scaleX(1);
+        transition: transform 250ms ease-in-out;
+
+        
 
         @media (max-width: 400px) {
             display: none;
@@ -161,18 +181,31 @@ const List = styled.ul`
 
         a {
             position: relative;
-            color: #cccc;
+            color: #ffffff;
             font-size: 15px;
-            padding-left: 15px;
+            padding-left: 0;
+            padding-bottom: 5px;
             transition: all 0.3s ease;
-            &::before {
+            text-decoration: none;
+            &::after {
                 position: absolute;
-                left: 0px;
-                top: 0px;
-                content: '-';
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                transform: scaleX(1);
+                transform-origin: 100% 0%;
+                background-color: #ccc;
+                transition: transform 250ms ease-in-out;
+
+                content: '';
                 line-height: 1.2em;
             }
             &:hover {
+                &::after {
+                    transform: scaleX(0);
+                    transform-origin: 100% 0%;
+                }
                 color: #fff;
             }
         }
@@ -180,13 +213,36 @@ const List = styled.ul`
 `;
 
 
+const MatechsoLink = styled.a`
+    text-decoration: none;
+    color: #F68C33;
+`;
+
+const CopyrightTitle = styled.p`
+    font-family: 'Gotham Bold', sans-serif;
+
+    text-align: 1.2em;
+    color: #ffffff;
+    font-weight: bold;
+    
+`;
+
 
 const Footer = () => {
+
+    const [services, setServices] = useState(null);
+
+
+    useEffect(() => {
+        setServices(data.splice(0, 4));
+    }, [data])
+
+
     return (
         <>
             <MainFooter>
                 <AutoContainer>
-                    <UpperBox>
+                    {/* <UpperBox>
                         <ListStyleOne className="clearfix">
                             <ListItem>
                                 {contact.street}
@@ -204,20 +260,33 @@ const Footer = () => {
                                 {contact.phone}
                             </ListItem>
                         </ListStyleOne>
-                    </UpperBox>
+                    </UpperBox> */}
                     <MiddleSection>
                         <Row className="clearfix">
-                            <Column3>
+                            <Col sm={12} md={3}>
                                 <LogoWidget>
                                     <Logo>
                                         <img src="/img/logofooter.png" width={170} alt="logo" />
                                     </Logo>
                                     <Text>
-                                        Atourrate est une société de travaux publique, de constructions, travaux divers négoce basé à Fès.
+                                        {contact.companyName} est une société de travaux publique, de constructions, travaux divers négoce basé à Fès.
                                     </Text>
                                 </LogoWidget>
-                            </Column3>
-                            <Column3>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <LinksWidget>
+                                    <LinksHeader>
+                                        Siège
+                                    </LinksHeader>
+                                        <Text>Siège Social
+                                            187 BD d'Accra lotissement La colline
+                                            28820 Mohammedia - Maroc
+
+                                            Tel :+212 523 32 31 58
+                                            Email : mcc@mccmaroc.ma </Text>
+                                </LinksWidget>
+                            </Col>
+                            <Col sm={12} md={3}>
                                 <LinksWidget>
                                     <LinksHeader>
                                         Liens Utiles
@@ -250,8 +319,8 @@ const Footer = () => {
                                         </li>
                                     </List>
                                 </LinksWidget>
-                            </Column3>
-                            <Column3>
+                            </Col>
+                            <Col sm={12} md={3}>
                                 <LinksWidget>
                                     <LinksHeader>
                                         Nos Services
@@ -265,14 +334,16 @@ const Footer = () => {
 
                                     </List>
                                 </LinksWidget>
-                            </Column3>
+                            </Col>
                         </Row>
                         <RowCentered>
                             <Column2Centered>
-                                <h4 style={{ color: '#fff' }}>Copyright © 2021 Atourrate Fès</h4>
+                                <CopyrightTitle>Copyright © 2021 QualiMet</CopyrightTitle>      
                             </Column2Centered>
                             <Column2Centered>
-                                <h4 style={{ color: '#fff', textAlign: 'right' }}>Powered by <a passHref={true} href="https://www.matechso.com" target="_blank">MaTechSo</a></h4>
+                                <CopyrightTitle style={{ textAlign: 'right' }}>Powered by 
+                                    <MatechsoLink passHref={true} href='https://www.matechso.com' target="_blank"> Matechso</MatechsoLink>
+                                </CopyrightTitle>
                             </Column2Centered>
                         </RowCentered>
                     </MiddleSection>
