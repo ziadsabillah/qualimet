@@ -103,9 +103,6 @@ const CallToActionSection = () => {
                                         {service.title.toUpperCase()}
                                     </h3>
                                 </Title>
-                                {/* <Paragraph>
-                                    {service.description}
-                                </Paragraph> */}
                                 <Button>Lire Plus</Button>
                             </Wrapper>
                         ))}
