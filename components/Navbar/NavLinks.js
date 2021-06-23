@@ -27,8 +27,8 @@ const LinkItem = styled.li`
     align-items: center;
     justify-content: center;
     display: flex;
-    border-top: 2px solid transparent;
-    transition: all 220ms ease-in-out; 
+    border-bottom: 2px solid transparent;
+    transition: color 220ms ease-in-out; 
 
     &:hover {
         border-bottom: 2px solid #1B75BB;

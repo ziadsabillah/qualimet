@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel'
 import services from "../../data/services";
-import { SubmitButton } from "../General";
 
 const SectionWrapper = styled.section`
     position: relative;
@@ -87,7 +86,7 @@ const CallToActionSection = () => {
         <>
 
             <SectionWrapper>
-                <Container>
+                <Container fluid>
                     <Carousel
                         itemClass="service-carousel-item"
                         ssr
@@ -104,9 +103,6 @@ const CallToActionSection = () => {
                                         {service.title.toUpperCase()}
                                     </h3>
                                 </Title>
-                                {/* <Paragraph>
-                                    {service.description}
-                                </Paragraph> */}
                                 <Button>Lire Plus</Button>
                             </Wrapper>
                         ))}
