@@ -58,7 +58,7 @@ const Services = () => {
 
     return (
         <>
-            <Carousel nextLabel="" prevLabel="">
+            <Carousel fade nextLabel="" prevLabel="">
                 <Carousel.Item>
                     <Row>
                         <Col sm={12} md={6}>

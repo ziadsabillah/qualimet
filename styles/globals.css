@@ -83,13 +83,13 @@ header {
 }
 
 
-.carousel-control-prev-icon {
+/* .carousel-control-prev-icon {
   background-image: url('../public/icons/previous.png') !important;
 }
 
 .carousel-control-next-icon {
   background-image: url('../public/icons/next.png') !important;
-}
+} */
 
 .slider-wrapper {
   position: relative;

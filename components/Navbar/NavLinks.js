@@ -18,6 +18,7 @@ const LinksWrapper = styled.ul`
 `;
 
 const LinkItem = styled.li`
+    position: relative;
     height: 50px;
     align-self: center;
     padding: 0 1.1em;
@@ -27,18 +28,31 @@ const LinkItem = styled.li`
     align-items: center;
     justify-content: center;
     display: flex;
-    border-bottom: 2px solid transparent;
+    /* border-bottom: 2px solid transparent; */
     transition: color 220ms ease-in-out; 
 
-    &:hover {
-        border-bottom: 2px solid #1B75BB;
-        color: #1B75BB;
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background-color: #1B75BB;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
     }
 
-    &.active {
-        border-bottom: 2px solid #1B75BB;
+
+
+    &:hover, &.active {
+        /* border-bottom: 2px solid #1B75BB; */
         color: #1B75BB;
+        &::after {
+            transform: scaleX(1);
+        }
     }
+
 `;
 
 const Link = styled.a`
