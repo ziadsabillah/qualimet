@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Row, Col, Carousel} from 'react-bootstrap'
-
+import {FcNext, FcPrevious} from 'react-icons/fc';
 
 const Content = styled.div`
     position: relative;
@@ -41,11 +41,60 @@ const Button = styled.a`
 `;
 
 
+const PrevIcon = () => (
+    <>
+        <FcPrevious color="black" size={12} />
+    </>
+)
+
+const NextIcon = () => (
+    <>
+        <FcNext color="black" size={12} />
+    </>
+)
+
+
 const Services = () => {
 
     return (
         <>
             <Carousel nextLabel="" prevLabel="">
+                <Carousel.Item>
+                    <Row>
+                        <Col sm={12} md={6}>
+                            <img src='/img/8.jpg' width="100%"/>
+                        </Col>
+                        <Col sm={12} md={6}>
+                            <Content>
+                                <Header>
+                                Etalonnage et Vérification
+                                </Header>
+                                <Paragraph>
+                                Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
+                                </Paragraph>
+                                <Button>Lire Plus</Button>
+                            </Content>
+                        </Col>
+                    </Row>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Row>
+                        <Col sm={12} md={6}>
+                            <img src='/img/8.jpg' width="100%"/>
+                        </Col>
+                        <Col sm={12} md={6}>
+                            <Content>
+                                <Header>
+                                Etalonnage et Vérification
+                                </Header>
+                                <Paragraph>
+                                Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
+                                </Paragraph>
+                                <Button>Lire Plus</Button>
+                            </Content>
+                        </Col>
+                    </Row>
+                </Carousel.Item>
                 <Carousel.Item>
                     <Row>
                         <Col sm={12} md={6}>
