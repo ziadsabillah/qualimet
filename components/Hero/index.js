@@ -53,7 +53,7 @@ export default function Hero() {
             titleColor: '#ffffff',
             button: 'Accréditations',
             href: '/contact',
-            imgPath: '/slider/slidernew-1.jpg',
+            imgPath: '/slider/measure.jpg',
             id: 2,
         }
     ]
