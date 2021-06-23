@@ -42,7 +42,7 @@ export default function Hero() {
         },
         {
             id: 4,
-            title: `QualiMet Maroc`,
+            title: `QualiMet Maroc - Laboratoire de Metrologie Accredité ISO 17025`,
             titleColor: '#FFF',
             button: 'A propos',
             href:"/about",
