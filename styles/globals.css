@@ -143,7 +143,7 @@ header {
 }
 
 .slide {
-  position: relative;
+  position: relative !important;
 }
 
 /* Previous and Next buttons of hero slider */
