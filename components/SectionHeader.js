@@ -7,7 +7,9 @@ export const SectionHeader = styled.div`
     padding-top: 20px;
     h2 {
         position: relative;
-        color: '#242424';
+
+        color: ${props => props.light ? "#efefef" : '#242424'};
+        
         font-size: 32px;
         font-weight: 600;
         line-height: 1.2em;

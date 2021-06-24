@@ -41,12 +41,16 @@ const Icon = styled.div`
     }
 `;
 const Title = styled.div`
+   
     margin-top: 1em;
-    color: #FFF;
+    color: #efefef;
     text-align: center !important;
     h3{
-        min-height: 62px;
+        font-size: 20px;
+        /* min-height: 62px; */
         margin: 0;
+        font-family:'Gotham Bold', sans-serif;
+        font-weight: bold
     }
     
 `;
@@ -60,11 +64,12 @@ const Button = styled.a`
     border-radius: 4px;
     margin-bottom: 1em;
     text-decoration: none;
-    /* border: 1px solid #F68C33; */
+    border: 1px solid #F68C33;
     cursor: pointer;
     /* transition: background .3s ease-in; */
+    &:hover {
 
-    &::after {
+        &::after {
         content: '';
         position: absolute;
         left: 0;
@@ -88,9 +93,10 @@ const Button = styled.a`
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
     }
+    }
     &:hover, &:focus {
         color: #FFF;
-        background-color: #F68C33;
+        /* background-color: #F68C33; */
     }
 `;
 
@@ -98,12 +104,12 @@ const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
         items: 4,
-        paritialVisibilityGutter: 60
+        paritialVisibilityGutter: 30
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 3,
-        paritialVisibilityGutter: 50
+        items: 4,
+        paritialVisibilityGutter: 20
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
@@ -128,7 +134,7 @@ const CallToActionSection = () => {
                     <Carousel
                         itemClass="service-carousel-item"
                         ssr
-                        // infinite
+                        infinite
                         partialVisible={false}
                         responsive={responsive}>
                         {services?.map((service) => (

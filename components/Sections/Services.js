@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Row, Col, Carousel} from 'react-bootstrap'
-import {FcNext, FcPrevious} from 'react-icons/fc';
+import { Row, Col, Carousel } from 'react-bootstrap'
+import { SectionHeader } from '../SectionHeader';
+import { FcNext, FcPrevious } from 'react-icons/fc';
 
 
 const Content = styled.div`
@@ -13,26 +14,20 @@ const Content = styled.div`
     width: 100%;
 
     height: 100%;
-    
+    justify-content: space-evenly;
 
 `;
 
-const Header = styled.h1`
-    font-size: 1.8em;
-    color: #efefef;
-    font-weight: bold;
-    font-family: 'Gotham Bold', sans-serif;
-`;
 
 const Paragraph = styled.p`
-    margin-top: 3em;
     font-size: 1.4em;
     color: #efefef;
 `;
 
 const Button = styled.a`
     position: relative;
-    margin-top: 2.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
     padding: .5em 1.5em;
     color: #efefef;
     background: transparent;
@@ -73,6 +68,12 @@ const Button = styled.a`
     }
 `;
 
+
+const CarouselSection = styled.section`
+    position: relative;
+    background: #242424;
+`;
+
 const PaddingLessCol = styled(Col)`
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -98,62 +99,71 @@ const Services = () => {
 
     return (
         <>
-            <Carousel interval={2000} fade nextLabel="" prevLabel="">
-                <Carousel.Item>
-                    <Row>
-                        <PaddingLessCol sm={12} md={6}>
-                            <img src='/img/8.jpg' width="100%"/>
-                        </PaddingLessCol>
-                        <PaddingLessCol sm={12} md={6}>
-                            <Content>
-                                <Header>
-                                Etalonnage et Vérification
-                                </Header>
-                                <Paragraph>
-                                Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
-                                </Paragraph>
-                                <Button>Lire Plus</Button>
-                            </Content>
-                        </PaddingLessCol>
-                    </Row>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Row>
-                        <PaddingLessCol sm={12} md={6}>
-                            <img src='/img/calibration.jpg' width="100%"/>
-                        </PaddingLessCol>
-                        <PaddingLessCol sm={12} md={6}>
-                            <Content>
-                                <Header>
-                                Essais et Caractérisation
-                                </Header>
-                                <Paragraph>
-                                Nous intervenons aussi dans les caractérisations des enceintes thermiques et climatique, sur les machines d'essais mécanique (en traction et en compression, sur les machines de dureté etc) et dans la qualification des autoclaves et ceux conformément aux normes en vigeur....
-                                </Paragraph>
-                                <Button>Lire Plus</Button>
-                            </Content>
-                        </PaddingLessCol>
-                    </Row>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Row>
-                        <PaddingLessCol sm={12} md={6}>
-                            <img src='/img/formation.jpg' width="100%"/>
-                        </PaddingLessCol>
-                        <PaddingLessCol sm={12} md={6}>
-                            <Content>
-                                <Header>
-                                Formations
-                                </Header>
-                                <Paragraph>
-                                Afin de transmettre nos expériences professionnelles à vos équipes dans la connaissance de la métrologie, nous vous proposons une offre de formation (intra ou inter-entreprise adaptée à vos besoins sur le plan technique ou humain dans nos centres...
-                                </Paragraph>
-                                <Button>Lire Plus</Button>
-                            </Content>
-                        </PaddingLessCol>
-                    </Row>
-                </Carousel.Item>
-            </Carousel>
+            <CarouselSection>
+
+                <Carousel interval={2000} fade nextLabel="" prevLabel="">
+                    <Carousel.Item>
+                        <Row>
+                            <PaddingLessCol sm={12} md={6}>
+                                <img src='/img/8.jpg' width="100%" />
+                            </PaddingLessCol>
+                            <PaddingLessCol sm={12} md={6}>
+                                <Content>
+                                    {/* <Header>
+                                        Etalonnage et Vérification
+                                    </Header> */}
+                                    <SectionHeader light>
+                                        <h2>Etalonnage et Vérification</h2>
+                                    </SectionHeader>
+                                    <Paragraph>
+                                        Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
+                                    </Paragraph>
+                                    <Button>Lire Plus</Button>
+                                </Content>
+                            </PaddingLessCol>
+                        </Row>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Row>
+                            <PaddingLessCol sm={12} md={6}>
+                                <img src='/img/calibration.jpg' width="100%" />
+                            </PaddingLessCol>
+                            <PaddingLessCol sm={12} md={6}>
+                                <Content>
+                                    <SectionHeader light>
+                                        <h2>Essais et Caractérisation</h2>
+                                    </SectionHeader>
+
+                                    <Paragraph>
+                                        Nous intervenons aussi dans les caractérisations des enceintes thermiques et climatique, sur les machines d'essais mécanique (en traction et en compression, sur les machines de dureté etc) et dans la qualification des autoclaves et ceux conformément aux normes en vigeur....
+                                    </Paragraph>
+                                    <Button>Lire Plus</Button>
+                                </Content>
+                            </PaddingLessCol>
+                        </Row>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Row>
+                            <PaddingLessCol sm={12} md={6}>
+                                <img src='/img/formation.jpg' width="100%" />
+                            </PaddingLessCol>
+                            <PaddingLessCol sm={12} md={6}>
+                                <Content>
+                                    <SectionHeader light>
+                                        <h2>Formations</h2>
+                                    </SectionHeader>
+                                    
+                                    <Paragraph>
+                                        Afin de transmettre nos expériences professionnelles à vos équipes dans la connaissance de la métrologie, nous vous proposons une offre de formation (intra ou inter-entreprise adaptée à vos besoins sur le plan technique ou humain dans nos centres...
+                                    </Paragraph>
+                                    <Button>Lire Plus</Button>
+                                </Content>
+                            </PaddingLessCol>
+                        </Row>
+                    </Carousel.Item>
+                </Carousel>
+            </CarouselSection>
+
         </>
     )
 }
