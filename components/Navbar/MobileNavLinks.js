@@ -84,15 +84,15 @@ const MobileNavLinks = () => {
             <LinksWrapper>
                 <DetectActive href="/" pageName="Accueil" />
                 
-                <DetectActive href="/about" pageName="Présentation" />
+                <DetectActive href="/" pageName="Présentation" />
 
-                <DetectActive href="/projects" pageName="Projets" />
+                <DetectActive href="/" pageName="Projets" />
 
-                <DetectActive href="/services" pageName="Services" />
+                <DetectActive href="/" pageName="Services" />
 
-                <DetectActive href="/recrutements" pageName="Recrutements" />
+                <DetectActive href="/" pageName="Recrutements" />
 
-                <DetectActive href="/contact" pageName="Contact" />
+                <DetectActive href="/" pageName="Contact" />
 
             </LinksWrapper>
             }
