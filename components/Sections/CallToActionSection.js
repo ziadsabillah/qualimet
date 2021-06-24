@@ -64,32 +64,6 @@ const Button = styled.a`
     cursor: pointer;
     /* transition: background .3s ease-in; */
 
-    /* &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50%;
-        height: 50%;
-        -webkit-box-shadow: 0 0 17px 3px #F68C33,0 0 4px 2px #F68C33;
-          box-shadow: 0 0 17px 3px #F68C33,0 0 4px 2px #F68C33;
-        z-index: -1;
-
-        -webkit-animation-name: orange-shadow;
-                animation-name: orange-shadow;
-        -webkit-animation-timing-function: ease;
-                animation-timing-function: ease;
-        -webkit-animation-duration: 2s;
-                animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-    } */
-
     &::after {
         content: '';
         position: absolute;
