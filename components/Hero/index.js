@@ -15,11 +15,15 @@ const Button = styled.a`
     padding: 10px 30px;
     border-radius: 4px;
     border: 2px solid #F68C33;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-    --webkit-transition: all 0.3s ease;
+    font-family: 'Gotham Bold', sans-serif;
+    transition: all 0.1s ease-in-out;
+    --webkit-transition: all 0.1s ease-in-out;
     cursor: pointer;
     text-decoration: none;
+
+    &:focus, &:hover {
+        color: #F68C33;
+    } 
 
     @media only screen and (max-width: 400px) {
         font-size: 0.6em;

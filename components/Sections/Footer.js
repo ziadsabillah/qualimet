@@ -181,7 +181,7 @@ const List = styled.ul`
 
         a {
             position: relative;
-            color: #ffffff;
+            color: #efefef;
             font-size: 15px;
             padding-left: 0;
             padding-bottom: 5px;
@@ -206,7 +206,7 @@ const List = styled.ul`
                     transform: scaleX(0);
                     transform-origin: 100% 0%;
                 }
-                color: #fff;
+                color: #ccc;
             }
         }
     }
