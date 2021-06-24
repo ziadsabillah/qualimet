@@ -62,7 +62,7 @@ export default function Hero() {
 
     return (
         <>
-            <Slider autoplay={2500} className="slider-wrapper">
+            <Slider autoplay={2500} touchDisabled={true} className="slider-wrapper">
                 {
                     slides.map((slide, index) =>
                         <div key={index}
