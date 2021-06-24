@@ -49,7 +49,7 @@ export const Select = styled.select`
 `;
 
 export const TextArea = styled.textarea`
-    height: 240px;
+    height: 150px;
     resize: none;
     font-size: 16px;
     background: none;

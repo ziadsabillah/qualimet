@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Row, Col, Carousel} from 'react-bootstrap'
 import {FcNext, FcPrevious} from 'react-icons/fc';
 
+
 const Content = styled.div`
     position: relative;
     display: flex;
@@ -65,6 +66,8 @@ const NextIcon = () => (
 
 
 const Services = () => {
+
+
 
     return (
         <>
