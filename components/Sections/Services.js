@@ -31,15 +31,42 @@ const Paragraph = styled.p`
 `;
 
 const Button = styled.a`
+    position: relative;
     margin-top: 2.5em;
     padding: .5em 1.5em;
     color: #efefef;
+    background: transparent;
     font-weight: bold;
     border-radius: 4px;
     text-decoration: none;
     border: 1px solid #F68C33;
     cursor: pointer;
     transition: background .3s ease-in;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+                box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+        z-index: 1;
+        -webkit-animation-name: gradient-shadow;
+                animation-name: gradient-shadow;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
     &:hover, &:focus {
         color: #efefef;
         background-color: #F68C33;
