@@ -16,7 +16,8 @@ export default function Home() {
       {/* <ProjectsSection /> */}
       <CallToActionSection />
       <Services />
-      {/* <Contact /> */}
+      
+      <Contact />
     </Layout>
   )
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import AutoContainer from "../AutoContainer";
 import { SectionHeader } from "../SectionHeader";
-import { Form, FormGroup, Input, SubmitButton, TextArea } from '../General'
+import { Form, FormGroup, Input, Select, SubmitButton, TextArea } from '../General'
 
 
 const ContactSection = styled.section`
@@ -22,7 +22,7 @@ const Row = styled.div`
 
 const LeftColumn = styled.div`
     @media (min-width: 992px) {
-        flex: 66.666667%;
+        flex: 50%;
     }
 
     @media (max-width: 500px) {
@@ -37,7 +37,7 @@ const LeftColumn = styled.div`
 
 const RightColumn = styled.div`
     @media (min-width: 992px) {
-        flex: 33.33333%;
+        flex: 50%;
     }
 
     @media (max-width: 500px) {
@@ -57,6 +57,13 @@ const InfoTitle = styled.h2`
     padding-bottom: 12px;
     margin-bottom: 40px;
 
+    &:hover {
+        &::after {
+            transform: scaleX(0);
+            transform-origin: 100% 0%;
+        }
+    }
+
     &::after {
         position: absolute;
         content: '';
@@ -65,6 +72,9 @@ const InfoTitle = styled.h2`
         width: 40px;
         height: 2px;
         background-color: #FC6C58;
+        transform: scaleX(1);
+        transform-origin: 100% 0%;
+        transition: transform 250ms ease-in-out;
     }
 `;
 
@@ -113,12 +123,26 @@ const Contact = () => {
             <ContactSection>
                 <AutoContainer>
                     <SectionHeader>
-                        <h2>Envoyer nous un message</h2>
-                        <p>Vous souhaitez nous contacter et avoir plus d’informations ? Il vous suffit de remplir le formulaire ci-dessous. Nous ferons en sorte de vous répondre dans les plus brefs délais.</p>
+                        <h2>Formulaire de contact</h2>
+                        <p>Vous souhaitez établir un devis? Remplissez le formulaire ci-dessous.</p>
                     </SectionHeader>
                     <Row className="clearfix">
                         <LeftColumn>
                             <Form>
+                                <Row>
+                                    <FormGroup>
+                                        <Input
+                                            type="text"
+                                            name="societe"
+                                            placeholder="Socièté" />
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Select placeholder="Civilité">
+                                            <option>Monsieur</option>
+                                            <option>Madame</option>
+                                        </Select>
+                                    </FormGroup>
+                                </Row>
                                 <Row>
                                     <FormGroup>
                                         <Input
@@ -131,7 +155,7 @@ const Contact = () => {
                                         <Input
                                             type="text"
                                             name="name"
-                                            placeholder="Votre Nom" />
+                                            placeholder="Nom" />
                                     </FormGroup>
 
                                 </Row>
@@ -146,9 +170,10 @@ const Contact = () => {
                                         <Input
                                             type="text"
                                             name="subject"
-                                            placeholder="Sujet" />
+                                            placeholder="Fonction*" />
                                     </FormGroup>
                                 </Row>
+
                                 <FormGroup>
                                     <TextArea
                                         name="message"
@@ -161,16 +186,16 @@ const Contact = () => {
                             </Form>
                         </LeftColumn>
                         <RightColumn>
-                            <InfoTitle>STE Atourrate</InfoTitle>
+                            <InfoTitle>Qualimet - Maroc</InfoTitle>
                             <InfoList>
                                 <li>
-                                Lot12 Moulin Idrissia Etg2 Bur17 Et.2. Atlas, Fès 30000, Maroc
+                                    Lot12 Moulin Idrissia Etg2 Bur17 Et.2. Atlas, Fès 30000, Maroc
                                 </li>
                                 <li>
-                                +212 05356-44048
+                                    +212 05356-44048
                                 </li>
                                 <li>
-                                contact@atourrate.com
+                                    contact@atourrate.com
                                 </li>
                             </InfoList>
                             <SmallHeader>Cordonnées</SmallHeader>

@@ -12,6 +12,12 @@ export const SectionHeader = styled.div`
         font-weight: 600;
         line-height: 1.2em;
         display: inline-block;
+
+        &:hover {
+            &::after {
+                transform: scaleX(0);
+            }
+        }
     }
 
     h2::after {
@@ -23,6 +29,8 @@ export const SectionHeader = styled.div`
         height: 2px;
         bottom: 8px;
         background-color: #FC6C58;
+        transform: scaleX(1);
+        transition: transform 250ms ease-in-out;
 
         @media only screen and (max-width: 600px) {
             display: none;

@@ -30,7 +30,22 @@ export const Input = styled.input`
   color: #000000;
   border: 1px solid #d7d7d7;
   transition: all 0.5s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gotham Bold', sans-serif;
+`;
+
+
+export const Select = styled.select`
+    width: 100%;
+    display: block;
+    line-height: 28px;
+    height: 50px;
+    font-size: 15px;
+    padding: 10px 22px;
+    background: none;
+    color: #000;
+    border: 1px solid #d7d7d7;
+    transition: all 0.5s ease;
+    font-family: 'Gotham Bold', sans-serif;
 `;
 
 export const TextArea = styled.textarea`
@@ -64,21 +79,22 @@ export const ListStyleOne = styled.ul`
 export const SubmitButton = styled.button`
     margin-top: 10px;
     padding: 12px 45px;
-
+    width: 100%;
     position: relative;
     line-height: 24px;
     color: #fefefe;
     font-size: 16px;
-    font-weight: 500;
-    background: #375F9C;
+    font-weight: bold;
+    background: #1B75BB;
     display: inline-block;
-    border-radius: 50px;
-    border: 2px solid #375F9C;
-    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    border: 2px solid #1B75BB;
+    
+    font-family: 'Gotham Bold', sans-serif;
 
     &:hover {
         background: transparent;
-        color: #375F9C;
+        color: #1B75BB;
         border-color: 2px solid #fff;
         cursor: pointer;
     }
