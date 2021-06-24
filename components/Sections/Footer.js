@@ -294,27 +294,27 @@ const Footer = () => {
                                     <List>
                                         <li>
                                             <a href="/">
-                                                Accueil
+                                                A propos
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/services">
-                                                Services
+                                            <a href="/test">
+                                                Spécialité
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/projects">
-                                                Projets
+                                            <a href="/test">
+                                                Accreditations
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/about">
-                                                Présentation
+                                            <a href="/test">
+                                                Prestations
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/contact">
-                                                Demander un devis
+                                            <a href="/test">
+                                                Contacts
                                             </a>
                                         </li>
                                     </List>
