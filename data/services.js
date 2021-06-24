@@ -75,6 +75,14 @@ const services = [
         L’étalonnage des pH-mètre, conductimètre, turbidimètre, spectrophotomètres est réalisé par des étalons raccordés à la chaine international. Cette prestation est réalisée en laboratoire ou sur site.
         `,
         iconPath: 'services/pysico.jpg'
+    },
+    {
+        _id: 9,
+        title: 'Présentation de la société QualiMet Maroc',
+        description: `
+        Crée en 2008, QualiMet Maroc  est un laboratoire  de Métrologie (Calibration Laboratory) accrédité ISO 17025  spécialisé dans les prestations d’étalonnage et la vérification d'instruments de mesure au laboratoire ou sur site. Notre laboratoire est accrédité par le  SEMAC « étalonnage » dans 6 grandeurs physiques (voir portée d’accréditation N° AL43/010). Nous disposons  d'une équipe expérimentée d’ingénieurs et de techniciens spécialement formés pour réaliser  les étalonnages conformément à  des procédures et des méthodes  normalisées et nous proposons une offre globale qui couvre l’ensemble des activités de métrologie dans différents domaines.
+        `,
+        iconPath: 'services/pysico.jpg'
     }
 ];
 
