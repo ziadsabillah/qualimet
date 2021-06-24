@@ -28,6 +28,8 @@ const Subtitle = styled.span`
 
 const Title = styled.h1`
     color: #333;
+    font-weight: bold;
+    font-family: 'Gotham Bold', sans-serif;
     text-align: center;
     letter-spacing: 1px;
     line-height: 35px;
