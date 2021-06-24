@@ -6,14 +6,19 @@ const Content = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 3em 1em 0 1em;
+    padding: 3em 2em 0 2em;
     align-items: center;
+    background: #242424;
+    width: 100%;
+
+    height: 100%;
+    
 
 `;
 
 const Header = styled.h1`
     font-size: 1.8em;
-    color: #242424;
+    color: #efefef;
     font-weight: bold;
     font-family: 'Gotham Bold', sans-serif;
 `;
@@ -21,13 +26,13 @@ const Header = styled.h1`
 const Paragraph = styled.p`
     margin-top: 3em;
     font-size: 1.4em;
-    color: grey;
+    color: #efefef;
 `;
 
 const Button = styled.a`
     margin-top: 2.5em;
     padding: .5em 1.5em;
-    color: #242424;
+    color: #efefef;
     font-weight: bold;
     border-radius: 4px;
     text-decoration: none;
@@ -35,10 +40,15 @@ const Button = styled.a`
     cursor: pointer;
     transition: background .3s ease-in;
     &:hover, &:focus {
-        color: #FFF;
+        color: #efefef;
         background-color: #F68C33;
     }
 `;
+
+const PaddingLessCol = styled(Col)`
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+`
 
 
 const PrevIcon = () => (
@@ -61,10 +71,10 @@ const Services = () => {
             <Carousel interval={2000} fade nextLabel="" prevLabel="">
                 <Carousel.Item>
                     <Row>
-                        <Col sm={12} md={6}>
+                        <PaddingLessCol sm={12} md={6}>
                             <img src='/img/8.jpg' width="100%"/>
-                        </Col>
-                        <Col sm={12} md={6}>
+                        </PaddingLessCol>
+                        <PaddingLessCol sm={12} md={6}>
                             <Content>
                                 <Header>
                                 Etalonnage et Vérification
@@ -74,15 +84,15 @@ const Services = () => {
                                 </Paragraph>
                                 <Button>Lire Plus</Button>
                             </Content>
-                        </Col>
+                        </PaddingLessCol>
                     </Row>
                 </Carousel.Item>
                 <Carousel.Item>
                     <Row>
-                        <Col sm={12} md={6}>
+                        <PaddingLessCol sm={12} md={6}>
                             <img src='/img/calibration.jpg' width="100%"/>
-                        </Col>
-                        <Col sm={12} md={6}>
+                        </PaddingLessCol>
+                        <PaddingLessCol sm={12} md={6}>
                             <Content>
                                 <Header>
                                 Essais et Caractérisation
@@ -92,15 +102,15 @@ const Services = () => {
                                 </Paragraph>
                                 <Button>Lire Plus</Button>
                             </Content>
-                        </Col>
+                        </PaddingLessCol>
                     </Row>
                 </Carousel.Item>
                 <Carousel.Item>
                     <Row>
-                        <Col sm={12} md={6}>
+                        <PaddingLessCol sm={12} md={6}>
                             <img src='/img/formation.jpg' width="100%"/>
-                        </Col>
-                        <Col sm={12} md={6}>
+                        </PaddingLessCol>
+                        <PaddingLessCol sm={12} md={6}>
                             <Content>
                                 <Header>
                                 Formations
@@ -110,7 +120,7 @@ const Services = () => {
                                 </Paragraph>
                                 <Button>Lire Plus</Button>
                             </Content>
-                        </Col>
+                        </PaddingLessCol>
                     </Row>
                 </Carousel.Item>
             </Carousel>
