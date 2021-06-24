@@ -3,6 +3,8 @@ import AutoContainer from "../AutoContainer";
 import { SectionHeader } from "../SectionHeader";
 import { Form, FormGroup, Input, Select, SubmitButton, TextArea } from '../General'
 
+import { withScriptjs, GoogleMap, withGoogleMap, Marker } from "react-google-maps";
+
 
 const ContactSection = styled.section`
     position: relative;
@@ -115,6 +117,13 @@ const Times = styled.div`
 
 
 
+const GoogleMapsComponent = withScriptjs(withGoogleMap((props) => (
+    <GoogleMap defaultZoom={8}
+        defaultCenter={{ lat: -30, lng: 150 }}>
+        {props.isMarkerShown && <Marker position={{ lat: -34, lng: 150 }} />}
+    </GoogleMap>
+)))
+
 
 const Contact = () => {
     return (
@@ -187,21 +196,12 @@ const Contact = () => {
                         </LeftColumn>
                         <RightColumn>
                             <InfoTitle>Qualimet - Maroc</InfoTitle>
-                            <InfoList>
-                                <li>
-                                    Lot12 Moulin Idrissia Etg2 Bur17 Et.2. Atlas, Fès 30000, Maroc
-                                </li>
-                                <li>
-                                    +212 05356-44048
-                                </li>
-                                <li>
-                                    contact@atourrate.com
-                                </li>
-                            </InfoList>
-                            <SmallHeader>Cordonnées</SmallHeader>
-                            <Times>
-
-                            </Times>
+                            <GoogleMapsComponent
+                                isMarkerShown
+                                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                loadingElement={<div style={{ height: `100%` }} />}
+                                containerElement={<div style={{ height: `400px` }} />}
+                                mapElement={<div style={{ height: `100%` }} />} />
                         </RightColumn>
                     </Row>
                 </AutoContainer>
