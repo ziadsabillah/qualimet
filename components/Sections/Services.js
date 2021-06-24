@@ -80,15 +80,15 @@ const Services = () => {
                 <Carousel.Item>
                     <Row>
                         <Col sm={12} md={6}>
-                            <img src='/img/8.jpg' width="100%"/>
+                            <img src='/img/calibration.jpg' width="100%"/>
                         </Col>
                         <Col sm={12} md={6}>
                             <Content>
                                 <Header>
-                                Etalonnage et Vérification
+                                Essais et Caractérisation
                                 </Header>
                                 <Paragraph>
-                                Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
+                                Nous intervenons aussi dans les caractérisations des enceintes thermiques et climatique, sur les machines d'essais mécanique (en traction et en compression, sur les machines de dureté etc) et dans la qualification des autoclaves et ceux conformément aux normes en vigeur....
                                 </Paragraph>
                                 <Button>Lire Plus</Button>
                             </Content>
@@ -98,15 +98,15 @@ const Services = () => {
                 <Carousel.Item>
                     <Row>
                         <Col sm={12} md={6}>
-                            <img src='/img/8.jpg' width="100%"/>
+                            <img src='/img/formation.jpg' width="100%"/>
                         </Col>
                         <Col sm={12} md={6}>
                             <Content>
                                 <Header>
-                                Etalonnage et Vérification
+                                Formations
                                 </Header>
                                 <Paragraph>
-                                Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
+                                Afin de transmettre nos expériences professionnelles à vos équipes dans la connaissance de la métrologie, nous vous proposons une offre de formation (intra ou inter-entreprise adaptée à vos besoins sur le plan technique ou humain dans nos centres...
                                 </Paragraph>
                                 <Button>Lire Plus</Button>
                             </Content>
