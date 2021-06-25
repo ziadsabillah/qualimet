@@ -4,7 +4,6 @@
   font-family: 'Gotham Bold';
   src: url("../public/fonts/cross-browser/gotham-bold-webfont.woff") format('woff')
        url("../public/fonts/cross-browser/gotham-bold-webfont.woff2") format("woff2");
-  font-weight: bold;
 }
 
 @font-face {

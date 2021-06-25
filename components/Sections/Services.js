@@ -4,6 +4,24 @@ import { SectionHeader } from '../SectionHeader';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 
 
+const Title = styled.h1`
+    color: #1B75BB;
+    font-weight: bolder;
+    font-family: 'Gotham Bold', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin-top: .5em;
+    text-transform: uppercase;
+
+`;
+
+const Subtitle = styled.span`
+    font-size: 15px;
+    color: #616161;
+    font-style: italic;
+`;
+
 const Content = styled.div`
     position: relative;
     display: flex;
@@ -12,7 +30,6 @@ const Content = styled.div`
     align-items: center;
     background: #242424;
     width: 100%;
-
     height: 100%;
     justify-content: space-evenly;
 
@@ -71,7 +88,9 @@ const Button = styled.a`
 
 const CarouselSection = styled.section`
     position: relative;
-    background: #242424;
+    padding: 80px;
+    /* background: #F9F9F9; */
+    text-align: center;
 `;
 
 const PaddingLessCol = styled(Col)`
@@ -99,8 +118,7 @@ const Services = () => {
 
     return (
         <>
-            <CarouselSection>
-
+            {/* <CarouselSection>
                 <Carousel interval={2000} fade nextLabel="" prevLabel="">
                     <Carousel.Item>
                         <Row>
@@ -109,9 +127,7 @@ const Services = () => {
                             </PaddingLessCol>
                             <PaddingLessCol sm={12} md={6}>
                                 <Content>
-                                    {/* <Header>
-                                        Etalonnage et Vérification
-                                    </Header> */}
+                                    
                                     <SectionHeader light>
                                         <h2>Etalonnage et Vérification</h2>
                                     </SectionHeader>
@@ -162,6 +178,11 @@ const Services = () => {
                         </Row>
                     </Carousel.Item>
                 </Carousel>
+            </CarouselSection> */}
+
+            <CarouselSection>
+                <Subtitle>Accrédités par le Semac & Tunac</Subtitle>
+                <Title>Services</Title>
             </CarouselSection>
 
         </>
