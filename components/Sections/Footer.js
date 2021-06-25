@@ -279,11 +279,10 @@ const Footer = () => {
                                         Siège
                                     </LinksHeader>
                                         <Text>Siège Social
-                                            187 BD d'Accra lotissement La colline
-                                            28820 Mohammedia - Maroc
+                                        23, Bd Boured, Roches Noires, Casablanca. Maroc. 
 
-                                            Tel :+212 523 32 31 58
-                                            Email : mcc@mccmaroc.ma </Text>
+                                            Tel : +212 5 22 24 38 86
+                                            Email : contact@etalonnages.com </Text>
                                 </LinksWidget>
                             </Col>
                             <Col sm={12} md={3}>
