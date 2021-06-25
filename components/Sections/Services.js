@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { Row, Col, Carousel } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import { SectionHeader } from '../SectionHeader';
 import { FcNext, FcPrevious } from 'react-icons/fc';
+import Carousel from 'react-multi-carousel';
 
 
 const Title = styled.h1`
@@ -98,6 +99,40 @@ const PaddingLessCol = styled(Col)`
     padding-left: 0 !important;
 `
 
+const Wrapper = styled.div`
+    position: relative;
+    display: flex;
+    min-height: 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 4px;
+`;
+
+const Thumbnail = styled.div`
+    position: relative;
+    margin-bottom: 12px;
+
+    img {
+        max-width: 400px;
+
+    }
+
+`;
+
+const Body = styled.div`
+    position: relative;
+    text-align: left;
+`
+
+const Header = styled.h2`
+    font-size: 18px;
+    color: #242424;
+    position: relative;
+    text-align: left;
+    font-weight: bold;
+`;
+
 
 const PrevIcon = () => (
     <>
@@ -110,6 +145,25 @@ const NextIcon = () => (
         <FcNext color="black" size={12} />
     </>
 )
+
+
+const responsive = {
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3,
+        partialVisibilityGutter: 30
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+        partialVisibilityGutter: 20,
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+        partialVisibilityGutter: 10
+    }
+}
 
 
 const Services = () => {
@@ -183,6 +237,53 @@ const Services = () => {
             <CarouselSection>
                 <Subtitle>Accrédités par le Semac & Tunac</Subtitle>
                 <Title>Services</Title>
+
+                <Container
+                    fluid
+
+                >
+                    <Carousel
+                        itemClass="service-item-carousel-item"
+                        ssr
+                        showDots
+                        focusOnSelect={true}
+                        draggable={false}
+                        swipeable
+                        infinite
+                        // customTransition="all .5"
+                        responsive={responsive}
+                        partialVisible={false}
+                        removeArrowOnDeviceType={[ "mobile"]}>
+                        <Wrapper>
+                            <Thumbnail>
+                                <img src="/img/formation.jpg" alt="Service Formation" />
+                            </Thumbnail>
+                            <Body>
+                                <Header>Etalonnage et Verification</Header>
+                            </Body>
+                        </Wrapper>
+                        <Wrapper>
+                            <Thumbnail>
+                                <img src="/img/formation.jpg" alt="Service Formation" />
+                            </Thumbnail>
+                            <Body>
+                                <Header>Etalonnage et Verification</Header>
+                            </Body>
+                        </Wrapper>
+                        <Wrapper>
+                            <Thumbnail>
+                                <img src="/img/formation.jpg" alt="Service Formation" />
+                            </Thumbnail>
+                            <Body>
+                                <Header>Etalonnage et Verification</Header>
+                            </Body>
+                        </Wrapper>
+
+
+
+                    </Carousel>
+                </Container>
+
             </CarouselSection>
 
         </>

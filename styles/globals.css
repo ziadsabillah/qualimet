@@ -267,6 +267,14 @@ header {
   float: left;
 }
 
+.service-item-carousel-item {
+  max-width: 410px !important;
+  max-height: 300px;
+  min-height: 1px;
+  float: left;
+
+  margin-right: 10px;
+}
 
 
 .testimonial-carousel-item {
