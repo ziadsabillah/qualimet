@@ -278,7 +278,7 @@ const Footer = () => {
                                     <LinksHeader>
                                         Siège
                                     </LinksHeader>
-                                        <Text>Siège Social
+                                        <Text>
                                         23, Bd Boured, Roches Noires, Casablanca. Maroc. 
 
                                             Tel : +212 5 22 24 38 86
