@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout'
 import DetailsPageHeader from '../../components/DetailsPageHeader';
 import { SectionHeader } from '../../components/SectionHeader';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel'
 
 import { useState, useEffect } from 'react';
@@ -29,6 +29,86 @@ const Title = styled.h2`
     padding: 1em 0;
     font-size: 18px;
 `;
+
+const LeftColumn = styled.div`
+    position: relative;
+    margin-bottom: 40px;
+
+    flex: 50%;
+
+    @media screen and (max-width: 800px) {
+        flex: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        position: relative;
+        color: #242424;
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 1.5em;
+        margin-bottom: 18px;
+    }
+
+`;
+
+const Paragraph = styled.div`
+    position: relative;
+    color: #797979;
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-bottom: 18px;
+    font-family: 'Open Sans', sans-serif;
+    /* @media screen and (max-width: 800px) {
+        text-align: center;
+    } */
+`;
+
+const List = styled.ul`
+    position: relative;
+
+    li {
+        position: relative;
+        color: #242424;
+        font-size: 20px;
+        font-style: italic;
+        padding-left: 40px;
+        margin-bottom: 15px;
+        font-family: 'Lora', sans-serif;
+    }
+    li::before {
+        position: absolute;
+        content: ' ';
+        background: url('/icons/check.png') center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 0px;
+        top: 0px;
+        height: 30px;
+        width: 30px;
+        line-height: 1em;
+        font-size: 18px;
+        font-family: "Flaticon";
+    }
+`;
+
+
+
+const RightColumn = styled.div`
+    position: relative;
+    margin-top: 40px;
+
+    flex: 40%;
+    @media screen and (max-width: 800px) {
+        flex: 100%;
+        padding-top: 56.25%;
+    }
+`;
+
+const Clearfix = styled.div`
+    position: relative;
+    padding: 2em 0;
+`
 
 
 
@@ -88,6 +168,27 @@ export default function SpecialtyPage() {
                             </div>
                         ))}
                     </Carousel>
+                    <Clearfix />
+                    <Row>
+                            <LeftColumn>
+                                <Paragraph>
+                                Toutes nos offres métrologiques en qualité d’étalonnage, de vérification et des essais se détaillent comme suit :
+                                </Paragraph>
+                                <List>
+                                    <li>Prestation sur site ou dans nos laboratoires</li>
+                                    <li>Mise à jour des fiches de vie et base de données informatiques
+
+</li>
+                                    <li>Gestion des ajustements et réparations des appareils hors tolérances (Suite à une vérification nous gérons l'ajustement ou la maintenance de l'instrument si nécessaire)</li>
+                                    
+                                </List>
+                            </LeftColumn>
+                            <RightColumn>
+                                 <div className="react-player">
+                                     <img src='/img/logofooter.png' alt="QualiMet Logo" />
+                                 </div>
+                            </RightColumn>
+                        </Row>
                 </Container>
 
             </Layout>
