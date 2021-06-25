@@ -13,12 +13,12 @@ const PageHeaderSection = styled.section`
     @media only screen and (max-width: 797px) {
         padding: 100px 0px;
     }
-    background-image: url('/slider/image-5.jpeg');
+    background-image: url('/img/6.jpg');
     position: relative;
-    padding: 220px 0px 80px;
+    padding: 120px 0px 80px;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    text-align: left;
     background-position: center top;
 
 `;
@@ -33,7 +33,7 @@ const PageHeader = styled.h1`
     }
 
     position: relative;
-    color: #ffffff;
+    color: #242424;
     font-size: 50px;
     font-weight: 600;
     line-height: 1.2em;

@@ -23,12 +23,11 @@ const LinkItem = styled.li`
     align-self: center;
     padding: 0 1.1em;
     color: #242424;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 14px;
     align-items: center;
     justify-content: center;
     display: flex;
-    /* border-bottom: 2px solid transparent; */
     transition: color 220ms ease-in-out; 
 
     &::after {
@@ -82,7 +81,7 @@ const NavLinks = () => {
             <LinksWrapper>
                 <DetectActive href="/" pageName="Accueil" />
                 
-                <DetectActive href="/test" pageName="Spécialité" />
+                <DetectActive href="/specialty" pageName="Spécialité" />
 
                 <DetectActive href="/test" pageName="Accreditations" />
 
