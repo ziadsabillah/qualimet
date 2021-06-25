@@ -281,7 +281,7 @@ const Footer = () => {
                                         <Text>
                                         23, Bd Boured, Roches Noires, Casablanca. Maroc. 
 
-                                            Tel : +212 5 22 24 38 86
+                                            Tel : +212 5 22 24 38 86<br />
                                             Email : contact@etalonnages.com </Text>
                                 </LinksWidget>
                             </Col>
