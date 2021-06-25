@@ -150,8 +150,10 @@ export default function SpecialtyPage() {
                 <Container>
                     <SectionHeader>
                         <h2>Spécialités des offres métrologiques d’étalonnage et de vérification au Maroc</h2>
-                        <p>L’activité principale de PI étant la métrologie, les quelques douze (12) laboratoires à son actif lui permettent de couvrir les secteurs d’activités industrielles à savoir :</p>
                     </SectionHeader>
+                    <Paragraph>
+                    L’activité principale de PI étant la métrologie, les quelques douze (12) laboratoires à son actif lui permettent de couvrir les secteurs d’activités industrielles à savoir :
+                    </Paragraph>
                     <Carousel
                         itemClass="specialty-carousel-item"
                         ssr
