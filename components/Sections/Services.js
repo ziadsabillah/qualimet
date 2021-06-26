@@ -94,6 +94,10 @@ const CarouselSection = styled.section`
     padding: 80px;
     /* background: #F9F9F9; */
     text-align: center;
+
+    @media only screen and (max-width: 767px) {
+        padding: 20px;
+    }
 `;
 
 const PaddingLessCol = styled(Col)`
