@@ -135,7 +135,7 @@ const CallToActionSection = () => {
                         itemClass="service-carousel-item"
                         ssr
                         infinite
-                        showDots
+                        // showDots
                         partialVisible={false}
                         responsive={responsive}>
                         {services?.map((service) => (

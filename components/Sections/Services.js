@@ -7,12 +7,14 @@ import Carousel from 'react-multi-carousel';
 
 const Title = styled.h1`
     color: #1B75BB;
+    
     font-weight: bolder;
     font-family: 'Gotham Bold', sans-serif;
     text-align: center;
     letter-spacing: 1px;
     line-height: 35px;
     margin-top: .5em;
+    margin-bottom: 1em;
     text-transform: uppercase;
 
 `;
@@ -172,67 +174,6 @@ const Services = () => {
 
     return (
         <>
-            {/* <CarouselSection>
-                <Carousel interval={2000} fade nextLabel="" prevLabel="">
-                    <Carousel.Item>
-                        <Row>
-                            <PaddingLessCol sm={12} md={6}>
-                                <img src='/img/8.jpg' width="100%" />
-                            </PaddingLessCol>
-                            <PaddingLessCol sm={12} md={6}>
-                                <Content>
-                                    
-                                    <SectionHeader light>
-                                        <h2>Etalonnage et Vérification</h2>
-                                    </SectionHeader>
-                                    <Paragraph>
-                                        Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
-                                    </Paragraph>
-                                    <Button>Lire Plus</Button>
-                                </Content>
-                            </PaddingLessCol>
-                        </Row>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Row>
-                            <PaddingLessCol sm={12} md={6}>
-                                <img src='/img/calibration.jpg' width="100%" />
-                            </PaddingLessCol>
-                            <PaddingLessCol sm={12} md={6}>
-                                <Content>
-                                    <SectionHeader light>
-                                        <h2>Essais et Caractérisation</h2>
-                                    </SectionHeader>
-
-                                    <Paragraph>
-                                        Nous intervenons aussi dans les caractérisations des enceintes thermiques et climatique, sur les machines d'essais mécanique (en traction et en compression, sur les machines de dureté etc) et dans la qualification des autoclaves et ceux conformément aux normes en vigeur....
-                                    </Paragraph>
-                                    <Button>Lire Plus</Button>
-                                </Content>
-                            </PaddingLessCol>
-                        </Row>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Row>
-                            <PaddingLessCol sm={12} md={6}>
-                                <img src='/img/formation.jpg' width="100%" />
-                            </PaddingLessCol>
-                            <PaddingLessCol sm={12} md={6}>
-                                <Content>
-                                    <SectionHeader light>
-                                        <h2>Formations</h2>
-                                    </SectionHeader>
-                                    
-                                    <Paragraph>
-                                        Afin de transmettre nos expériences professionnelles à vos équipes dans la connaissance de la métrologie, nous vous proposons une offre de formation (intra ou inter-entreprise adaptée à vos besoins sur le plan technique ou humain dans nos centres...
-                                    </Paragraph>
-                                    <Button>Lire Plus</Button>
-                                </Content>
-                            </PaddingLessCol>
-                        </Row>
-                    </Carousel.Item>
-                </Carousel>
-            </CarouselSection> */}
 
             <CarouselSection>
                 <Subtitle>Accrédités par le Semac & Tunac</Subtitle>
@@ -251,6 +192,7 @@ const Services = () => {
                         swipeable
                         infinite
                         // customTransition="all .5"
+                        renderDotsOutside={true}
                         responsive={responsive}
                         partialVisible={false}
                         removeArrowOnDeviceType={[ "mobile"]}>
