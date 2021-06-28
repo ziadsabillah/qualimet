@@ -14,6 +14,10 @@ const NavbarContainer = styled.div`
     align-items: center;
     padding: 0 5em;
     background: #FFFF;
+
+    @media (max-width: 767px) {
+        padding: 0 .5em !important;
+    }
 `;
 
 const LeftSection = styled.div`
