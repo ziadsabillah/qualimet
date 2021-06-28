@@ -121,6 +121,7 @@ const Wrapper = styled.div`
 
     &:hover {
         box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        transition: box-shadow .3s ease-in-out;
         cursor: pointer;
     }
 `;
@@ -140,7 +141,10 @@ const Thumbnail = styled.div`
 
 const Body = styled.div`
     position: relative;
-    text-align: left;
+    /* text-align: center; */
+    padding: .7em .3em;
+    text-align: center;
+    width: 100%;
 `
 
 const Header = styled.h2`
@@ -150,7 +154,7 @@ const Header = styled.h2`
     position: relative;
     text-align: left;
     font-weight: bold;
-    padding-bottom: .2em;
+    padding-bottom: .5em;
 
     &::after {
         content: '';
