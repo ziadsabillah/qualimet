@@ -34,6 +34,11 @@ const Title = styled.h1`
     letter-spacing: 1px;
     line-height: 35px;
     margin-top: .5em;
+    font-size: 2em;
+
+    @media (max-width: 767px) {
+        font-size: 1em ;
+    }
 `;
 
 const LineIcon = styled.div`
