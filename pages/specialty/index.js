@@ -152,7 +152,7 @@ export default function SpecialtyPage() {
                         <h2>Spécialités des offres métrologiques d’étalonnage et de vérification au Maroc</h2>
                     </SectionHeader>
                     <Paragraph>
-                    L’activité principale de PI étant la métrologie, les quelques douze (12) laboratoires à son actif lui permettent de couvrir les secteurs d’activités industrielles à savoir :
+                    L’activité principale de QualiMet étant la métrologie, les quelques douze (12) laboratoires à son actif lui permettent de couvrir les secteurs d’activités industrielles à savoir :
                     </Paragraph>
                     <Carousel
                         itemClass="specialty-carousel-item"
