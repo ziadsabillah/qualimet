@@ -4,7 +4,6 @@
   font-family: 'Gotham Bold';
   src: url("../public/fonts/cross-browser/gotham-bold-webfont.woff") format('woff')
        url("../public/fonts/cross-browser/gotham-bold-webfont.woff2") format("woff2");
-  font-weight: bold;
 }
 
 @font-face {
@@ -268,6 +267,14 @@ header {
   float: left;
 }
 
+.service-item-carousel-item {
+  max-width: 410px !important;
+  max-height: 300px;
+  min-height: 1px;
+  float: left;
+
+  margin-right: 10px;
+}
 
 
 .testimonial-carousel-item {
