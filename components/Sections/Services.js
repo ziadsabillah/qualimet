@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, PopoverTitle } from 'react-bootstrap'
 import { SectionHeader } from '../SectionHeader';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 import Carousel from 'react-multi-carousel';
 
 import { useState, useEffect } from 'react';
 
-import {data} from '../../data/general-services';
 
 
 const Title = styled.h1`
@@ -206,7 +205,7 @@ const responsive = {
 }
 
 
-const Services = () => {
+const Services = ({subtitle, title, data}) => {
 
     const [services, setServices] = useState(data);
 
@@ -219,8 +218,8 @@ const Services = () => {
         <>
 
             <CarouselSection>
-                <Subtitle>Accrédités par le Semac & Tunac</Subtitle>
-                <Title>Services</Title>
+                <Subtitle>{subtitle}</Subtitle>
+                <Title>{title}</Title>
 
                 <Container
                     
@@ -233,8 +232,10 @@ const Services = () => {
                         focusOnSelect={true}
                         draggable={false}
                         swipeable
-                        infinite
+                        // infinite
                         // customTransition="all .5"
+                        // customRightArrow={<NextIcon />}
+                        // customLeftArrow={<PrevIcon />}
                         renderDotsOutside={true}
                         responsive={responsive}
                         partialVisible={false}
