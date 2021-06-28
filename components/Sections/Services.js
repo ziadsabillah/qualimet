@@ -4,6 +4,10 @@ import { SectionHeader } from '../SectionHeader';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 import Carousel from 'react-multi-carousel';
 
+import { useState, useEffect } from 'react';
+
+import {data} from '../../data/general-services';
+
 
 const Title = styled.h1`
     color: #1B75BB;
@@ -89,6 +93,12 @@ const Button = styled.a`
 `;
 
 
+const Link = styled.a`
+    text-decoration: none;
+
+`;
+
+
 const CarouselSection = styled.section`
     position: relative;
     padding: 80px 0;
@@ -109,15 +119,22 @@ const Wrapper = styled.div`
     align-items: flex-start;
     overflow: hidden;
     border-radius: 4px;
+
+    &:hover {
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+    }
 `;
 
 const Thumbnail = styled.div`
     position: relative;
     margin-bottom: 12px;
+    width: 100%;
 
     img {
-        max-width: 400px;
-
+        /* max-width: 400px; */
+        width: 100%;
+        min-height: 273px;
     }
 
 `;
@@ -191,7 +208,12 @@ const responsive = {
 
 const Services = () => {
 
+    const [services, setServices] = useState(data);
 
+
+    useEffect(() => {
+        setServices(data)
+    }, [data]);
 
     return (
         <>
@@ -201,7 +223,7 @@ const Services = () => {
                 <Title>Services</Title>
 
                 <Container
-                    fluid
+                    
 
                 >
                     <Carousel
@@ -216,35 +238,20 @@ const Services = () => {
                         renderDotsOutside={true}
                         responsive={responsive}
                         partialVisible={false}
-                        removeArrowOnDeviceType={[ "mobile"]}>
-                        <Wrapper>
-                            <Thumbnail>
-                                <img src="/img/formation.jpg" alt="Service Formation" />
-                            </Thumbnail>
-                            <Body>
-                                
-                                <Header>Etalonnage et Verification</Header>
-                            </Body>
-                        </Wrapper>
-                        <Wrapper>
-                            <Thumbnail>
-                                <img src="/img/formation.jpg" alt="Service Formation" />
-                            </Thumbnail>
-                            <Body>
-                                <Header>Etalonnage et Verification</Header>
-                            </Body>
-                        </Wrapper>
-                        <Wrapper>
-                            <Thumbnail>
-                                <img src="/img/formation.jpg" alt="Service Formation" />
-                            </Thumbnail>
-                            <Body>
-                                <Header>Etalonnage et Verification</Header>
-                            </Body>
-                        </Wrapper>
-
-
-
+                        removeArrowOnDeviceType={["mobile"]}>
+                            {services?.map(service => (
+                                <Link href="/specialty">
+                                    <Wrapper>
+                                        <Thumbnail>
+                                            <img src={service.img} alt={service.title} />
+                                        </Thumbnail>
+                                        <Body>
+                                            <Header>{service.title}</Header>
+                                        </Body>
+                                    </Wrapper>
+                                </Link>
+                            ))}
+                    
                     </Carousel>
                 </Container>
 
