@@ -66,6 +66,18 @@ export const TextArea = styled.textarea`
 
 // List Styles ul
 
+export const Paragraph = styled.div`
+    position: relative;
+    color: #797979;
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-bottom: 18px;
+    font-family: 'Open Sans', sans-serif;
+    /* @media screen and (max-width: 800px) {
+        text-align: center;
+    } */
+`;
+
 export const ListStyleOne = styled.ul`
     position: relative;
     align-items: center;
