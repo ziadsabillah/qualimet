@@ -4,6 +4,10 @@ import { SectionHeader } from '../SectionHeader';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 import Carousel from 'react-multi-carousel';
 
+import { useState, useEffect } from 'react';
+
+import {data} from '../../data/general-services';
+
 
 const Title = styled.h1`
     color: #1B75BB;
@@ -89,9 +93,15 @@ const Button = styled.a`
 `;
 
 
+const Link = styled.a`
+    text-decoration: none;
+
+`;
+
+
 const CarouselSection = styled.section`
     position: relative;
-    padding: 80px;
+    padding: 80px 0;
     /* background: #F9F9F9; */
     text-align: center;
 
@@ -100,10 +110,6 @@ const CarouselSection = styled.section`
     }
 `;
 
-const PaddingLessCol = styled(Col)`
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-`
 
 const Wrapper = styled.div`
     position: relative;
@@ -113,15 +119,22 @@ const Wrapper = styled.div`
     align-items: flex-start;
     overflow: hidden;
     border-radius: 4px;
+
+    &:hover {
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+    }
 `;
 
 const Thumbnail = styled.div`
     position: relative;
     margin-bottom: 12px;
+    width: 100%;
 
     img {
-        max-width: 400px;
-
+        /* max-width: 400px; */
+        width: 100%;
+        min-height: 273px;
     }
 
 `;
@@ -132,11 +145,32 @@ const Body = styled.div`
 `
 
 const Header = styled.h2`
-    font-size: 18px;
+    position: relative;
+    font-size: 16px;
     color: #242424;
     position: relative;
     text-align: left;
     font-weight: bold;
+    padding-bottom: .2em;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20%;
+        height: 2px;
+        background-color: #242424;
+    }
+`;
+
+
+const ButtonLink = styled.a`
+    text-decoration: none;
+    color: #242424;
+    padding: .5em 1.5em;
+    margin: .3em;
+
 `;
 
 
@@ -174,7 +208,12 @@ const responsive = {
 
 const Services = () => {
 
+    const [services, setServices] = useState(data);
 
+
+    useEffect(() => {
+        setServices(data)
+    }, [data]);
 
     return (
         <>
@@ -184,7 +223,7 @@ const Services = () => {
                 <Title>Services</Title>
 
                 <Container
-                    fluid
+                    
 
                 >
                     <Carousel
@@ -199,34 +238,20 @@ const Services = () => {
                         renderDotsOutside={true}
                         responsive={responsive}
                         partialVisible={false}
-                        removeArrowOnDeviceType={[ "mobile"]}>
-                        <Wrapper>
-                            <Thumbnail>
-                                <img src="/img/formation.jpg" alt="Service Formation" />
-                            </Thumbnail>
-                            <Body>
-                                <Header>Etalonnage et Verification</Header>
-                            </Body>
-                        </Wrapper>
-                        <Wrapper>
-                            <Thumbnail>
-                                <img src="/img/formation.jpg" alt="Service Formation" />
-                            </Thumbnail>
-                            <Body>
-                                <Header>Etalonnage et Verification</Header>
-                            </Body>
-                        </Wrapper>
-                        <Wrapper>
-                            <Thumbnail>
-                                <img src="/img/formation.jpg" alt="Service Formation" />
-                            </Thumbnail>
-                            <Body>
-                                <Header>Etalonnage et Verification</Header>
-                            </Body>
-                        </Wrapper>
-
-
-
+                        removeArrowOnDeviceType={["mobile"]}>
+                            {services?.map(service => (
+                                <Link href="/specialty">
+                                    <Wrapper>
+                                        <Thumbnail>
+                                            <img src={service.img} alt={service.title} />
+                                        </Thumbnail>
+                                        <Body>
+                                            <Header>{service.title}</Header>
+                                        </Body>
+                                    </Wrapper>
+                                </Link>
+                            ))}
+                    
                     </Carousel>
                 </Container>
 
