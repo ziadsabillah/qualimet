@@ -302,7 +302,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/test">
+                                            <a href="/accreditations">
                                                 Accreditations
                                             </a>
                                         </li>

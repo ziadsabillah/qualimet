@@ -83,7 +83,7 @@ const NavLinks = () => {
                 
                 <DetectActive href="/specialty" pageName="Spécialité" />
 
-                <DetectActive href="/test" pageName="Accreditations" />
+                <DetectActive href="/accreditations" pageName="Accreditations" />
 
                 <DetectActive href="/test" pageName="Prestations" />
 
