@@ -87,9 +87,9 @@ const NavLinks = () => {
 
                 <DetectActive href="/test" pageName="Prestations" />
 
-                <DetectActive href="/services" pageName="A propos" />
+                <DetectActive href="/test" pageName="A propos" />
 
-                <DetectActive href="/test" pageName="Contacts" />
+                <DetectActive href="/contact" pageName="Contacts" />
 
             </LinksWrapper>
         </NavLinkContainer>
