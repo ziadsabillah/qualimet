@@ -276,6 +276,9 @@ header {
   margin-right: 10px;
 }
 
+.react-multi-carousel-list {
+  overflow: unset !important;
+}
 
 .testimonial-carousel-item {
   width: 540px;
