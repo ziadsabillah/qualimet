@@ -1,8 +1,29 @@
 import styled from 'styled-components';
-import { Row, Col, Carousel } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import { SectionHeader } from '../SectionHeader';
 import { FcNext, FcPrevious } from 'react-icons/fc';
+import Carousel from 'react-multi-carousel';
 
+
+const Title = styled.h1`
+    color: #1B75BB;
+    
+    font-weight: bolder;
+    font-family: 'Gotham Bold', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+
+`;
+
+const Subtitle = styled.span`
+    font-size: 15px;
+    color: #616161;
+    font-style: italic;
+`;
 
 const Content = styled.div`
     position: relative;
@@ -12,7 +33,6 @@ const Content = styled.div`
     align-items: center;
     background: #242424;
     width: 100%;
-
     height: 100%;
     justify-content: space-evenly;
 
@@ -71,13 +91,53 @@ const Button = styled.a`
 
 const CarouselSection = styled.section`
     position: relative;
-    background: #242424;
+    padding: 80px;
+    /* background: #F9F9F9; */
+    text-align: center;
+
+    @media only screen and (max-width: 767px) {
+        padding: 20px;
+    }
 `;
 
 const PaddingLessCol = styled(Col)`
     padding-right: 0 !important;
     padding-left: 0 !important;
 `
+
+const Wrapper = styled.div`
+    position: relative;
+    display: flex;
+    min-height: 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 4px;
+`;
+
+const Thumbnail = styled.div`
+    position: relative;
+    margin-bottom: 12px;
+
+    img {
+        max-width: 400px;
+
+    }
+
+`;
+
+const Body = styled.div`
+    position: relative;
+    text-align: left;
+`
+
+const Header = styled.h2`
+    font-size: 18px;
+    color: #242424;
+    position: relative;
+    text-align: left;
+    font-weight: bold;
+`;
 
 
 const PrevIcon = () => (
@@ -93,75 +153,83 @@ const NextIcon = () => (
 )
 
 
+const responsive = {
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3,
+        partialVisibilityGutter: 30
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+        partialVisibilityGutter: 20,
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+        partialVisibilityGutter: 10
+    }
+}
+
+
 const Services = () => {
 
 
 
     return (
         <>
+
             <CarouselSection>
+                <Subtitle>Accrédités par le Semac & Tunac</Subtitle>
+                <Title>Services</Title>
 
-                <Carousel interval={2000} fade nextLabel="" prevLabel="">
-                    <Carousel.Item>
-                        <Row>
-                            <PaddingLessCol sm={12} md={6}>
-                                <img src='/img/8.jpg' width="100%" />
-                            </PaddingLessCol>
-                            <PaddingLessCol sm={12} md={6}>
-                                <Content>
-                                    {/* <Header>
-                                        Etalonnage et Vérification
-                                    </Header> */}
-                                    <SectionHeader light>
-                                        <h2>Etalonnage et Vérification</h2>
-                                    </SectionHeader>
-                                    <Paragraph>
-                                        Nous vous offrons des prestations d'étalonnage conformément à la norme ISO 17025 des instruments et matériels utilisés dans les domaines suivant : électricité et magnétisme, force, couple, pression, température, masse, volume, aérométrie, verrerie volumétriques, dimensionnel etc.
-                                    </Paragraph>
-                                    <Button>Lire Plus</Button>
-                                </Content>
-                            </PaddingLessCol>
-                        </Row>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Row>
-                            <PaddingLessCol sm={12} md={6}>
-                                <img src='/img/calibration.jpg' width="100%" />
-                            </PaddingLessCol>
-                            <PaddingLessCol sm={12} md={6}>
-                                <Content>
-                                    <SectionHeader light>
-                                        <h2>Essais et Caractérisation</h2>
-                                    </SectionHeader>
+                <Container
+                    fluid
 
-                                    <Paragraph>
-                                        Nous intervenons aussi dans les caractérisations des enceintes thermiques et climatique, sur les machines d'essais mécanique (en traction et en compression, sur les machines de dureté etc) et dans la qualification des autoclaves et ceux conformément aux normes en vigeur....
-                                    </Paragraph>
-                                    <Button>Lire Plus</Button>
-                                </Content>
-                            </PaddingLessCol>
-                        </Row>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Row>
-                            <PaddingLessCol sm={12} md={6}>
-                                <img src='/img/formation.jpg' width="100%" />
-                            </PaddingLessCol>
-                            <PaddingLessCol sm={12} md={6}>
-                                <Content>
-                                    <SectionHeader light>
-                                        <h2>Formations</h2>
-                                    </SectionHeader>
-                                    
-                                    <Paragraph>
-                                        Afin de transmettre nos expériences professionnelles à vos équipes dans la connaissance de la métrologie, nous vous proposons une offre de formation (intra ou inter-entreprise adaptée à vos besoins sur le plan technique ou humain dans nos centres...
-                                    </Paragraph>
-                                    <Button>Lire Plus</Button>
-                                </Content>
-                            </PaddingLessCol>
-                        </Row>
-                    </Carousel.Item>
-                </Carousel>
+                >
+                    <Carousel
+                        itemClass="service-item-carousel-item"
+                        ssr
+                        showDots
+                        focusOnSelect={true}
+                        draggable={false}
+                        swipeable
+                        infinite
+                        // customTransition="all .5"
+                        renderDotsOutside={true}
+                        responsive={responsive}
+                        partialVisible={false}
+                        removeArrowOnDeviceType={[ "mobile"]}>
+                        <Wrapper>
+                            <Thumbnail>
+                                <img src="/img/formation.jpg" alt="Service Formation" />
+                            </Thumbnail>
+                            <Body>
+                                <Header>Etalonnage et Verification</Header>
+                            </Body>
+                        </Wrapper>
+                        <Wrapper>
+                            <Thumbnail>
+                                <img src="/img/formation.jpg" alt="Service Formation" />
+                            </Thumbnail>
+                            <Body>
+                                <Header>Etalonnage et Verification</Header>
+                            </Body>
+                        </Wrapper>
+                        <Wrapper>
+                            <Thumbnail>
+                                <img src="/img/formation.jpg" alt="Service Formation" />
+                            </Thumbnail>
+                            <Body>
+                                <Header>Etalonnage et Verification</Header>
+                            </Body>
+                        </Wrapper>
+
+
+
+                    </Carousel>
+                </Container>
+
             </CarouselSection>
 
         </>
