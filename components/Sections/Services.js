@@ -91,7 +91,7 @@ const Button = styled.a`
 
 const CarouselSection = styled.section`
     position: relative;
-    padding: 80px;
+    padding: 80px 0;
     /* background: #F9F9F9; */
     text-align: center;
 
@@ -100,10 +100,6 @@ const CarouselSection = styled.section`
     }
 `;
 
-const PaddingLessCol = styled(Col)`
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-`
 
 const Wrapper = styled.div`
     position: relative;
@@ -132,11 +128,32 @@ const Body = styled.div`
 `
 
 const Header = styled.h2`
-    font-size: 18px;
+    position: relative;
+    font-size: 16px;
     color: #242424;
     position: relative;
     text-align: left;
     font-weight: bold;
+    padding-bottom: .2em;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20%;
+        height: 2px;
+        background-color: #242424;
+    }
+`;
+
+
+const ButtonLink = styled.a`
+    text-decoration: none;
+    color: #242424;
+    padding: .5em 1.5em;
+    margin: .3em;
+
 `;
 
 
@@ -205,6 +222,7 @@ const Services = () => {
                                 <img src="/img/formation.jpg" alt="Service Formation" />
                             </Thumbnail>
                             <Body>
+                                
                                 <Header>Etalonnage et Verification</Header>
                             </Body>
                         </Wrapper>
