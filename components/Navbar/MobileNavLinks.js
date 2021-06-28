@@ -92,7 +92,7 @@ const MobileNavLinks = () => {
 
                 <DetectActive href="/test" pageName="A propos" />
 
-                <DetectActive href="/test" pageName="Contacts" />
+                <DetectActive href="/contact" pageName="Contacts" />
 
             </LinksWrapper>
             }

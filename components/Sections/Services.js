@@ -241,7 +241,7 @@ const Services = ({subtitle, title, data}) => {
                         partialVisible={false}
                         removeArrowOnDeviceType={["mobile"]}>
                             {services?.map(service => (
-                                <Link href="/specialty">
+                                <Link key={service.id} href="/specialty">
                                     <Wrapper>
                                         <Thumbnail>
                                             <img src={service.img} alt={service.title} />
