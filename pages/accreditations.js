@@ -5,6 +5,9 @@ import { Container } from 'react-bootstrap';
 import { SectionHeader } from '../components/SectionHeader';
 import { Paragraph } from '../components/General';
 
+import { useState, useEffect } from 'react';
+
+import data from '../data/accreditations';
 import Carousel from 'react-multi-carousel';
 import styled from 'styled-components';
 
@@ -32,6 +35,14 @@ const Clearfix = styled.div`
 `;
 
 export default function AccreditationsPage() {
+
+    const [accreditations, setAccreditation] = useState(data);
+
+    useEffect(() => {
+        setAccreditation(data)
+    }, [data]);
+
+
     return (
         <>
             <Layout title="Accréditations">
@@ -53,9 +64,11 @@ export default function AccreditationsPage() {
                         partialVisible={false}
                         responsive={responsive}>
 
-                        <div>Test</div>
-                        <div>Test 2</div>
-
+                        {accreditations?.map(accreditation => (
+                            <div key={accreditation.id}>
+                                <h2>{accreditation.title}</h2>
+                            </div>
+                        ))}
 
                     </Carousel>
                     <Clearfix />
@@ -69,8 +82,11 @@ export default function AccreditationsPage() {
                         infinite
                         partialVisible={false}
                         responsive={responsive}>
-                        <div>Test 1</div>
-                        <div>Test 2</div>
+                        {accreditations?.map(accreditation => (
+                            <div key={accreditation.id}>
+                                <h2>{accreditation.title}</h2>
+                            </div>
+                        ))}
                     </Carousel>
                 </Container>
             </Layout>
