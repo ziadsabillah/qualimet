@@ -22,7 +22,7 @@ const SectionWrapper = styled.section`
         width: 100%;
         display: block;
         height: 100%;
-        background-color: rgba(27, 117, 187, .85);
+        background-color: rgba(27, 117, 187, .65);
     }
 `;
 
