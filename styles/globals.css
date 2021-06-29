@@ -269,16 +269,21 @@ header {
 
 .service-item-carousel-item {
   max-width: 410px !important;
-  max-height: 300px;
+  /* max-height: 300px; */
   min-height: 1px;
   float: left;
 
   margin-right: 10px;
 }
-
-.react-multi-carousel-list {
-  overflow: unset !important;
+.react-multi-carousel-list.service-carousel-item {
+  overflow: hidden !important;
 }
+
+.react-multi-carousel-list.service-item-carousel-item {
+  overflow-x: unset !important;
+}
+
+
 
 .testimonial-carousel-item {
   width: 540px;
