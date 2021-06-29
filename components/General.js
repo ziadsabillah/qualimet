@@ -68,7 +68,7 @@ export const TextArea = styled.textarea`
 
 export const Paragraph = styled.div`
     position: relative;
-    color: #797979;
+    color: ${props => props.light ? '#FFFFFF' : '#797979'};
     font-size: 16px;
     line-height: 1.7em;
     margin-bottom: 18px;
