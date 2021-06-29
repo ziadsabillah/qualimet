@@ -33,12 +33,12 @@ const Info = ({ logo, address, email, phone }) => {
     return (
         <>
             <FullWidthRow>
-                <Col sm={12} md={4}>
+                <Col sm={12} md={6}>
                     <ImageWrapper>
                         <img src={logo} alt="Logo" />
                     </ImageWrapper>
                 </Col>
-                <DarkCol sm={12} md={8}>
+                <DarkCol sm={12} md={6}>
                     <Wrapper>
                         <SectionHeader light>
                             <h2>Addresse:</h2>
