@@ -269,7 +269,7 @@ const Footer = () => {
                                         <img src="/img/logofooter.png" width={170} alt="logo" />
                                     </Logo>
                                     <Text>
-                                        {contact.companyName} est une société de travaux publique, de constructions, travaux divers négoce basé à Fès.
+                                    Crée en 2008, QualiMet Maroc  est un laboratoire  de Métrologie (Calibration Laboratory) accrédité ISO 17025  spécialisé dans les prestations d’étalonnage et la vérification d'instruments de mesure au laboratoire ou sur site. 
                                     </Text>
                                 </LogoWidget>
                             </Col>
