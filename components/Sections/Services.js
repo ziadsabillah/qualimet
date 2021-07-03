@@ -120,7 +120,7 @@ const Wrapper = styled.div`
     border-radius: 4px;
 
     &:hover {
-        box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        /* box-shadow: 0px 5px 15px rgba(0,0,0,0.3); */
         transition: box-shadow .3s ease-in-out;
         cursor: pointer;
     }
